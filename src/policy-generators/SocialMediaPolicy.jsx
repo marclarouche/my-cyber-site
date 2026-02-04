@@ -1,0 +1,710 @@
+import React, { useState } from 'react';
+import { Lock, Copy, Download, Printer, RotateCcw, ArrowLeft, FileText, Share2 } from 'lucide-react';
+
+export default function SocialMediaPolicy() {
+  const [formData, setFormData] = useState({
+    orgName: '',
+    policyPurpose: '',
+    policyScope: '',
+    coveredAccounts: '',
+    audience: '',
+    principles: '',
+    acceptableUse: '',
+    prohibited: '',
+    contentGuidelines: '',
+    approvals: '',
+    personalUse: '',
+    confidentiality: '',
+    privacy: '',
+    securityRequirements: '',
+    credentials: '',
+    thirdParty: '',
+    incidents: '',
+    retention: '',
+    enforcement: '',
+    reviewCadence: '',
+    references: ''
+  });
+
+  const [output, setOutput] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const generatePolicy = () => {
+    const {
+      orgName,
+      policyPurpose,
+      policyScope,
+      coveredAccounts,
+      audience,
+      principles,
+      acceptableUse,
+      prohibited,
+      contentGuidelines,
+      approvals,
+      personalUse,
+      confidentiality,
+      privacy,
+      securityRequirements,
+      credentials,
+      thirdParty,
+      incidents,
+      retention,
+      enforcement,
+      reviewCadence,
+      references
+    } = formData;
+
+    const output = `
+SOCIAL MEDIA POLICY
+Organization: ${orgName || "[Organization Name]"}
+
+1. Purpose
+${policyPurpose || "[Describe the purpose of this policy and the outcomes it supports, such as protecting trust, safety, and brand integrity.]"}
+
+2. Scope
+${policyScope || "[Define the scope, including who is covered and which devices, systems, and accounts are in scope.]"}
+
+3. Covered Accounts and Platforms
+${coveredAccounts || "[List official social media accounts and supported platforms, and describe any excluded or restricted channels.]"}
+
+4. Covered Population
+${audience || "[Identify who must follow this policy, including employees, contractors, and third parties acting on behalf of the organization.]"}
+
+5. Core Principles
+${principles || "[Define principles such as respect, accuracy, transparency, and a commitment to protecting customers and the organization.]"}
+
+6. Acceptable Use and Expectations
+${acceptableUse || "[Describe expected professional conduct, tone, responsiveness, and how to handle disagreement without escalation.]"}
+
+7. Prohibited Activities
+${prohibited || "[List prohibited behavior, including harassment, hate, threats, disclosure of confidential data, impersonation, and unapproved endorsements.]"}
+
+8. Content and Brand Guidelines
+${contentGuidelines || "[Describe brand voice, logo usage, accessibility expectations, accuracy checks, and required disclaimers when needed.]"}
+
+9. Posting Authority and Approvals
+${approvals || "[Define who may post on official accounts, required approvals, and how urgent or time sensitive content is handled.]"}
+
+10. Personal Social Media Use
+${personalUse || "[Set expectations for personal accounts when referencing the organization, including conflicts of interest and recommended disclaimers.]"}
+
+11. Confidentiality and Intellectual Property
+${confidentiality || "[Define what must never be shared, including customer data, internal systems details, nonpublic plans, and intellectual property.]"}
+
+12. Privacy and Customer Data
+${privacy || "[Explain how to avoid sharing personal data, how to handle DMs safely, and how to route sensitive conversations to secure channels.]"}
+
+13. Account Security Requirements
+${securityRequirements || "[Define minimum security controls, including MFA, password manager usage, device security, and access reviews.]"}
+
+14. Credentials, Access, and Recovery
+${credentials || "[Describe credential storage, access provisioning and removal, ownership, and account recovery requirements.]"}
+
+15. Third Party Tools, Agencies, and Influencers
+${thirdParty || "[Define requirements for vendors and external partners, including approvals, secure access, contracts, and content standards.]"}
+
+16. Incident Handling and Escalation
+${incidents || "[Define escalation paths for account compromise, misinformation, legal threats, harassment, and media inquiries.]"}
+
+17. Recordkeeping and Retention
+${retention || "[Describe how content and key communications are retained or archived, and how legal holds are handled when needed.]"}
+
+18. Monitoring, Enforcement, and Consequences
+${enforcement || "[Describe monitoring expectations, how reports are investigated, and potential consequences for violations.]"}
+
+19. Policy Review and Updates
+${reviewCadence || "[Define review frequency and triggers for updates, including incidents, platform changes, and regulatory requirements.]"}
+
+20. References and Alignment
+${references || "[List internal references and optional external guidance that informs the program.]"}
+
+Generated by the CyberLife Coach – Social Media Policy Generator
+    `.trim();
+
+    setOutput(output);
+  };
+
+  const resetForm = () => {
+    setFormData({
+      orgName: '',
+      policyPurpose: '',
+      policyScope: '',
+      coveredAccounts: '',
+      audience: '',
+      principles: '',
+      acceptableUse: '',
+      prohibited: '',
+      contentGuidelines: '',
+      approvals: '',
+      personalUse: '',
+      confidentiality: '',
+      privacy: '',
+      securityRequirements: '',
+      credentials: '',
+      thirdParty: '',
+      incidents: '',
+      retention: '',
+      enforcement: '',
+      reviewCadence: '',
+      references: ''
+    });
+    setOutput('');
+  };
+
+  const copyOutput = async () => {
+    if (!output) {
+      alert("There is no generated policy to copy yet.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(output);
+      alert("Policy text copied to clipboard.");
+    } catch (e) {
+      alert("Copy failed. Please copy manually.");
+    }
+  };
+
+  const downloadFile = (filename, content) => {
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const downloadText = () => {
+    if (!output) {
+      alert("There is no generated policy to download yet.");
+      return;
+    }
+    downloadFile('social-media-policy.txt', output);
+  };
+
+  const downloadMarkdown = () => {
+    if (!output) {
+      alert("There is no generated policy to download yet.");
+      return;
+    }
+    downloadFile('social-media-policy.md', output);
+  };
+
+  const printOutput = () => {
+    if (!output) {
+      alert("There is no generated policy to print yet.");
+      return;
+    }
+
+    const printWindow = window.open('', '_blank', 'width=900,height=700');
+    if (!printWindow) {
+      alert("Pop-up blocked. Please allow pop-ups to print/save as PDF.");
+      return;
+    }
+
+    const escapeHtml = (str) => {
+      return String(str).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    };
+
+    printWindow.document.write(`
+      <html>
+      <head>
+        <title>Social Media Policy</title>
+        <style>
+          body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            padding: 24px;
+            color: #020617;
+            background: #ffffff;
+            white-space: pre-wrap;
+          }
+        </style>
+      </head>
+      <body>${escapeHtml(output)}</body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.focus();
+    printWindow.print();
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      {/* Navigation */}
+      <nav className="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+<div className="flex items-center space-x-3 group cursor-pointer">
+              <img 
+                src="/logo.png" 
+                alt="CyberLifeCoach" 
+                className="h-10 w-auto group-hover:brightness-125 group-hover:scale-110 transition-all duration-300" 
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-300">
+                CyberLifeCoach
+              </span>
+            </div>
+          <button
+            onClick={() => window.location.href = '/policy-generators'}
+            className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition-all duration-300"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Business Policy Hub</span>
+          </button>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="space-y-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <Share2 className="w-12 h-12 text-cyan-400" />
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Social Media Policy Generator
+              </h1>
+            </div>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Create a clear social media policy that protects your organization, employees, and customers while supporting respectful,
+              effective communication across public platforms.
+            </p>
+          </div>
+
+          {/* Security Badge */}
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-4 flex items-center justify-center space-x-3">
+            <Lock className="w-6 h-6 text-cyan-400" />
+            <span className="text-slate-300"><strong>Client-side only.</strong> Policy text is generated in your browser and not uploaded.</span>
+          </div>
+
+          {/* Form Section */}
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl border border-slate-700 p-8">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-2">Policy Inputs</h3>
+            <p className="text-slate-400 mb-6">
+              Fill in the sections below. The generator will produce a structured social media policy draft that you can refine
+              for your organization and culture.
+            </p>
+
+            <div className="space-y-6">
+              {/* Organization Name */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Organization Name
+                </label>
+                <textarea
+                  name="orgName"
+                  value={formData.orgName}
+                  onChange={handleInputChange}
+                  placeholder="Organization Name"
+                  rows="2"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Purpose */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Purpose
+                </label>
+                <textarea
+                  name="policyPurpose"
+                  value={formData.policyPurpose}
+                  onChange={handleInputChange}
+                  placeholder="Why this policy exists and what it is meant to protect and enable"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Scope */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Scope
+                </label>
+                <textarea
+                  name="policyScope"
+                  value={formData.policyScope}
+                  onChange={handleInputChange}
+                  placeholder="Who and what is covered, including employees, contractors, accounts, and devices"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Covered Accounts */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Covered Accounts and Platforms
+                </label>
+                <textarea
+                  name="coveredAccounts"
+                  value={formData.coveredAccounts}
+                  onChange={handleInputChange}
+                  placeholder="List official accounts, supported platforms, and any excluded channels"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Covered Population */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Covered Population
+                </label>
+                <textarea
+                  name="audience"
+                  value={formData.audience}
+                  onChange={handleInputChange}
+                  placeholder="Employees, contractors, interns, vendors who represent the organization, etc."
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Core Principles */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Core Principles
+                </label>
+                <textarea
+                  name="principles"
+                  value={formData.principles}
+                  onChange={handleInputChange}
+                  placeholder="Respectful communication, accuracy, transparency, customer trust, do no harm, etc."
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Acceptable Use */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Acceptable Use and Expectations
+                </label>
+                <textarea
+                  name="acceptableUse"
+                  value={formData.acceptableUse}
+                  onChange={handleInputChange}
+                  placeholder="What good behavior looks like, tone, professionalism, responding to users, avoiding escalation"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Prohibited Activities */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Prohibited Activities
+                </label>
+                <textarea
+                  name="prohibited"
+                  value={formData.prohibited}
+                  onChange={handleInputChange}
+                  placeholder="Harassment, hate speech, threats, sharing confidential data, impersonation, unapproved endorsements, etc."
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Content Guidelines */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Content and Brand Guidelines
+                </label>
+                <textarea
+                  name="contentGuidelines"
+                  value={formData.contentGuidelines}
+                  onChange={handleInputChange}
+                  placeholder="Brand voice, logo usage, disclaimers, accuracy checks, fact checking, accessibility considerations"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Approvals */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Posting Authority and Approvals
+                </label>
+                <textarea
+                  name="approvals"
+                  value={formData.approvals}
+                  onChange={handleInputChange}
+                  placeholder="Who can post on official accounts, approval workflow, and how urgent posts are handled"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Personal Use */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Personal Social Media Use
+                </label>
+                <textarea
+                  name="personalUse"
+                  value={formData.personalUse}
+                  onChange={handleInputChange}
+                  placeholder="Rules for personal accounts when referencing the organization, including disclaimers and conflict of interest expectations"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Confidentiality */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Confidentiality and Intellectual Property
+                </label>
+                <textarea
+                  name="confidentiality"
+                  value={formData.confidentiality}
+                  onChange={handleInputChange}
+                  placeholder="What must never be shared, including customer data, internal systems, pricing, roadmaps, and nonpublic information"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Privacy */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Privacy and Customer Data
+                </label>
+                <textarea
+                  name="privacy"
+                  value={formData.privacy}
+                  onChange={handleInputChange}
+                  placeholder="No sharing personal data, handling DMs safely, directing users to secure channels, consent requirements"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Security Requirements */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Account Security Requirements
+                </label>
+                <textarea
+                  name="securityRequirements"
+                  value={formData.securityRequirements}
+                  onChange={handleInputChange}
+                  placeholder="MFA, password manager usage, device security, access reviews, offboarding, phishing awareness"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Credentials */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Credentials, Access, and Recovery
+                </label>
+                <textarea
+                  name="credentials"
+                  value={formData.credentials}
+                  onChange={handleInputChange}
+                  placeholder="Where credentials are stored, how access is granted and removed, recovery and ownership rules"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Third Party */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Third Party Tools, Agencies, and Influencers
+                </label>
+                <textarea
+                  name="thirdParty"
+                  value={formData.thirdParty}
+                  onChange={handleInputChange}
+                  placeholder="Rules for vendors, scheduling tools, ad accounts, influencers, approvals, and contract expectations"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Incidents */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Incident Handling and Escalation
+                </label>
+                <textarea
+                  name="incidents"
+                  value={formData.incidents}
+                  onChange={handleInputChange}
+                  placeholder="How to respond to account compromise, misinformation, legal threats, harassment, and media inquiries"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Retention */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Recordkeeping and Retention
+                </label>
+                <textarea
+                  name="retention"
+                  value={formData.retention}
+                  onChange={handleInputChange}
+                  placeholder="Archiving posts, retention duration, legal holds, and ownership of content and analytics"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Enforcement */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Monitoring, Enforcement, and Consequences
+                </label>
+                <textarea
+                  name="enforcement"
+                  value={formData.enforcement}
+                  onChange={handleInputChange}
+                  placeholder="Monitoring approach, investigation process, discipline steps, and remediation actions"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* Review Cadence */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  Policy Review and Updates
+                </label>
+                <textarea
+                  name="reviewCadence"
+                  value={formData.reviewCadence}
+                  onChange={handleInputChange}
+                  placeholder="Review frequency, update triggers, and communication of changes"
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+
+              {/* References */}
+              <div>
+                <label className="block text-sm font-semibold text-cyan-400 mb-2">
+                  References and Alignment
+                </label>
+                <textarea
+                  name="references"
+                  value={formData.references}
+                  onChange={handleInputChange}
+                  placeholder="Internal standards, plus optional references such as NIST, ISO 27001, FTC endorsement guidance, GDPR, etc."
+                  rows="3"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 resize-none"
+                />
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4 mt-8">
+              <button
+                onClick={generatePolicy}
+                className="flex-1 min-w-[200px] bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+              >
+                <FileText className="w-5 h-5" />
+                <span>Generate Policy</span>
+              </button>
+              <button
+                onClick={resetForm}
+                className="flex-1 min-w-[200px] bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <RotateCcw className="w-5 h-5" />
+                <span>Reset</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Output Section */}
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl border border-slate-700 p-8">
+            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Generated Social Media Policy</h3>
+            <textarea
+              value={output}
+              readOnly
+              placeholder="Your generated policy will appear here. Fill in the sections on the left, then select 'Generate Policy'. You can copy, download, or print the output."
+              rows="20"
+              className="w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors text-slate-100 font-mono text-sm resize-none"
+            />
+
+            {/* Download Buttons */}
+            <div className="flex flex-wrap gap-4 mt-6">
+              <button
+                onClick={copyOutput}
+                className="flex items-center space-x-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <Copy className="w-5 h-5" />
+                <span>Copy</span>
+              </button>
+              <button
+                onClick={downloadText}
+                className="flex items-center space-x-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <Download className="w-5 h-5" />
+                <span>Download TXT</span>
+              </button>
+              <button
+                onClick={downloadMarkdown}
+                className="flex items-center space-x-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <Download className="w-5 h-5" />
+                <span>Download Markdown</span>
+              </button>
+              <button
+                onClick={printOutput}
+                className="flex items-center space-x-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <Printer className="w-5 h-5" />
+                <span>Print/Save as PDF</span>
+              </button>
+            </div>
+
+            <p className="text-sm text-slate-500 mt-4">Tip: Print/Save as PDF uses your browser print dialog. Choose Save as PDF.</p>
+          </div>
+
+          {/* Legal Disclaimer */}
+          <div className="mt-8 bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+            <p className="text-sm text-slate-400 leading-relaxed">
+              <strong className="text-cyan-400">Important notice:</strong> This social media policy generator provides sample structure and wording for informational and educational purposes. It does not constitute legal advice, employment law guidance, or a comprehensive communications strategy. Organizations must tailor content to their specific environment, industry regulations, brand values, and cultural context. Consult qualified legal, HR, and communications professionals to ensure your social media policy meets applicable requirements and supports your organization's goals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <img 
+              src="/logo.png" 
+              alt="CyberLifeCoach" 
+              className="h-8 w-auto transition-all duration-300 hover:scale-125 hover:brightness-125" 
+            />
+            <span className="font-bold text-lg transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
+              CyberLifeCoach
+            </span>
+          </div>
+          <div className="text-slate-500 text-sm">
+            <p>&copy; 2026 CyberLifeCoach</p>
+            <p className="text-slate-600">A Veteran-Owned Business Committed to Your Digital Security</p>
+            <p>All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

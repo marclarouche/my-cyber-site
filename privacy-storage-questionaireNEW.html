@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="../js/tos-gate.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberLifeCoach | Storage Setup Intake</title>
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/services.css" />
+  <link rel="stylesheet" href="./privacy-storage-questionaire.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/cyberlifecoach-logo-removebg.png" alt="CyberLifeCoach Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../courses.html">Courses</a></li>
+          <li><a href="../products.html">Products</a></li>
+          <li><a href="../PolicyGenerator/policy-generator.html">Policy Generator</a></li>
+          <li><a href="../SecurityCenter/security-center.html">Security Center</a></li>
+          <li><a href="../Tools/tools.html">Tools</a></li>
+          <li><a href="../assessments.html">Free Previews</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Storage Setup Intake</h1>
+      <p><strong>Select your setup type, then answer a few questions so we can recommend the safest, simplest path.</strong></p>
+      <p>This is guided setup using your hardware. You keep control of your accounts and data.</p>
+
+      <div class="callout services-callout intake-callout">
+        <strong>Privacy boundary</strong>
+        <p>I do not request passwords, recovery codes, private keys, or personal files. If a login is needed, you sign in yourself during the session.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-spotlight">
+    <div class="container">
+      <h2 class="section-title">Tell Me What You Want To Build</h2>
+      <p class="section-lead">First choose a Home and Prosumer setup or a Small Business NAS. The form will adapt based on your selection.</p>
+
+      <div class="content-grid">
+        <div class="content-card intake-card">
+          <form id="intakeForm" class="intake-form" method="post" action="">
+            <input type="hidden" id="setupTypeHidden" name="setup_type" value="" />
+
+            <div class="intake-section">
+              <h3>Step 1  Choose your setup</h3>
+
+              <div class="radio-row">
+                <label class="radio-pill">
+                  <input type="radio" name="setup_type_choice" value="home_prosumer" required />
+                  <span>Home and Prosumer Mini Server</span>
+                </label>
+
+                <label class="radio-pill">
+                  <input type="radio" name="setup_type_choice" value="small_business_nas" required />
+                  <span>Small Business NAS</span>
+                </label>
+              </div>
+
+              <p class="intake-hint" id="selectionHint">No selection yet.</p>
+            </div>
+
+            <div class="intake-section">
+              <h3>Step 2  Your contact info</h3>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="fullName">Full name</label>
+                  <input id="fullName" name="full_name" type="text" autocomplete="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+
+                <div class="field">
+                  <label for="timezone">Time zone</label>
+                  <input id="timezone" name="timezone" type="text" placeholder="Example: Pacific, Eastern" />
+                </div>
+
+                <div class="field">
+                  <label for="preferredContact">Preferred contact method</label>
+                  <select id="preferredContact" name="preferred_contact">
+                    <option value="email">Email</option>
+                    <option value="video">Video call</option>
+                    <option value="phone">Phone call</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="intake-section">
+              <h3>Step 3  Your data and devices</h3>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="dataSize">Approximate data size</label>
+                  <select id="dataSize" name="data_size">
+                    <option value="">Select one</option>
+                    <option value="under_250gb">Under 250 GB</option>
+                    <option value="250gb_1tb">250 GB to 1 TB</option>
+                    <option value="1tb_4tb">1 TB to 4 TB</option>
+                    <option value="4tb_plus">4 TB or more</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="deviceCount">How many devices will connect</label>
+                  <select id="deviceCount" name="device_count">
+                    <option value="">Select one</option>
+                    <option value="1_3">1 to 3</option>
+                    <option value="4_7">4 to 7</option>
+                    <option value="8_10">8 to 10</option>
+                    <option value="10_plus">More than 10</option>
+                  </select>
+                </div>
+
+                <div class="field field-wide">
+                  <label for="dataTypes">What are you storing</label>
+                  <textarea id="dataTypes" name="data_types" rows="3" placeholder="Examples: photos, documents, client files, invoices, videos"></textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="currentStorage">Where is your data today</label>
+                <textarea id="currentStorage" name="current_storage" rows="2" placeholder="Examples: Google Drive, Dropbox, OneDrive, external drives, USB sticks"></textarea>
+              </div>
+            </div>
+
+            <div id="homeSection" class="intake-section hidden">
+              <h3>Home and Prosumer Mini Server details</h3>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="miniPcModel">Mini PC or server model</label>
+                  <input id="miniPcModel" name="mini_pc_model" type="text" placeholder="Example: Beelink, Minisforum, Intel NUC" />
+                </div>
+
+                <div class="field">
+                  <label for="ramAmount">RAM</label>
+                  <input id="ramAmount" name="ram_amount" type="text" placeholder="Example: 8 GB, 16 GB" />
+                </div>
+
+                <div class="field">
+                  <label for="bootDrive">Boot drive size</label>
+                  <input id="bootDrive" name="boot_drive" type="text" placeholder="Example: 256 GB SSD" />
+                </div>
+
+                <div class="field">
+                  <label for="mirrorDrives">Mirrored storage drives</label>
+                  <input id="mirrorDrives" name="mirror_drives" type="text" placeholder="Example: 2 x 4 TB" />
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="remoteAccessHome">Do you want remote access</label>
+                  <select id="remoteAccessHome" name="remote_access_home">
+                    <option value="">Select one</option>
+                    <option value="no">No</option>
+                    <option value="yes_tailscale">Yes, using Tailscale</option>
+                    <option value="not_sure">Not sure</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="comfortLevel">Comfort level</label>
+                  <select id="comfortLevel" name="comfort_level">
+                    <option value="">Select one</option>
+                    <option value="beginner">Beginner, I want simple steps</option>
+                    <option value="intermediate">Intermediate, I can follow a checklist</option>
+                    <option value="advanced">Advanced, I want more control</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="homeGoals">What do you want it to do</label>
+                <textarea id="homeGoals" name="home_goals" rows="3" placeholder="Examples: private file storage, photo backups, secure sharing with family, local backups"></textarea>
+              </div>
+            </div>
+
+            <div id="businessSection" class="intake-section hidden">
+              <h3>Small Business NAS details</h3>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="userCount">How many users need access</label>
+                  <select id="userCount" name="user_count">
+                    <option value="">Select one</option>
+                    <option value="1_3">1 to 3</option>
+                    <option value="4_7">4 to 7</option>
+                    <option value="8_10">8 to 10</option>
+                    <option value="10_plus">More than 10</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="nasPreference">NAS platform preference</label>
+                  <select id="nasPreference" name="nas_preference">
+                    <option value="">Select one</option>
+                    <option value="synology">Synology</option>
+                    <option value="qnap">QNAP</option>
+                    <option value="already_have_one">We already have a NAS</option>
+                    <option value="not_sure">Not sure</option>
+                  </select>
+                </div>
+
+                <div class="field field-wide">
+                  <label for="businessNeeds">What does your team need</label>
+                  <textarea id="businessNeeds" name="business_needs" rows="3" placeholder="Examples: shared folders by role, client folders, scans and receipts, accounting backups"></textarea>
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="backupPriority">Backup priority</label>
+                  <select id="backupPriority" name="backup_priority">
+                    <option value="">Select one</option>
+                    <option value="basic">Basic, recover from accidental deletion</option>
+                    <option value="ransomware">Ransomware aware, snapshots and offline copy</option>
+                    <option value="offsite">Offsite copy needed</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="remoteAccessBusiness">Remote access for staff</label>
+                  <select id="remoteAccessBusiness" name="remote_access_business">
+                    <option value="">Select one</option>
+                    <option value="no">No</option>
+                    <option value="yes_limited">Yes, limited to approved devices</option>
+                    <option value="not_sure">Not sure</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="complianceNotes">Any compliance or client requirements</label>
+                <textarea id="complianceNotes" name="compliance_notes" rows="2" placeholder="Examples: none, HIPAA, client confidentiality, retention rules"></textarea>
+              </div>
+            </div>
+
+            <div class="intake-section">
+              <h3>Step 4  Scheduling</h3>
+
+              <div class="field">
+                <label for="availability">Best days and times</label>
+                <textarea id="availability" name="availability" rows="2" placeholder="Example: weekdays after 3pm, Saturdays mornings"></textarea>
+              </div>
+
+              <div class="field">
+                <label for="notes">Anything else I should know</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Include any constraints such as internet speed, router access, or special workflows"></textarea>
+              </div>
+            </div>
+
+            <div class="cta-buttons">
+              <button type="submit" class="btn primary-btn">Submit Intake</button>
+              <a href="../consult.html" class="btn secondary-btn">Back to Booking</a>
+            </div>
+
+            <div class="legal-disclaimer">
+              <strong>Legal Disclaimer</strong>
+              This intake is for planning and scoping only. This service provides educational guidance and guided setup. Mirrored or parity protected storage improves resilience but does not replace backups. You remain responsible for your accounts, your devices, and ongoing maintenance.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <a href="../index.html">
+          <img src="../images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../about.html">About Us</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+
+      <div class="social-icons" aria-label="Social media">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+
+      <p>&copy; 2025 CyberLifeCoach | <strong>A Veteran-Owned Business Committed to Your Digital Security</strong> | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks){
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+
+    const selectionHint = document.getElementById('selectionHint');
+    const homeSection = document.getElementById('homeSection');
+    const businessSection = document.getElementById('businessSection');
+    const hidden = document.getElementById('setupTypeHidden');
+
+    function setSelection(value){
+      if (value === 'home_prosumer'){
+        selectionHint.textContent = 'Selected: Home and Prosumer Mini Server';
+        homeSection.classList.remove('hidden');
+        businessSection.classList.add('hidden');
+        hidden.value = 'home_prosumer';
+      } else if (value === 'small_business_nas'){
+        selectionHint.textContent = 'Selected: Small Business NAS';
+        businessSection.classList.remove('hidden');
+        homeSection.classList.add('hidden');
+        hidden.value = 'small_business_nas';
+      } else {
+        selectionHint.textContent = 'No selection yet.';
+        homeSection.classList.add('hidden');
+        businessSection.classList.add('hidden');
+        hidden.value = '';
+      }
+    }
+
+    document.querySelectorAll('input[name="setup_type_choice"]').forEach((radio) => {
+      radio.addEventListener('change', (e) => setSelection(e.target.value));
+    });
+
+    setSelection('');
+  </script>
+</body>
+</html>
