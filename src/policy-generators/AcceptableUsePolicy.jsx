@@ -201,7 +201,7 @@ Date: _______________________________`;
     try {
       await navigator.clipboard.writeText(output);
       alert("Copied to clipboard.");
-    } catch (e) {
+    } catch {
       alert("Copy failed. Please copy manually.");
     }
   };
@@ -263,7 +263,7 @@ Date: _______________________________`;
       window.print();
       setTimeout(function(){ window.close(); }, 300);
     };
-  <\/script>
+</script>
 </body>
 </html>`;
 

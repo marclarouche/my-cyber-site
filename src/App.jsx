@@ -9,6 +9,7 @@ import BusinessAssessmentPreview from './consultations/BusinessAssessmentPreview
 import SmallBusinessConsultation from './consultations/SmallBusinessConsultation';
 import StorageSetupIntake from './consultations/StorageSetupIntake';
 import PrivacyStorageConsultation from './consultations/PrivacyStorageConsultation';
+import PrivacyScoreCalculator from './PrivacyScoreCalculator';
 
 {/* Put nested Business Policy hub routes BEFORE the parent Business Policy hub route */}
 import AcceptableUsePolicy from './policy-generators/AcceptableUsePolicy';
@@ -175,6 +176,7 @@ export default function App() {
         <Route path="/business-assessment-preview" element={<BusinessAssessmentPreview />} />
         <Route path="/storage-setup-intake" element={<StorageSetupIntake />} />
         <Route path="/privacy-storage-consultation" element={<PrivacyStorageConsultation />} />
+        <Route path="/privacy-score" element={<PrivacyScoreCalculator />} />
 
        {/* Put nested Business Policy hub routes BEFORE the parent Business Policy hub route */} 
        <Route path="/policy-generators/acceptable-use-policy" element={<AcceptableUsePolicy />} />

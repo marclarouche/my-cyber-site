@@ -153,7 +153,7 @@ Review Cycle: Annual or upon material change
     try {
       await navigator.clipboard.writeText(output);
       alert("Copied to clipboard.");
-    } catch (e) {
+    } catch {
       alert("Copy failed. Please copy manually.");
     }
   };
@@ -215,7 +215,7 @@ Review Cycle: Annual or upon material change
       window.print();
       setTimeout(function(){ window.close(); }, 300);
     };
-  <\/script>
+  </script>
 </body>
 </html>`;
 

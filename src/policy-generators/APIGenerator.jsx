@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Code, Copy, Download, Printer, RotateCcw, ArrowLeft, FileText, AlertCircle, Lightbulb } from 'lucide-react';
 
 export default function APIGenerator() {
@@ -18,24 +18,7 @@ export default function APIGenerator() {
     includeSheets: false
   });
 
-  const [output, setOutput] = useState('');
-  const [badges, setBadges] = useState({
-    spec: 'OpenAPI',
-    tool: 'Redoc'
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
-  useEffect(() => {
-    updateBadges();
-  }, [formData.specFormat, formData.docTool]);
-
+  // Helper functions moved outside component for better performance
   const getSpecLabel = (val) => {
     const map = {
       'openapi-yaml': 'OpenAPI',
@@ -58,11 +41,20 @@ export default function APIGenerator() {
     return map[val] || 'Redoc';
   };
 
-  const updateBadges = () => {
-    setBadges({
-      spec: getSpecLabel(formData.specFormat),
-      tool: getToolLabel(formData.docTool)
-    });
+  const [output, setOutput] = useState('');
+
+  // Direct computation - no need for useMemo as these are simple synchronous lookups
+  const badges = {
+    spec: getSpecLabel(formData.specFormat),
+    tool: getToolLabel(formData.docTool)
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
   };
 
   const buildStyleText = (style) => {
@@ -236,6 +228,7 @@ export default function APIGenerator() {
       await navigator.clipboard.writeText(output);
       alert("API documentation plan copied to clipboard.");
     } catch (e) {
+      console.error("Copy to clipboard failed:", e);
       alert("Copy failed. Please copy manually.");
     }
   };
@@ -297,7 +290,7 @@ export default function APIGenerator() {
       window.print();
       setTimeout(function(){ window.close(); }, 300);
     };
-  <\/script>
+  </script>
 </body>
 </html>`;
 

@@ -136,6 +136,7 @@ ${mdmLine}Approved by: ______________________    Date: __________
       await navigator.clipboard.writeText(output);
       alert("Copied to clipboard.");
     } catch (e) {
+      console.error('Clipboard copy failed:', e);
       alert("Copy failed. Please copy manually.");
     }
   };
@@ -197,7 +198,7 @@ ${mdmLine}Approved by: ______________________    Date: __________
       window.print();
       setTimeout(function(){ window.close(); }, 300);
     };
-  <\/script>
+  </script>
 </body>
 </html>`;
 

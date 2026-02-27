@@ -18,69 +18,65 @@ export default function CyberSecurityLanding() {
       icon: <Shield className="w-8 h-8" />,
       title: "Personal Privacy Audits",
       description: "Comprehensive assessment of your digital footprint and privacy posture with actionable recommendations.",
-      cta: "Schedule Audit",
-      href: "/individual-consultation"
+      cta: "Schedule Audit"
     },
     {
       icon: <Lock className="w-8 h-8" />,
       title: "Small Business Security Consulting",
       description: "Strategic guidance on implementing robust security frameworks tailored to your organization's needs.",
-      cta: "Learn More",
-      href: "/small-business-consultation"
+      cta: "Learn More"
     },
     {
       icon: <Eye className="w-8 h-8" />,
       title: "Privacy Storage Setup",
       description: "Mini server with mirrored storage on ZimaOS, securely hardened and set up with training.",
-      cta: "Get Started",
-      href: "/privacy-storage-consultation"
+      cta: "Get Started"
     }
   ];
 
-  const products = [
-    {
-      icon: <Plane className="w-8 h-8" />,
-      title: "Digital Nomad Security Workbook",
-      description: "Complete security guide for professionals working remotely across borders",
-      link: "https://cyberlifecoach.gumroad.com/l/securenomad"
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Nonprofit Cybersecurity Guide",
-      description: "Essential cybersecurity strategies tailored for nonprofit organizations",
-      link: "https://cyberlifecoach.gumroad.com/l/nonprofit-blueprint"
-    },
-    {
-      icon: <Home className="w-8 h-8" />,
-      title: "Digital Housekeeping for Retirees",
-      description: "Practical digital organization and security tips for retirees",
-      link: "https://cyberlifecoach.gumroad.com/l/scam-proof"
-    },
-    {
-      icon: <Newspaper className="w-8 h-8" />,
-      title: "Encryptopedia for Journalists",
-      description: "Comprehensive encryption and security handbook for journalists",
-      link: "https://cyberlifecoach.gumroad.com/l/thejounralistfirewallpe"
-    }
-  ];
+const products = [
+  {
+    icon: <Plane className="w-8 h-8" />,
+    title: "Digital Nomad Security Workbook",
+    description: "Complete security guide for professionals working remotely across borders",
+    link: "https://cyberlifecoach.gumroad.com/l/securenomad"
+  },
+  {
+    icon: <Heart className="w-8 h-8" />,
+    title: "Nonprofit Cybersecurity Guide",
+    description: "Essential cybersecurity strategies tailored for nonprofit organizations",
+    link: "https://cyberlifecoach.gumroad.com/l/nonprofit-blueprint"
+  },
+  {
+    icon: <Home className="w-8 h-8" />,
+    title: "Digital Housekeeping for Retirees",
+    description: "Practical digital organization and security tips for retirees",
+    link: "https://cyberlifecoach.gumroad.com/l/scam-proof"
+  },
+  {
+    icon: <Newspaper className="w-8 h-8" />,
+    title: "Encryptopedia for Journalists",
+    description: "Comprehensive encryption and security handbook for journalists",
+    link: "https://cyberlifecoach.gumroad.com/l/thejounralistfirewallpe"
+  }
+];
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-3 group cursor-pointer">
-              <img
-                src="/logo.png"
-                alt="Your Company"
-                className="h-10 w-auto group-hover:brightness-125 group-hover:scale-110 transition-all duration-300"
-              />
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-300">
-                CyberLifeCoach
-              </span>
-            </div>
+<div className="flex items-center space-x-3 group cursor-pointer">
+  <img 
+    src="/logo.png" 
+    alt="Your Company" 
+    className="h-10 w-auto group-hover:brightness-125 group-hover:scale-110 transition-all duration-300" 
+  />
+  <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-300">
+    CyberLifeCoach
+  </span>
+</div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -90,16 +86,13 @@ export default function CyberSecurityLanding() {
               <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
               <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
               <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-              <a
-                href="/individual-consultation"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
-              >
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
                 Book Consultation
-              </a>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
-            <button
+            <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-slate-300 hover:text-cyan-400"
             >
@@ -115,15 +108,12 @@ export default function CyberSecurityLanding() {
               <a href="#services" className="block text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
               <a href="/policy-generators" className="block text-slate-300 hover:text-cyan-400 transition-colors">Policy Generators</a>
               <a href="#products" className="block text-slate-300 hover:text-cyan-400 transition-colors">Products</a>
-              <a href="/security-center" className="block text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
+              <a href="/SecurityCenter" className="block text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
               <a href="/tools" className="block text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
-              <a href="/about" className="block text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-              <a
-                href="/individual-consultation"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold"
-              >
+              <a href="#about" className="block text-slate-300 hover:text-cyan-400 transition-colors">About</a>
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold">
                 Book Consultation
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -136,8 +126,8 @@ export default function CyberSecurityLanding() {
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
-
-        <div className="relative max-w-7xl mx-auto text-center">
+        
+       <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-cyan-500/30 mb-8 hover:border-cyan-500/60 transition-all">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -150,13 +140,13 @@ export default function CyberSecurityLanding() {
             Privacy Is Not Optional.
             <br />It's Essential.
           </h1>
-
+          
           <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
             Expert cybersecurity consulting and privacy solutions for individuals and organizations who take their digital security seriously.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a 
               href="/individual-consultation"
               className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 flex items-center space-x-2"
             >
@@ -164,10 +154,9 @@ export default function CyberSecurityLanding() {
               <span>Schedule Privacy Audit</span>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a
+            
               href="/privacy-score"
               className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 flex items-center space-x-2"
-            >
               <Shield className="w-5 h-5" />
               <span>Check Your Privacy Score</span>
             </a>
@@ -197,25 +186,35 @@ export default function CyberSecurityLanding() {
               Core Services
             </h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Comprehensive privacy and security solutions tailored to your needs.
+              Comprehensive security solutions tailored to your unique threat landscape and privacy requirements.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group">
-                <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
+              <div key={index} className="group bg-slate-900/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-2">
+                <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                <p className="text-slate-400 mb-6">{service.description}</p>
-                <a
-                  href={service.href}
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold group/link"
+                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <p className="text-slate-400 mb-6 leading-relaxed">{service.description}</p>
+                <button 
+                  onClick={() => {
+                    if (index === 0) {
+                      window.location.href = '/individual-consultation';
+                    }
+                    if (index === 1) {
+                      window.location.href = '/small-business-consultation';
+                    }
+                    if (index === 2) {
+                      window.location.href = '/privacy-storage-consultation';
+                    }
+                  }}
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold group/btn cursor-pointer"
                 >
                   <span>{service.cta}</span>
-                  <ChevronRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </a>
+                  <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                </button>
               </div>
             ))}
           </div>
@@ -223,48 +222,50 @@ export default function CyberSecurityLanding() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 px-4">
+      <section id="products" className="py-20 px-4 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Digital Products
+              Featured Workbooks & Guides
             </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Practical guides and workbooks to help you take control of your privacy.
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Expert-crafted resources to help you protect your digital life
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, index) => (
-              <a
-                key={index}
-                href={product.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
-              >
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
+              <div key={index} className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1">
+                <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {product.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-2">{product.title}</h3>
-                <p className="text-slate-400 text-sm mb-4">{product.description}</p>
-                <div className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 font-semibold text-sm">
-                  <span>Get It</span>
-                  <ExternalLink className="w-3 h-3" />
-                </div>
-              </a>
+                <h3 className="text-xl font-bold mb-3 text-white">{product.title}</h3>
+                <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+                  {product.description}
+                </p>
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-white"
+                >
+                  Get it
+                </a>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Free Tools Section */}
-      <section className="py-20 px-4 bg-slate-900/50">
+      {/* Tools Section */}
+      <section id="tools" className="py-20 px-4 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Free Tools</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Free Privacy Tools
+            </h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Instant privacy and security tools — no signup required.
+              Start your privacy journey with our complimentary assessment tools and resources.
             </p>
           </div>
 
@@ -273,31 +274,36 @@ export default function CyberSecurityLanding() {
               <Wrench className="w-10 h-10 text-cyan-400 mb-4" />
               <h3 className="text-2xl font-bold mb-3">Privacy Score Calculator</h3>
               <p className="text-slate-400 mb-6">Get an instant assessment of your current privacy posture with actionable recommendations.</p>
-              <a href="/privacy-score" className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold group">
-                <span>Try Now</span>
-                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+             
+            <a href="/privacy-score" className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold group">
+             <span>Try Now</span>
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
             </div>
+
 
             <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300">
               <Eye className="w-10 h-10 text-cyan-400 mb-4" />
               <h3 className="text-2xl font-bold mb-3">Data Breach Checker</h3>
               <p className="text-slate-400 mb-6">Discover if your personal information has been compromised in known data breaches.</p>
-              <a
-                href="https://haveibeenpwned.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold group"
-              >
-                <span>Check Now</span>
-                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              
+<a
+  href="https://haveibeenpwned.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-semibold group"
+>
+  <span>Check Now</span>
+  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+</a>
+
+            
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stay Informed Section */}
+      {/* Content Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 backdrop-blur-sm p-12 rounded-3xl border border-cyan-500/30">
@@ -348,14 +354,11 @@ export default function CyberSecurityLanding() {
           <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
             Schedule a comprehensive privacy audit and receive a customized security roadmap for your organization.
           </p>
-          <a
-            href="/individual-consultation"
-            className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3"
-          >
+          <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3">
             <Calendar className="w-6 h-6" />
             <span>Book Your Privacy Audit</span>
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </button>
           <p className="text-slate-500 mt-6 text-sm">First 30 minutes complimentary • No obligation</p>
         </div>
       </section>
@@ -365,23 +368,25 @@ export default function CyberSecurityLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img
-                  src="/logo.png"
-                  alt="CyberLifeCoach"
-                  className="h-8 w-auto transition-all duration-300 hover:scale-110 hover:brightness-125"
-                />
-                <span className="font-bold text-lg transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
-                  CyberLifeCoach
-                </span>
-              </div>
+             
+<div className="flex items-center space-x-2 mb-4">
+  <img 
+    src="/logo.png" 
+    alt="CyberLifeCoach" 
+    className="h-8 w-auto transition-all duration-300 hover:scale-110 hover:brightness-125" 
+  />
+   <span className="font-bold text-lg transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
+              CyberLifeCoach
+            </span>
+</div>
+
               <p className="text-slate-500 text-sm">Expert cybersecurity consulting for the privacy-conscious.</p>
             </div>
-
+            
             <div>
               <h4 className="font-semibold mb-4 text-cyan-400">Services</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><a href="/individual-consultation" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
                 <li><a href="#" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
                 <li><a href="#" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
               </ul>
@@ -390,9 +395,9 @@ export default function CyberSecurityLanding() {
             <div>
               <h4 className="font-semibold mb-4 text-cyan-400">Resources</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
                 <li><a href="#" className="hover:text-cyan-400 transition-colors">Courses</a></li>
-                <li><a href="https://cyberlifecoach.substack.com/" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
               </ul>
             </div>
 
@@ -408,8 +413,7 @@ export default function CyberSecurityLanding() {
 
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
             <p className="text-slate-500 text-sm text-center">
-              &copy; 2026 CyberLifeCoach | A Veteran-Owned Business Committed to Your Digital Security | All rights reserved.
-            </p>
+             &copy; 2026 CyberLifeCoach | A Veteran-Owned Business Committed to Your Digital Security | All rights reserved. </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-cyan-400 transition-colors">Terms of Service</a>
@@ -417,7 +421,6 @@ export default function CyberSecurityLanding() {
           </div>
         </div>
       </footer>
-
     </div>
   );
 }

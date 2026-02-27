@@ -96,12 +96,8 @@ Last Updated: ${date}`;
       return;
     }
 
-    try {
-      await navigator.clipboard.writeText(output);
-      alert("Copied to clipboard.");
-    } catch (e) {
-      alert("Copy failed. Please copy manually.");
-    }
+    await navigator.clipboard.writeText(output);
+    alert("Copied to clipboard.");
   };
 
   const downloadFile = (filename, mimeType) => {
@@ -174,7 +170,7 @@ Last Updated: ${date}`;
       window.print();
       setTimeout(function() { window.close(); }, 300);
     };
-  <\/script>
+  </script>
 </body>
 </html>`;
 
