@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Monitor, Apple, Server, Globe, Network, Cloud, Building, FileText, ArrowLeft, ChevronRight, BookOpen, Lock, Wrench, CheckCircle, Zap, Download } from 'lucide-react';
+import { Shield, Monitor, Apple, Server, Globe, Network, Cloud, Building, FileText, ArrowLeft, ChevronRight, BookOpen, Lock, Wrench, CheckCircle, Zap, Download, Users } from 'lucide-react';
 
 export default function SecurityCenterHub() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -314,13 +314,19 @@ export default function SecurityCenterHub() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Help Implementing These Controls?</h2>
           <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-            Our security consultants can help you deploy, test, and maintain these security configurations across your entire infrastructure.
+            I can help you deploy, test, and maintain these security configurations across your entire infrastructure.
           </p>
-          <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3">
-            <Shield className="w-6 h-6" />
+          
+          <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3"
+          >
+            <Users className="w-6 h-6" />
             <span>Schedule a Consultation</span>
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>    
+
         </div>
       </section>
 

@@ -81,9 +81,14 @@ export default function IndividualConsultation() {
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Home</span>
               </a>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                Schedule Now
-              </button>
+
+              <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+               >
+              Schedule Now
+              </a>
             </div>
           </div>
         </div>
@@ -115,14 +120,20 @@ export default function IndividualConsultation() {
   onClick={() => window.location.href = '/personal-assessment'}
   className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 flex items-center space-x-2"
 >
-  <FileText className="w-5 h-5" />
-  <span>Start Free Assessment</span>
-  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-</button>
-            <button className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 flex items-center space-x-2">
-              <Calendar className="w-5 h-5" />
-              <span>Schedule Paid Consultation</span>
-            </button>
+           <FileText className="w-5 h-5" />
+           <span>Start Free Assessment</span>
+           <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+           </button>
+            
+            <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 flex items-center space-x-2"
+             >
+            <Calendar className="w-5 h-5" />
+            <span>Schedule Paid Consultation</span>
+            </a>
+          
           </div>
         </div>
       </section>
@@ -212,9 +223,13 @@ export default function IndividualConsultation() {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 rounded-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                Schedule Consultation
-              </button>
+              <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 rounded-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+>
+  Schedule Paid Consultation
+</a>
             </div>
           </div>
         </div>
@@ -413,7 +428,7 @@ export default function IndividualConsultation() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Shield className="w-6 h-6 text-cyan-400" />
-            <span className="font-bold text-lg">SecurePrivacy</span>
+            <span className="font-bold text-lg">CyberLifeCoach</span>
           </div>
           <p className="text-slate-500 text-sm text-center">
           &copy; 2026 CyberLifeCoach | A Veteran-Owned Business Committed to Your Digital Security | All rights reserved.</p>

@@ -231,8 +231,9 @@ export default function Privacy() {
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-3">•</span>
                 <div>
-                  By visiting this page on our website: <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline transition-colors">Contact Us</a>
+                  By visiting this page on our website: <a href="mailto:cyberlifecoach@proton.me"a className="text-cyan-400 hover:text-cyan-300 underline transition-colors">Contact Us</a>
                 </div>
+             
               </li>
             </ul>
           </div>
@@ -261,7 +262,7 @@ export default function Privacy() {
           <div className="flex justify-center space-x-6 mt-6">
             <a href="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors">Privacy Policy</a>
             <a href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors">About</a>
-            <a href="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a>
+            <a href="mailto:cyberlifecoach@proton.me" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a>
           </div>
         </div>
       </footer>

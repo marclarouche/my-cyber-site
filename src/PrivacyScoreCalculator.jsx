@@ -296,9 +296,15 @@ function Nav({ scrolled, isMenuOpen, setIsMenuOpen }) {
             <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
             <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
             <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-              Book Consultation
-            </button>
+            
+            <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+            >
+            Book Consultation
+            </a>
+
           </div>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-slate-300 hover:text-cyan-400">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -338,25 +344,25 @@ function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-cyan-400">Services</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
+              <li><a href="/individual-consultation" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
+              <li><a href="/small-business-consultation" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
+              <li><a href="/tools/threat-model" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4 text-cyan-400">Resources</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Courses</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
+              <li><a href="https://cyberlifecoach.pro/Tools/tools.html" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
+              <li><a href="https://cyberlifecoach.pro/courses.html" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Courses</a></li>
+              <li><a href="https://cyberlifecoach.substack.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4 text-cyan-400">Connect</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+              <li><a href="mailto:cyberlifecoach@proton.me" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+              <li><a href="http://www.linkedin.com/in/marcjlarouche" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
+              <li><a href="https://bsky.app/profile/cyberlifecoach.bsky.social" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Bluesky</a></li>
             </ul>
           </div>
         </div>

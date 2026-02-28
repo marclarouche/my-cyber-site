@@ -430,11 +430,17 @@ export default function ToolsHub() {
           <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
             Our security experts can build custom tools and solutions tailored to your specific business needs.
           </p>
-          <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3">
-            <Shield className="w-6 h-6" />
+          
+           <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3"
+            >
+           <Shield className="w-6 h-6" />
             <span>Schedule a Consultation</span>
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+           </a>
+      
         </div>
       </section>
 

@@ -66,7 +66,16 @@ export default function CyberSecurityLanding() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-
+<style>{`
+  @keyframes wobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  .group:hover .wobble-icon {
+    animation: wobble 0.4s ease-in-out;
+  }
+`}</style>
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,12 +99,14 @@ export default function CyberSecurityLanding() {
               <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
               <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
               <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-              <a
-                href="/individual-consultation"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
-              >
-                Book Consultation
-              </a>
+             
+             <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+>
+  Book Consultation
+</a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -243,8 +254,8 @@ export default function CyberSecurityLanding() {
                 rel="noopener noreferrer"
                 className="group bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
               >
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
-                  {product.icon}
+                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors wobble-icon">
+                 {product.icon}
                 </div>
                 <h3 className="text-lg font-bold mb-2">{product.title}</h3>
                 <p className="text-slate-400 text-sm mb-4">{product.description}</p>
@@ -309,7 +320,7 @@ export default function CyberSecurityLanding() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              <a href="https://cyberlifecoach.substack.com/" className="group bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10">
+              <a href="https://cyberlifecoach.substack.com/" target="_blank" rel="noopener noreferrer" className="group bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-gradient-to-br from-orange-500 to-red-600 p-3 rounded-lg">
                     <ExternalLink className="w-6 h-6" />
@@ -323,7 +334,7 @@ export default function CyberSecurityLanding() {
                 </div>
               </a>
 
-              <a href="https://www.youtube.com/channel/UC2Fw5LZuNautD9eVMPnHGSQ" className="group bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10">
+              <a href="https://www.youtube.com/channel/UC2Fw5LZuNautD9eVMPnHGSQ" target="_blank" rel="noopener noreferrer" className="group bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-gradient-to-br from-red-600 to-red-700 p-3 rounded-lg">
                     <ExternalLink className="w-6 h-6" />
@@ -382,8 +393,8 @@ export default function CyberSecurityLanding() {
               <h4 className="font-semibold mb-4 text-cyan-400">Services</h4>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="/individual-consultation" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
+                <li><a href="/small-business-consultation" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
+                <li><a href="/tools/threat-model" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
               </ul>
             </div>
 
@@ -391,17 +402,17 @@ export default function CyberSecurityLanding() {
               <h4 className="font-semibold mb-4 text-cyan-400">Resources</h4>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Courses</a></li>
-                <li><a href="https://cyberlifecoach.substack.com/" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
+                <li><a href="https://cyberlifecoach.pro/courses.html" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Courses</a></li>
+                <li><a href="https://cyberlifecoach.substack.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-cyan-400">Connect</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+              <li><a href="mailto:cyberlifecoach@proton.me" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+              <li><a href="http://www.linkedin.com/in/marcjlarouche" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
+              <li><a href="https://bsky.app/profile/cyberlifecoach.bsky.social" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Bluesky</a></li>
               </ul>
             </div>
           </div>
