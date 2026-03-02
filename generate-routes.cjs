@@ -1,8 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. Point this to your React pages folder
-const pagesDir = path.resolve(__dirname, 'src/pages');
+// 1. Point this to your src folder
+const srcDir = path.resolve(__dirname, 'src');
+
+// 2. All folders containing page components
+const foldersToScan = [
+  'pages',
+  'consultations',
+  'policy-generators',
+  'security-center',
+  'tools'
+];
 
 function getRoutes(dir, baseRoute = '') {
   let routes = [];
@@ -42,8 +51,19 @@ function getRoutes(dir, baseRoute = '') {
   return [...new Set(routes)];
 }
 
-const myRoutes = getRoutes(pagesDir);
-console.log('Final Cleaned Routes:', myRoutes);
+// 3. Scan all folders and combine routes
+let allRoutes = ['/'];
+
+foldersToScan.forEach((folder) => {
+  const folderPath = path.join(srcDir, folder);
+  const routes = getRoutes(folderPath);
+  allRoutes = allRoutes.concat(routes);
+});
+
+// 4. Remove duplicates across all folders
+allRoutes = [...new Set(allRoutes)];
+
+console.log('Final Cleaned Routes:', allRoutes);
 
 // Use this for .cjs files
-module.exports = myRoutes;
+module.exports = allRoutes;
