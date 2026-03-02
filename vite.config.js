@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
-const myDynamicRoutes = require('./generate-routes.js'); // Import the script
+import myDynamicRoutes from './generate-routes.js' // The file we just edited
 
 export default defineConfig({
   plugins: [
@@ -9,7 +9,10 @@ export default defineConfig({
     Sitemap({ 
       hostname: 'https://cyberlifecoach.pro',
       outDir: 'dist', 
-      dynamicRoutes: myDynamicRoutes // Automatically uses the 80+ detected routes
+      dynamicRoutes: myDynamicRoutes // This array is now handled by your script
     }),
   ],
+  build: {
+    outDir: 'dist',
+  }
 })
