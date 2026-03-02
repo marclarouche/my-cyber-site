@@ -73,9 +73,15 @@ export default function PrivacyStorageConsultation() {
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Home</span>
               </a>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                Book Session
-              </button>
+
+            <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+             target="_blank"
+             rel="noopener noreferrer"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+             >
+             Book Session
+             </a>
+
             </div>
           </div>
         </div>
@@ -249,12 +255,21 @@ export default function PrivacyStorageConsultation() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                  <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                    Book Home Setup
-                  </button>
-                  <button className="flex-1 px-6 py-3 rounded-lg font-semibold border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-800">
-                    Questionnaire
-                  </button>
+
+                  <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+                   >
+                   Book Home Setup
+                  </a>
+
+                  <button
+                  onClick={() => window.location.href = '/storage-setup-intake'}
+                  className="flex-1 px-6 py-3 rounded-lg font-semibold border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-800"
+                  >
+                  Questionnaire
+                 </button>
                 </div>
               </div>
             </div>
@@ -369,11 +384,20 @@ export default function PrivacyStorageConsultation() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                  <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                    Book Business Setup
-                  </button>
-                  <button className="flex-1 px-6 py-3 rounded-lg font-semibold border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-800">
-                    Questionnaire
+
+                  <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                 className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+                  >
+                  Book Business Setup
+                 </a>
+
+                  <button
+                  onClick={() => window.location.href = '/storage-setup-intake'}
+                  className="flex-1 px-6 py-3 rounded-lg font-semibold border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-800"
+                  >
+                  Questionnaire
                   </button>
                 </div>
               </div>
@@ -411,13 +435,22 @@ export default function PrivacyStorageConsultation() {
             Get professional guidance to set up your private storage solution with security and privacy built in from day one.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3">
-              <Calendar className="w-6 h-6" />
-              <span>Book Your Setup Session</span>
-            </button>
-            <button className="px-10 py-5 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 inline-flex items-center space-x-3">
-              <FileText className="w-6 h-6" />
-              <span>Fill Out Questionnaire</span>
+
+            <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3"
+            >
+            <Calendar className="w-6 h-6" />
+            <span>Book Your Setup Session</span>
+            </a>
+
+            <button
+            onClick={() => window.location.href = '/storage-setup-intake'}
+            className="px-10 py-5 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 inline-flex items-center space-x-3"
+             >
+            <FileText className="w-6 h-6" />
+             <span>Fill Out Questionnaire</span>
             </button>
           </div>
         </div>

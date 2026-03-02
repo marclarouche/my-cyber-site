@@ -119,7 +119,10 @@ import TOSSummarizer from './tools/TOSSummarizer';
 import AboutTOSSummarizer from './tools/AboutTOSSummarizer';
 import LogfileFinder from './tools/LogfileFinder';
 import AboutLogfileFinder from './tools/AboutLogfileFinder';
+import SecureSmartphoneChooser from './tools/SecureSmartphoneChooser';
+import AboutSecureSmartphoneChooser from './tools/AboutSecureSmartphoneChooser';
 import ToolsHub from './tools/ToolsHub';
+
 
 {/* Put nested Security Center Hub  routes BEFORE the parent Security Center hub route */}
 import SecurityCenterHub from './security-center/SecurityCenterHub';
@@ -286,6 +289,8 @@ export default function App() {
         <Route path="/tools/about-tos-summarizer" element={<AboutTOSSummarizer />} />
         <Route path="/tools/logfile-finder" element={<LogfileFinder />} />
         <Route path="/tools/about-logfile-finder" element={<AboutLogfileFinder />} />
+        <Route path="/tools/secure-smartphone-chooser" element={<SecureSmartphoneChooser />} />
+        <Route path="/tools/about-secure-smartphone-chooser" element={<AboutSecureSmartphoneChooser />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}

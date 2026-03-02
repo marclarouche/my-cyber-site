@@ -23,10 +23,11 @@ export default function AboutFirewallWin11() {
               </span>
             </a>
 
-            <a href="/security-center/firewall-hardening-hub" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Firewall Hardening Hub</span>
-            </a>
+                <a href="/security-center/firewall-hardening-hub" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
+                 <ArrowLeft className="w-4 h-4" />
+                <span>Back to Firewall Hardening Hub</span>
+               </a>
+
           </div>
         </div>
       </nav>

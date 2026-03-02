@@ -83,11 +83,16 @@ export default function SmallBusinessConsultation() {
               <a href="/" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Home</span>
-              </a>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                Book Session
-              </button>
-            </div>
+             </a>
+              <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+             >
+            Book Session
+            </a>
+
+           </div>
           </div>
         </div>
       </nav>
@@ -118,17 +123,17 @@ export default function SmallBusinessConsultation() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
-              onClick={() => setShowQuestionnaire(true)}
-              className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 flex items-center space-x-2"
-            >
-              <Calendar className="w-5 h-5" />
-              <span>Book This Session</span>
-            </button>
+  
+          <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 flex items-center space-x-2"
+          >
+          <Calendar className="w-5 h-5" />
+          <span>Book This Session</span>
+         </a>
 
-
-
-            <button 
+          <button 
               onClick={() => window.location.href = '/business-assessment-preview'}
               className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 flex items-center space-x-2">       
               <FileText className="w-5 h-5" />
@@ -260,9 +265,15 @@ export default function SmallBusinessConsultation() {
             <p className="text-sm text-slate-500 mb-8">Includes 30-day written plan and executive summary</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                Book Session Now
-              </button>
+  
+            <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+            >
+            Book Session Now
+            </a>
+
               <button className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900">
                 Try Free Preview First
               </button>

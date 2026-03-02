@@ -149,9 +149,8 @@ export default function About() {
             <a href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors">
               About Us
             </a>
-            <a href="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">
-              Contact
-            </a>
+            <a href="mailto:cyberlifecoach@proton.me" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a>
+            
           </div>
 
           <div className="flex items-center gap-6" aria-label="Social media">

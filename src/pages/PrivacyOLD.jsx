@@ -4,17 +4,6 @@ import { ArrowLeft, Mail, Shield, Lock, Eye, FileText } from 'lucide-react';
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <style>{`
-        @keyframes wobble {
-          0%, 100% { transform: rotate(0deg); }
-          25% { transform: rotate(-7deg); }
-          75% { transform: rotate(7deg); }
-        }
-        .group:hover .wobble-icon {
-          animation: wobble 0.4s ease-in-out;
-        }
-      `}</style>
-
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-slate-900/95 backdrop-blur-sm shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,9 +60,9 @@ export default function Privacy() {
         <div className="max-w-4xl mx-auto space-y-8">
           
           {/* Section 1 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <Eye className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <Eye className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">1. Information We Collect</h2>
             </div>
             <p className="text-slate-300 leading-relaxed mb-4">
@@ -102,9 +91,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 2 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <FileText className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <FileText className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">2. How We Use Information</h2>
             </div>
             <ul className="space-y-3 text-slate-400">
@@ -124,9 +113,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 3 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <Lock className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <Lock className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">3. Data Storage and Protection</h2>
             </div>
             <ul className="space-y-3 text-slate-400">
@@ -152,9 +141,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 4 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <Eye className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <Eye className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">4. Cookies, Local Storage, and Tracking</h2>
             </div>
             <ul className="space-y-3 text-slate-400">
@@ -180,9 +169,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 5 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <Shield className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <Shield className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">5. Your Rights</h2>
             </div>
             <p className="text-slate-400 leading-relaxed">
@@ -191,9 +180,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 6 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <FileText className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <FileText className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">6. Compliance with Regulations</h2>
             </div>
             <p className="text-slate-400 leading-relaxed">
@@ -202,9 +191,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 7 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <FileText className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <FileText className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">7. Changes to This Privacy Policy</h2>
             </div>
             <p className="text-slate-400 leading-relaxed">
@@ -213,9 +202,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 8 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 group">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <Shield className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <Shield className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-400">8. GPC Opt-Out</h2>
             </div>
             <p className="text-slate-400 leading-relaxed">
@@ -224,9 +213,9 @@ export default function Privacy() {
           </div>
 
           {/* Section 9 */}
-          <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/30 p-8 group">
+          <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/30 p-8">
             <div className="flex items-center space-x-3 mb-4">
-              <Mail className="w-6 h-6 text-cyan-400 wobble-icon" />
+              <Mail className="w-6 h-6 text-cyan-400" />
               <h2 className="text-2xl font-bold text-cyan-300">9. Contact Us</h2>
             </div>
             <p className="text-slate-300 leading-relaxed mb-4">
@@ -242,8 +231,9 @@ export default function Privacy() {
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-3">•</span>
                 <div>
-                  By visiting this page on our website: <a href="mailto:cyberlifecoach@proton.me" className="text-cyan-400 hover:text-cyan-300 underline transition-colors">Contact Us</a>
+                  By visiting this page on our website: <a href="mailto:cyberlifecoach@proton.me"a className="text-cyan-400 hover:text-cyan-300 underline transition-colors">Contact Us</a>
                 </div>
+             
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench,Smartphone } from 'lucide-react';
 
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -228,7 +228,15 @@ export default function ToolsHub() {
       category: "Analysis",
       link: "/tools/logfile-finder",
       aboutLink: "/tools/about-logfile-finder"
-    }
+    },
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "Secure Smartphone Chooser",
+      description: "Pick your threat focus and generate a best-fit smartphone recommendation with a personalized hardening checklist you can download.",
+      category: "Privacy",
+      link: "/tools/secure-smartphone-chooser",
+      aboutLink: "/tools/about-secure-smartphone-chooser"
+},
   ];
 
   const categories = ["All", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];

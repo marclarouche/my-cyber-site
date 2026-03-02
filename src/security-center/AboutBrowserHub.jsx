@@ -23,10 +23,13 @@ export default function AboutBrowserCenter() {
               </span>
             </a>
 
-            <a href="/security-center" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
+            <button
+              onClick={() => window.location.href = '/security-center'}
+              className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition-all duration-300 border border-slate-700 hover:border-cyan-500"
+              >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Security Center</span>
-            </a>
+              </button>
           </div>
         </div>
       </nav>

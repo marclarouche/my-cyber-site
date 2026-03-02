@@ -736,13 +736,16 @@ Generated locally on ${date}.`;
                 <p className="text-slate-300 mb-6 leading-relaxed">
                   Book the paid <a href="/small-business-consultation" className="text-cyan-400 hover:text-cyan-300 underline">Small Business Cyber QuickStart</a> to receive a complete score breakdown, a step-by-step plan, and a written summary. Guidance only, no uploads, no passwords, and no customer PII.
                 </p>
-                <a 
-                  href="/small-business-consultation"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
-                >
-                  <Calendar className="w-5 h-5" />
-                  <span>Book QuickStart</span>
+                
+                <a   href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+                 >
+                 <Calendar className="w-5 h-5" />
+                 <span>Book QuickStart</span>
                 </a>
+               
               </div>
 
               {/* Meta Info */}
@@ -752,14 +755,17 @@ Generated locally on ${date}.`;
 
               {/* Action Buttons Row 2 */}
               <div className="flex flex-wrap gap-4 justify-center">
-                <a 
-                  href="/small-business-consultation"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
-                >
-                  <Calendar className="w-5 h-5" />
-                  <span>Book QuickStart</span>
-                </a>
-                <button 
+               
+               <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+               >
+              <Calendar className="w-5 h-5" />
+              <span>Book QuickStart</span>
+               </a>
+
+               <button 
                   onClick={() => window.print()}
                   className="inline-flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900"
                 >
