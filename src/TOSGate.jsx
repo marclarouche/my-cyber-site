@@ -3,7 +3,7 @@
  * 
  * Drop this wrapper around your entire app in App.jsx (or your router root).
  * Any user who hasn't accepted the current TOS version will be shown the
- * TermsOfService page first — no matter which route they navigate to.
+ * TermsOfAgreement page first — no matter which route they navigate to.
  *
  * Usage in App.jsx:
  * 
@@ -19,7 +19,7 @@
  */
 
 import React, { useState } from 'react';
-import TermsOfService from './TermsOfService';
+import TermsOfAgreement from './TermsOfAgreement';
 
 // ── Configuration ─────────────────────────────────────────────────────────────
 // Bump this string whenever you update the TOS and want all users to re-accept.
@@ -45,7 +45,7 @@ export default function TOSGate({ children }) {
   // Lazy initialization runs synchronously during mount, so accepted is always true or false.
   // No loading spinner needed - this prevents any flash of content.
   if (!accepted) {
-    return <TermsOfService onAccept={() => setAccepted(true)} />;
+    return <TermsOfAgreement onAccept={() => setAccepted(true)} />;
   }
 
   return <>{children}</>;

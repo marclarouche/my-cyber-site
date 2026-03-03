@@ -4,7 +4,7 @@ import { Shield, FileText, Lock, AlertTriangle, UserCheck, RefreshCw, ChevronRig
 const TOS_VERSION = "1.0.1";
 const TOS_KEY = "clc_tos_acceptance";
 
-export default function TermsOfService({ onAccept }) {
+export default function TermsOfAgreement({ onAccept }) {
   const [checked, setChecked] = useState(false);
   const [accepted, setAccepted] = useState(false);
   const [previousAcceptance, setPreviousAcceptance] = useState(null);
@@ -296,7 +296,7 @@ export default function TermsOfService({ onAccept }) {
                     onChange={(e) => setChecked(e.target.checked)}
                   />
                   <span className="text-sm text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors">
-                    I have read and agree to the Terms of Service, and I understand that the tools process data locally in my browser and do not collect personal information unless I explicitly choose to email results.
+                    I have read and agree to the Terms of Agreement, and I understand that the tools process data locally in my browser and do not collect personal information unless I explicitly choose to email results.
                   </span>
                 </label>
               </div>

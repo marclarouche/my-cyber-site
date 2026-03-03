@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Lock, Eye, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Newspaper } from 'lucide-react';
+import { Shield, Lock, Eye, UserCheck, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Newspaper } from 'lucide-react';
+
 
 export default function CyberSecurityLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -185,20 +186,22 @@ export default function CyberSecurityLanding() {
             </a>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {[
-              { value: "500+", label: "Audits Completed" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "15+", label: "Years Experience" },
-              { value: "50+", label: "Enterprise Clients" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center group cursor-default">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">{stat.value}</div>
-                <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+  {[
+    { icon: <Shield className="w-8 h-8" />, label: "Veteran-Owned", sub: "Service-driven mission" },
+    { icon: <Lock className="w-8 h-8" />, label: "Privacy-First", sub: "No data collection" },
+    { icon: <UserCheck className="w-8 h-8" />, label: "Personalized", sub: "Not a generic checklist" },
+    { icon: <Eye className="w-8 h-8" />, label: "Real-World Focus", sub: "Practical, actionable advice" }
+  ].map((item, index) => (
+    <div key={index} className="text-center group cursor-default">
+      <div className="flex justify-center text-cyan-400 mb-3 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300">{item.icon}</div>
+      <div className="text-sm font-semibold text-slate-300 group-hover:text-cyan-300 transition-colors">{item.label}</div>
+      <div className="text-xs text-slate-500 mt-1">{item.sub}</div>
+    </div>
+  ))}
+</div>
+
+      </div>
       </section>
 
       {/* Services Section */}
