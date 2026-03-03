@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Privacy from './pages/Privacy';
+import Writing from './pages/Writing';
 import IndividualConsultation from './consultations/IndividualConsultation';
 import PersonalAssessmentPreview from './consultations/PersonalAssessmentPreview';
 import BusinessAssessmentPreview from './consultations/BusinessAssessmentPreview';
@@ -121,6 +122,8 @@ import LogfileFinder from './tools/LogfileFinder';
 import AboutLogfileFinder from './tools/AboutLogfileFinder';
 import SecureSmartphoneChooser from './tools/SecureSmartphoneChooser';
 import AboutSecureSmartphoneChooser from './tools/AboutSecureSmartphoneChooser';
+import AboutAISecurityAssessment from './tools/AboutAISecurityAssessment';
+import AISecurityAssessment from './tools/AISecurityAssessment';
 import ToolsHub from './tools/ToolsHub';
 
 
@@ -173,6 +176,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/writing" element={<Writing />} />
         <Route path="/personal-assessment" element={<PersonalAssessmentPreview />} />
         <Route path="/individual-consultation" element={<IndividualConsultation />} />
         <Route path="/small-business-consultation" element={<SmallBusinessConsultation />} />
@@ -291,6 +295,8 @@ export default function App() {
         <Route path="/tools/about-logfile-finder" element={<AboutLogfileFinder />} />
         <Route path="/tools/secure-smartphone-chooser" element={<SecureSmartphoneChooser />} />
         <Route path="/tools/about-secure-smartphone-chooser" element={<AboutSecureSmartphoneChooser />} />
+        <Route path="/tools/about-ai-security-assessment" element={<AboutAISecurityAssessment />} />
+        <Route path="/tools/ai-security-assessment" element={<AISecurityAssessment />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}

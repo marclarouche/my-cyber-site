@@ -99,6 +99,7 @@ export default function CyberSecurityLanding() {
               <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
               <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
               <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
+              <a href="/writing" className="text-slate-300 hover:text-cyan-400 transition-colors">Writing</a>
              
              <a href="https://calendly.com/cyberlifecoach-proton/new-meeting"
   target="_blank"

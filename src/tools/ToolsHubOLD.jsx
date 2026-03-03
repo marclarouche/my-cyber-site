@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench,Smartphone } from 'lucide-react';
 
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const tools = [
-    {
-      icon: <BrainCircuit className="w-8 h-8" />,
-      title: "AI Coworker Security Assessment",
-      description: "Evaluate your organization's AI deployment posture across governance, monitoring, red team readiness, and incident response. Get a maturity score and AI Delta Risk Score instantly.",
-      category: "AI Security",
-      link: "/tools/ai-security-assessment",
-      aboutLink: "/tools/about-ai-security-assessment",
-      isNew: true
-    },
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Header Analyzer",
@@ -248,7 +239,7 @@ export default function ToolsHub() {
 },
   ];
 
-  const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];
+  const categories = ["All", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredTools = tools.filter(tool => {
@@ -366,16 +357,9 @@ export default function ToolsHub() {
                     <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
                       {tool.icon}
                     </div>
-                    <div className="flex items-center gap-2">
-                      {tool.isNew && (
-                        <span className="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">
-                          New
-                        </span>
-                      )}
-                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
-                        {tool.category}
-                      </span>
-                    </div>
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                      {tool.category}
+                    </span>
                   </div>
 
                   {/* Title */}
@@ -441,7 +425,7 @@ export default function ToolsHub() {
                 <CheckCircle className="w-8 h-8 text-cyan-400" />
               </div>
               <h3 className="text-xl font-bold mb-3">Always Free</h3>
-              <p className="text-slate-400">All 29 tools are completely free with no hidden fees, premium tiers, or usage limits.</p>
+              <p className="text-slate-400">All 28 tools are completely free with no hidden fees, premium tiers, or usage limits.</p>
             </div>
           </div>
         </div>
