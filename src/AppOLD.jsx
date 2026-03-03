@@ -12,7 +12,15 @@ import StorageSetupIntake from './consultations/StorageSetupIntake';
 import PrivacyStorageConsultation from './consultations/PrivacyStorageConsultation';
 import PrivacyScoreCalculator from './PrivacyScoreCalculator';
 
-import TOSGate from './TOSGate';
+import TOSGate from './TOSGate';   // ← add this import
+
+export default function App() {
+  return (
+    <TOSGate>                      {/* ← wrap everything in TOSGate */}
+      <YourRouter />               {/* ← whatever is already here */}
+    </TOSGate>
+  );
+}
 
 {/* Put nested Business Policy hub routes BEFORE the parent Business Policy hub route */}
 import AcceptableUsePolicy from './policy-generators/AcceptableUsePolicy';
@@ -169,10 +177,10 @@ import AboutSMBAssessment from './security-center/AboutSMBAssessment';
 import Office365LockdownTool from './security-center/Office365LockdownTool';
 import AboutOffice365Tool from './security-center/AboutOffice365Tool';
 
+// Add this route:
 
 export default function App() {
   return (
-    <TOSGate>
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -342,6 +350,5 @@ export default function App() {
         <Route path="/security-center" element={<SecurityCenterHub />} />
       </Routes>
     </Router>
-    </TOSGate>
   );
 }
