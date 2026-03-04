@@ -126,6 +126,8 @@ import SecureSmartphoneChooser from './tools/SecureSmartphoneChooser';
 import AboutSecureSmartphoneChooser from './tools/AboutSecureSmartphoneChooser';
 import AboutAISecurityAssessment from './tools/AboutAISecurityAssessment';
 import AISecurityAssessment from './tools/AISecurityAssessment';
+import APIAuthorizationHealthCheck from './tools/APIAuthorizationHealthCheck';
+import AboutAPIAuthorizationHealthCheck from './tools/AboutAPIAuthorizationHealthCheck';
 import ToolsHub from './tools/ToolsHub';
 
 
@@ -299,6 +301,8 @@ export default function App() {
         <Route path="/tools/about-secure-smartphone-chooser" element={<AboutSecureSmartphoneChooser />} />
         <Route path="/tools/about-ai-security-assessment" element={<AboutAISecurityAssessment />} />
         <Route path="/tools/ai-security-assessment" element={<AISecurityAssessment />} />
+        <Route path="/tools/api-authorization-health-check" element={<APIAuthorizationHealthCheck />} />
+        <Route path="/tools/about-api-authorization-health-check" element={<AboutAPIAuthorizationHealthCheck />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}

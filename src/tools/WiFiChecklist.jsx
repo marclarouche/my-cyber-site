@@ -46,7 +46,7 @@ export default function WiFiChecklist() {
                 alt="CyberLifeCoach" 
                 className="h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:brightness-125" 
               />
-              <span className="font-bold text-xl transition-all duration-300 group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-300">
                 CyberLifeCoach
               </span>
             </a>

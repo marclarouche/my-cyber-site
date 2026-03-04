@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server } from 'lucide-react';
 
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,6 +12,15 @@ export default function ToolsHub() {
       category: "AI Security",
       link: "/tools/ai-security-assessment",
       aboutLink: "/tools/about-ai-security-assessment",
+      isNew: true
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: "API Authorization Health Check",
+      description: "Dual-layer BOLA risk assessment for IT leaders and developers. Get an executive risk summary, developer remediation findings, framework alignment, and downloadable reports.",
+      category: "Analysis",
+      link: "/tools/api-authorization-health-check",
+      aboutLink: "/tools/about-api-authorization-health-check",
       isNew: true
     },
     {

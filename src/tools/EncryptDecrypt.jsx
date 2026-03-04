@@ -336,31 +336,30 @@ export default function EncryptDecrypt() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
       {/* Navigation */}
-      <nav className="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/logo.png" 
-              alt="CyberLifeCoach" 
-              className="h-10 w-auto transition-all duration-300 hover:scale-110 hover:brightness-125" 
-            />
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Local Encryption Tool
-              </h1>
-              <p className="text-xs text-slate-400">Fully Offline • AES-256-GCM</p>
-            </div>
+      <nav className="fixed w-full z-50 bg-slate-900/95 backdrop-blur-sm shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            <a href="/" className="flex items-center space-x-3 group cursor-pointer">
+              <img
+                src="/logo.png"
+                alt="CyberLifeCoach"
+                className="h-10 w-auto group-hover:brightness-125 group-hover:scale-110 transition-all duration-300"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-300">
+                CyberLifeCoach
+              </span>
+            </a>
+            <a href="/tools" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Tools Hub</span>
+            </a>
           </div>
-          <a href="/tools" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Tools Hub</span>
-          </a>
         </div>
       </nav>
 
       {/* Compatibility Error */}
       {compatError && (
-        <div className="max-w-7xl mx-auto px-4 mt-6">
+        <div className="max-w-7xl mx-auto px-4 mt-24">
           <div className="bg-red-900/20 border border-red-500/50 rounded-xl p-4 flex items-center space-x-3">
             <AlertTriangle className="w-6 h-6 text-red-400 flex-shrink-0" />
             <p className="text-red-200">{compatError}</p>
@@ -369,7 +368,7 @@ export default function EncryptDecrypt() {
       )}
 
       {/* Privacy Notice */}
-      <section className="max-w-7xl mx-auto px-4 py-8">
+      <section className="max-w-7xl mx-auto px-4 py-8 pt-32">
         <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/30 rounded-xl p-6">
           <div className="flex items-start space-x-4">
             <Shield className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
