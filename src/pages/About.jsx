@@ -74,13 +74,18 @@ export default function About() {
               <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-8 max-w-5xl mx-auto">
                 {/* Left panel */}
                 <div className="bg-slate-900/70 border border-cyan-500/20 rounded-2xl overflow-hidden shadow-xl shadow-black/20">
-                  <div className="bg-white/90 border-b border-cyan-500/20 p-5 flex justify-center items-center min-h-[220px]">
-                    <img
-                      src="/marc.png"
-                      alt="Marc photo"
-                      className="max-w-[220px] w-full h-auto rounded-xl object-cover"
-                    />
-                  </div>
+                 
+
+<div className="relative overflow-hidden" style={{ height: "320px" }}>
+  <img
+    src="/marc.png"
+    alt="Marc photo"
+    className="w-full h-full object-cover object-top"
+  />
+  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900/90 to-transparent" />
+</div>
+
+
                   <div className="p-6">
                     <p className="text-slate-400 m-0">Clear, practical guidance. No panic. No gimmicks.</p>
                   </div>
