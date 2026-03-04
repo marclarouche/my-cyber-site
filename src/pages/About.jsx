@@ -105,9 +105,11 @@ export default function About() {
                     <h3 className="text-cyan-400 font-bold text-lg mb-2">Education & Certifications</h3>
                     <ul className="list-disc pl-5 text-slate-400 space-y-2 mb-6">
                       <li>Bachelor of Science, University of Michigan</li>
-                      <li>Master’s in Business Administration, Knowledge Management Systems, California University</li>
+                      <li>Master’s in Business Administration, Knowledge Management Systems, California Intercontinental University</li>
                       <li>Certified Information Systems Security Professional (CISSP)</li>
-                      <li>Certified Ethical Hacker (CEHv9)</li>
+                      <li>Certified Ethical Hacker (CEHv9) EC-Council</li>
+                      <li>Certified Blockchain Business Foundations, BTA</li>
+                      <li>Certified Technical Writer, California State University Dominguez Hills</li>
                     </ul>
 
                     <h3 className="text-cyan-400 font-bold text-lg mb-2">Hobbies & Interests</h3>
