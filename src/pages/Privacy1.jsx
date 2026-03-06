@@ -95,7 +95,7 @@ export default function Privacy() {
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-3 mt-1">•</span>
                 <div>
-                  <strong className="text-slate-300">Web server logs (limited).</strong> Our web server receives standard connection metadata, including your IP address and requested URL. These logs are used for basic operations and security, and are <strong className="text-cyan-300">typically retained for about four days (96 hours)</strong>.
+                  <strong className="text-slate-300">Web server logs (limited).</strong> Our web server receives standard connection metadata, including your IP address and requested URL. These logs are used for basic operations and security, and are <strong className="text-cyan-300">purged every 24 hours</strong>.
                 </div>
               </li>
             </ul>
@@ -139,7 +139,7 @@ export default function Privacy() {
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-3 mt-1">•</span>
                 <div>
-                  <strong className="text-slate-300">Server logs.</strong> Minimal connection logs that include IP addresses are typically retained for about four days (96 hours) and then automatically purged.
+                  <strong className="text-slate-300">Server logs.</strong> Minimal connection logs that include IP addresses are retained for up to 24 hours and then automatically purged.
                 </div>
               </li>
               <li className="flex items-start">
@@ -186,7 +186,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-cyan-400">5. Your Rights</h2>
             </div>
             <p className="text-slate-400 leading-relaxed">
-              Depending on your location, you may have rights to access, correct, delete, or object to processing of personal data. Because we do not collect personal identifiers and retain only short-lived server logs, there is typically no account or profile for us to access. You can still contact us with questions, and we will assist where applicable. Server logs containing IP addresses are automatically deleted within about four days (96 hours).
+              Depending on your location, you may have rights to access, correct, delete, or object to processing of personal data. Because we do not collect personal identifiers and retain only short-lived server logs, there is typically no account or profile for us to access. You can still contact us with questions, and we will assist where applicable. Server logs containing IP addresses are automatically deleted within 24 hours.
             </p>
           </div>
 
@@ -197,7 +197,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-cyan-400">6. Compliance with Regulations</h2>
             </div>
             <p className="text-slate-400 leading-relaxed">
-              We align our practices with applicable data protection laws, including the GDPR and the CCPA/CPRA. Our approach minimizes data collection by processing tool inputs locally, avoiding analytics and tracking cookies, and limiting server logs with a retention period of about four days (96 hours).
+              We align our practices with applicable data protection laws, including the GDPR and the CCPA/CPRA. Our approach minimizes data collection by processing tool inputs locally, avoiding analytics and tracking cookies, and limiting server logs with a 24-hour retention period.
             </p>
           </div>
 
