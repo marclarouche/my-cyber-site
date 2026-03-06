@@ -4,7 +4,7 @@
 
 const FEED_URL = "https://cyberlifecoach.substack.com/feed";
 
-exports.handler = async function () {
+export const handler = async function () {
   try {
     const response = await fetch(FEED_URL, {
       headers: {
@@ -16,6 +16,7 @@ exports.handler = async function () {
     if (!response.ok) {
       return {
         statusCode: 502,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ error: "Failed to fetch feed from Substack" }),
       };
     }
@@ -26,14 +27,15 @@ exports.handler = async function () {
       statusCode: 200,
       headers: {
         "Content-Type": "application/xml",
-        "Cache-Control": "public, s-maxage=300", // cache for 5 minutes
+        "Cache-Control": "public, s-maxage=300",
         "Access-Control-Allow-Origin": "*",
       },
       body: xml,
     };
-  } catch (err) {
+  } catch {
     return {
       statusCode: 500,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Internal error fetching feed" }),
     };
   }
