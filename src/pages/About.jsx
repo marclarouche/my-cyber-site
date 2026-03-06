@@ -78,7 +78,7 @@ export default function About() {
 
 <div className="relative overflow-hidden" style={{ height: "320px" }}>
   <img
-    src="/marc.png"
+    src="/marc.webp"
     alt="Marc photo"
     className="w-full h-full object-cover object-top"
   />
