@@ -27,6 +27,40 @@ export default function URLRiskReview() {
     "suspended", "locked", "billing", "payment", "credential", "password"
   ];
 
+  // Legitimate hosts frequently abused to host malware/phishing
+  const ABUSED_LEGITIMATE_HOSTS = new Set([
+    "storage.googleapis.com",
+    "googleapis.com",
+    "s3.amazonaws.com",
+    "amazonaws.com",
+    "blob.core.windows.net",
+    "azurewebsites.net",
+    "firebasestorage.googleapis.com",
+    "web.app",
+    "firebaseapp.com",
+    "pages.dev",
+    "workers.dev",
+    "netlify.app",
+    "vercel.app",
+    "github.io",
+    "raw.githubusercontent.com",
+    "onedrive.live.com",
+    "sharepoint.com",
+    "1drv.ms",
+    "drive.google.com",
+    "docs.google.com",
+    "sites.google.com",
+    "glitch.me",
+    "replit.dev",
+    "render.com",
+    "surge.sh",
+    "weebly.com",
+    "wixsite.com",
+    "squarespace.com",
+    "typeform.com",
+    "notion.site",
+  ]);
+
   // Helper functions
   const levenshteinDistance = (a, b) => {
     const m = a.length, n = b.length;
@@ -51,6 +85,28 @@ export default function URLRiskReview() {
     const hasLatin = latin.test(str);
     const hasCyrillic = cyrillic.test(str);
     return hasLatin && hasCyrillic;
+  };
+
+  // Detect dot-separated hex encoding e.g. 6f.64.3d.31.73.79
+  const containsHexEncoding = (str) => {
+    return /(?:[0-9a-fA-F]{2}\.){2,}[0-9a-fA-F]{2}/.test(str);
+  };
+
+  // Detect suspicious Base64 strings (20+ chars, mixed case + digits)
+  const containsSuspiciousBase64 = (str) => {
+    const b64Pattern = /[A-Za-z0-9+\/]{20,}={0,2}/g;
+    const matches = str.match(b64Pattern);
+    if (!matches) return false;
+    return matches.some(m => /[A-Z]/.test(m) && /[a-z]/.test(m) && /[0-9]/.test(m));
+  };
+
+  // Check if host is a known legitimate platform abused for malware hosting
+  const isAbusedLegitimateHost = (host) => {
+    const h = host.toLowerCase();
+    if (ABUSED_LEGITIMATE_HOSTS.has(h)) return true;
+    return Array.from(ABUSED_LEGITIMATE_HOSTS).some(abused =>
+      h === abused || h.endsWith('.' + abused)
+    );
   };
 
   const parseUrlInfo = (input) => {
@@ -169,6 +225,17 @@ export default function URLRiskReview() {
     
     // Check for non-HTTP schemes
     const nonHttp = !['http', 'https'].includes(parsed.scheme);
+
+    // Check for abused legitimate hosting platforms
+    const abusedHost = isAbusedLegitimateHost(parsed.host);
+
+    // Check for hex-encoded segments in path or fragment
+    const fullUrlWithFragment = parsed.href;
+    const hasHexEncoding = containsHexEncoding(fullUrlWithFragment);
+
+    // Check for suspicious Base64 in path/query/fragment
+    const pathAndQuery = (parsed.path || '') + (parsed.query || '') + (fullUrlWithFragment.includes('#') ? fullUrlWithFragment.split('#')[1] : '');
+    const hasBase64 = containsSuspiciousBase64(pathAndQuery);
     
     // Add signals
     checkSignal(nonHttp, 'non-http', `Non-HTTP scheme: ${parsed.scheme}.`);
@@ -186,6 +253,9 @@ export default function URLRiskReview() {
     checkSignal(suspiciousTLD, 'tld', `Suspicious TLD: .${parsed.tld}.`);
     checkSignal(keywordHits.length, 'keywords', 'Suspicious keyword: ' + keywordHits.join(', ') + '.');
     checkSignal(looksLikeBrand, 'brand-lookalike', `Host contains or resembles "${closestBrand}"${brandDistance > 0 ? ` (distance ${brandDistance})` : ' but is not the official domain'}.`);
+    checkSignal(abusedHost, 'abused-host', `"${parsed.host}" is a legitimate platform frequently abused to host phishing and malware. Treat with extra caution even if the domain looks trusted.`);
+    checkSignal(hasHexEncoding, 'hex-encoding', 'URL contains dot-separated hex-encoded segments. This obfuscation technique is used to hide malicious payloads from scanners.');
+    checkSignal(hasBase64, 'base64-payload', 'URL contains a suspicious Base64-encoded string. Attackers use Base64 to conceal destination URLs, credentials, or commands.');
 
     return {
       signals,
@@ -204,7 +274,10 @@ export default function URLRiskReview() {
       hasUserInfo,
       hasAt,
       uncommonPort,
-      suspiciousTLD
+      suspiciousTLD,
+      abusedHost,
+      hasHexEncoding,
+      hasBase64
     };
   };
 
@@ -226,6 +299,9 @@ export default function URLRiskReview() {
     add(signalsObj.suspiciousTLD, 8);
     add(signalsObj.keywordHits.length > 0, Math.min(12, signalsObj.keywordHits.length * 4));
     add(signalsObj.looksLikeBrand, 12);
+    add(signalsObj.abusedHost, 20);
+    add(signalsObj.hasHexEncoding, 25);
+    add(signalsObj.hasBase64, 20);
     
     if (score > 100) score = 100;
 
@@ -330,7 +406,10 @@ export default function URLRiskReview() {
     'tld': 'Suspicious TLD',
     'keywords': 'Suspicious keywords',
     'brand-lookalike': 'Brand look-alike',
-    'non-http': 'Non-HTTP scheme'
+    'non-http': 'Non-HTTP scheme',
+    'abused-host': 'Abused legitimate platform',
+    'hex-encoding': 'Hex-encoded payload',
+    'base64-payload': 'Base64-encoded payload'
   };
 
   const getNextSteps = (verdict) => {
