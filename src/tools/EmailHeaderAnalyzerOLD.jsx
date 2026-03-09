@@ -508,41 +508,6 @@ Authentication-Results: mx.google.com; spf=softfail (google.com: domain of trans
         </div>
       </section>
 
-      {/* Legal Disclaimer */}
-      <section className="px-4 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-cyan-400 mb-3">Legal Disclaimer and Responsible Use</h3>
-            <p className="text-sm text-slate-500 mb-4">Please read before using the Email Header Analyzer.</p>
-            <div className="space-y-3 text-sm text-slate-400 leading-relaxed">
-              <p>
-                The Email Header Analyzer has been developed and tested by CyberLifeCoach with careful attention to accuracy
-                and validation. While the tool produces reliable results for common header formats, this is a
-                <strong className="text-slate-300"> static analysis only</strong> — it reads the text you paste and applies
-                heuristic rules. It does not connect to external services, verify DNS records live, query IP reputation
-                databases, or confirm whether a sending server is currently blocklisted.
-              </p>
-              <p>
-                A static score of "Low risk" does not mean an email is safe. Headers can be forged or crafted to pass
-                common checks while still delivering malicious content. Conversely, a "Suspicious" score may flag
-                legitimate bulk senders, forwarded messages, or third-party mailing platforms that legitimately split
-                envelope and header domains. This tool is designed to assist with investigation and learning — it is
-                not a replacement for live threat intelligence, a trained security analyst, or a dedicated email
-                security platform.
-              </p>
-              <p>
-                Always confirm legitimacy through multiple methods: verify the sending domain via official channels,
-                inspect links before clicking, and treat unexpected requests for credentials, payments, or urgent action
-                with heightened suspicion regardless of this tool's output. All analysis happens entirely in your
-                browser. No headers or results are transmitted to any server. CyberLifeCoach and its affiliates make
-                no warranties, expressed or implied, regarding completeness or accuracy, and are not liable for any
-                action taken or decision made based solely on the output of this tool.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-800 py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -558,8 +523,7 @@ Authentication-Results: mx.google.com; spf=softfail (google.com: domain of trans
           </div>
           <div className="text-slate-500 text-sm">
             <p>&copy; {new Date().getFullYear()} CyberLifeCoach</p>
-            <p className="text-slate-600">This static analyzer does not perform live DNS lookups or IP reputation checks. Treat results as a starting point, not a verdict.</p>
-            <p>All rights reserved.</p>
+            <p className="text-slate-600">Analysis happens entirely in your browser. No data is sent anywhere.</p>
           </div>
         </div>
       </footer>

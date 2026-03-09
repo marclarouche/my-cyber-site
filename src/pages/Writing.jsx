@@ -1,21 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ExternalLink, ChevronRight, BookOpen, ArrowLeft } from 'lucide-react';
 
-// Calls our own Netlify function — no third-party proxy, no CORS issues
-const FEED_URL = "/.netlify/functions/substack-feed";
-
-function parseRSS(xmlText) {
-  const parser = new DOMParser();
-  const xml = parser.parseFromString(xmlText, "text/xml");
-  const items = Array.from(xml.querySelectorAll("item"));
-  return items.map((item) => ({
-    title: item.querySelector("title")?.textContent || "",
-    link: item.querySelector("link")?.textContent || "",
-    pubDate: item.querySelector("pubDate")?.textContent || "",
-    description: item.querySelector("description")?.textContent || "",
-    guid: item.querySelector("guid")?.textContent || "",
-  }));
-}
+const RSS_URL =
+  "https://api.rss2json.com/v1/api.json?rss_url=https://cyberlifecoach.substack.com/feed";
 
 function ArticleCard({ article, index }) {
   const excerpt = article.description
@@ -66,19 +53,16 @@ export default function Writing() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(FEED_URL)
-      .then((res) => {
-        if (!res.ok) throw new Error("Feed request failed");
-        return res.text();
+    fetch(RSS_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "ok") {
+          setArticles(data.items);
+        } else {
+          setError("Could not load articles.");
+        }
       })
-      .then((xml) => {
-        const parsed = parseRSS(xml);
-        if (parsed.length === 0) throw new Error("No articles found");
-        setArticles(parsed);
-      })
-      .catch(() =>
-        setError("Could not load articles. Visit Substack directly to read the latest posts.")
-      )
+      .catch(() => setError("Could not load articles."))
       .finally(() => setLoading(false));
   }, []);
 
@@ -91,6 +75,7 @@ export default function Writing() {
         }
       `}</style>
 
+      {/* Navigation */}
       <nav className="fixed w-full z-50 bg-slate-900/95 backdrop-blur-sm shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
@@ -112,6 +97,7 @@ export default function Writing() {
         </div>
       </nav>
 
+      {/* Hero */}
       <section className="relative pt-32 pb-16 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/20 to-transparent pointer-events-none" />
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -135,6 +121,7 @@ export default function Writing() {
         </div>
       </section>
 
+      {/* Articles */}
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
           {loading && (
@@ -161,6 +148,7 @@ export default function Writing() {
             ))}
           </div>
 
+          {/* CTA */}
           {!loading && !error && (
             <div className="mt-12 text-center" style={{ animation: "fadeSlideUp 0.7s ease 0.4s both" }}>
               <a
