@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server, ClipboardList } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server } from 'lucide-react';
 
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -254,16 +254,7 @@ export default function ToolsHub() {
       category: "Privacy",
       link: "/tools/secure-smartphone-chooser",
       aboutLink: "/tools/about-secure-smartphone-chooser"
-    },
-    {
-      icon: <ClipboardList className="w-8 h-8" />,
-      title: "Personal Privacy Playbook Generator",
-      description: "Answer 13 questions about your devices, habits, and risk level. Get a personalized, prioritized 4-week privacy action plan with a downloadable report — built for your situation, not a generic checklist.",
-      category: "Privacy",
-      link: "/tools/privacy-playbook-generator",
-      aboutLink: "/tools/about-privacy-playbook-generator",
-      isNew: true
-    },
+},
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];
@@ -459,7 +450,7 @@ export default function ToolsHub() {
                 <CheckCircle className="w-8 h-8 text-cyan-400" />
               </div>
               <h3 className="text-xl font-bold mb-3">Always Free</h3>
-              <p className="text-slate-400">All 30 tools are completely free with no hidden fees, premium tiers, or usage limits.</p>
+              <p className="text-slate-400">All 29 tools are completely free with no hidden fees, premium tiers, or usage limits.</p>
             </div>
           </div>
         </div>

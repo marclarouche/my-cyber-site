@@ -4,6 +4,10 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Privacy from './pages/Privacy';
 import Writing from './pages/Writing';
+import AdminSetup from './pages/AdminSetup';
+import CloudflareSetup from './pages/CloudflareSetup';
+import SocialAutomation from './pages/SocialAutomation';
+<Route path="/clc-ops/social-automation" element={<SocialAutomation />} />
 import IndividualConsultation from './consultations/IndividualConsultation';
 import PersonalAssessmentPreview from './consultations/PersonalAssessmentPreview';
 import BusinessAssessmentPreview from './consultations/BusinessAssessmentPreview';
@@ -116,6 +120,8 @@ import AWSCloudFormation from './tools/AWSCloudFormation';
 import AboutAWSCloudFormation from './tools/AboutAWSCloudFormation';
 import PasswordBreachChecker from './tools/PasswordBreachChecker';
 import AboutPasswordBreachChecker from './tools/AboutPasswordBreachChecker';
+import AboutPrivacyPlaybookGenerator from './tools/AboutPrivacyPlaybookGenerator';
+import PrivacyPlaybookGenerator from './tools/PrivacyPlaybookGenerator';
 import FingerPrintAuditor from './tools/FingerPrintAuditor';
 import AboutFingerPrintAuditor from './tools/AboutFingerPrintAuditor';
 import TOSSummarizer from './tools/TOSSummarizer';
@@ -178,6 +184,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/clc-ops/social-setup" element={<AdminSetup />} />
+        <Route path="/clc-ops/social-automation" element={<SocialAutomation />} />
+        <Route path="/clc-ops/cloudflare-setup" element={<CloudflareSetup />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/writing" element={<Writing />} />
@@ -291,6 +300,8 @@ export default function App() {
         <Route path="/tools/about-aws-cloud-formation" element={<AboutAWSCloudFormation />} />
         <Route path="/tools/password-breach-checker" element={<PasswordBreachChecker />} />
         <Route path="/tools/about-password-breach-checker" element={<AboutPasswordBreachChecker />} />
+        <Route path="/tools/about-privacy-playbook-generator" element={<AboutPrivacyPlaybookGenerator />} />
+        <Route path="/tools/privacy-playbook-generator" element={<PrivacyPlaybookGenerator />} />
         <Route path="/tools/finger-print-auditor" element={<FingerPrintAuditor />} />
         <Route path="/tools/about-finger-print-auditor" element={<AboutFingerPrintAuditor />} />
         <Route path="/tools/tos-summarizer" element={<TOSSummarizer />} />
