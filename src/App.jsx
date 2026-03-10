@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Privacy from './pages/Privacy';
 import Writing from './pages/Writing';
+import MissionControl from './pages/MissionControl';
 import AdminSetup from './pages/AdminSetup';
 import CloudflareSetup from './pages/CloudflareSetup';
 import SocialAutomation from './pages/SocialAutomation';
@@ -184,6 +185,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/clc-ops" element={<MissionControl />} />
         <Route path="/clc-ops/social-setup" element={<AdminSetup />} />
         <Route path="/clc-ops/social-automation" element={<SocialAutomation />} />
         <Route path="/clc-ops/cloudflare-setup" element={<CloudflareSetup />} />
