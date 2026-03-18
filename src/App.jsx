@@ -135,6 +135,8 @@ import AboutAISecurityAssessment from './tools/AboutAISecurityAssessment';
 import AISecurityAssessment from './tools/AISecurityAssessment';
 import APIAuthorizationHealthCheck from './tools/APIAuthorizationHealthCheck';
 import AboutAPIAuthorizationHealthCheck from './tools/AboutAPIAuthorizationHealthCheck';
+import DigitalFootprintScanner from './tools/DigitalFootprintScanner';
+import AboutDigitalFootprintScanner from './tools/AboutDigitalFootprintScanner';
 import ToolsHub from './tools/ToolsHub';
 
 
@@ -316,6 +318,8 @@ export default function App() {
         <Route path="/tools/ai-security-assessment" element={<AISecurityAssessment />} />
         <Route path="/tools/api-authorization-health-check" element={<APIAuthorizationHealthCheck />} />
         <Route path="/tools/about-api-authorization-health-check" element={<AboutAPIAuthorizationHealthCheck />} />
+        <Route path="/tools/digital-footprint-scanner" element={<DigitalFootprintScanner />} />
+        <Route path="/tools/about-digital-footprint-scanner" element={<AboutDigitalFootprintScanner />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}

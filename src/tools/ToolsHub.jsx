@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server, ClipboardList } from 'lucide-react';
-
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server, ClipboardList, Footprints } from 'lucide-react';
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -264,17 +263,28 @@ export default function ToolsHub() {
       aboutLink: "/tools/about-privacy-playbook-generator",
       isNew: true
     },
+    {
+     icon: <Footprints className="w-8 h-8" />,
+     title: "Digital Footprint Scanner",
+     description: "Discover what's already out there about you — data breaches, broker exposure, username linkability, and risky habits — scored into a single privacy report with prioritised action steps.",
+     category: "Privacy",
+     link: "/tools/digital-footprint-scanner",
+     aboutLink: "/tools/about-digital-footprint-scanner",
+     isNew: true
+},
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredTools = tools.filter(tool => {
+const filteredTools = tools
+  .filter(tool => {
     const matchesSearch = tool.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "All" || tool.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  })
+  .sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
