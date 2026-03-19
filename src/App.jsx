@@ -139,6 +139,8 @@ import DigitalFootprintScanner from './tools/DigitalFootprintScanner';
 import AboutDigitalFootprintScanner from './tools/AboutDigitalFootprintScanner';
 import GovernmentImpersonationScamDetector from './tools/GovernmentImpersonationScamDetector';
 import AboutGovernmentImpersonationScamDetector from './tools/AboutGovernmentImpersonationScamDetector';
+import TravelDataExposureAssessor from './tools/TravelDataExposureAssessor';
+import AboutTravelDataExposureAssessor from './tools/AboutTravelDataExposureAssessor';
 import ToolsHub from './tools/ToolsHub';
 
 
@@ -324,6 +326,8 @@ export default function App() {
         <Route path="/tools/about-digital-footprint-scanner" element={<AboutDigitalFootprintScanner />} />
         <Route path="/tools/government-impersonation-scam-detector" element={<GovernmentImpersonationScamDetector />} />
         <Route path="/tools/about-government-impersonation-scam-detector" element={<AboutGovernmentImpersonationScamDetector />} />
+        <Route path="/tools/travel-data-exposure-assessor" element={<TravelDataExposureAssessor />} />
+        <Route path="/tools/about-travel-data-exposure-assessor" element={<AboutTravelDataExposureAssessor />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}

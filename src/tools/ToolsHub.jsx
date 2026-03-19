@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server, ShieldAlert, ClipboardList, Footprints } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Plane, Server, ShieldAlert, ClipboardList, Footprints } from 'lucide-react';
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -281,6 +281,15 @@ export default function ToolsHub() {
     aboutLink: "/tools/about-government-impersonation-scam-detector",
     isNew: true
     },
+    {
+     icon: <Plane className="w-8 h-8" />,
+     title: "Travel Data Exposure Assessor",
+     description: "Input your booking habits, loyalty programs, and payment methods to get a personalized Travel Exposure Risk Score — and see exactly which data pipelines have you in their crosshairs.",
+     category: "Privacy",
+     link: "/tools/travel-data-exposure-assessor",
+     aboutLink: "/tools/about-travel-data-exposure-assessor",
+     isNew: true
+    }
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];

@@ -1,3 +1,156 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ============================================================
+   CYBERLIFECOACH — GLOBAL PRINT STYLES
+   ============================================================ */
+
+@media print {
+
+  /* ── Page setup ── */
+  @page {
+    size: A4;
+    margin: 2cm 1.5cm 2cm 1.5cm;
+  }
+
+  /* ── Force white backgrounds and dark text on EVERYTHING ── */
+  html * {
+    background: white !important;
+    background-color: white !important;
+    background-image: none !important;
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: #cccccc !important;
+  }
+
+  /* ── Hide fixed nav — it stamps itself on every printed page ── */
+  nav {
+    display: none !important;
+  }
+
+  /* ── Hide footer, buttons, animated blobs ── */
+  footer,
+  button,
+  .animate-pulse,
+  .blur-3xl,
+  .filter {
+    display: none !important;
+  }
+
+  /* ── Remove the padding-top that compensates for the fixed nav ── */
+  section:first-of-type,
+  .pt-32 {
+    padding-top: 1rem !important;
+    margin-top: 0 !important;
+  }
+
+  /* ── Gradient-clipped headings: force solid teal ── */
+  .bg-clip-text,
+  [class*="bg-clip-text"] {
+    -webkit-text-fill-color: #0e7490 !important;
+    color: #0e7490 !important;
+    background: transparent !important;
+  }
+
+  /* ── Section card boxes ── */
+  .rounded-2xl,
+  .rounded-xl {
+    border: 1px solid #cccccc !important;
+    border-radius: 6px !important;
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ── Badge pills in hero ── */
+  .rounded-full {
+    border: 1px solid #cccccc !important;
+  }
+
+  /* ── Body text ── */
+  p, li, span, td, th, label {
+    color: #222222 !important;
+    -webkit-text-fill-color: #222222 !important;
+  }
+
+  /* ── Headings ── */
+  h1, h2, h3, h4, h5, h6 {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+  }
+
+  /* ── Section h2 — teal so they stand out ── */
+  h2 {
+    color: #0e7490 !important;
+    -webkit-text-fill-color: #0e7490 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* ── Links ── */
+  a {
+    color: #0e7490 !important;
+    -webkit-text-fill-color: #0e7490 !important;
+    text-decoration: underline !important;
+  }
+
+  /* ── Hide styled CTA anchor-buttons ── */
+  a[class*="from-cyan"],
+  a[class*="bg-gradient"] {
+    display: none !important;
+  }
+
+  /* ── Tables ── */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 0.8rem !important;
+  }
+  th {
+    color: #0e7490 !important;
+    -webkit-text-fill-color: #0e7490 !important;
+    border-bottom: 2px solid #0e7490 !important;
+    padding: 6px 8px !important;
+    text-align: left !important;
+    background: white !important;
+  }
+  td {
+    border-bottom: 1px solid #dddddd !important;
+    padding: 6px 8px !important;
+  }
+  tr:last-child td {
+    border-bottom: none !important;
+  }
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ── Risk / status colour overrides ── */
+  .text-green-400  { color: #166534 !important; -webkit-text-fill-color: #166534 !important; }
+  .text-yellow-400 { color: #854d0e !important; -webkit-text-fill-color: #854d0e !important; }
+  .text-amber-400  { color: #92400e !important; -webkit-text-fill-color: #92400e !important; }
+  .text-orange-400 { color: #9a3412 !important; -webkit-text-fill-color: #9a3412 !important; }
+  .text-red-400    { color: #991b1b !important; -webkit-text-fill-color: #991b1b !important; }
+  .text-cyan-400   { color: #0e7490 !important; -webkit-text-fill-color: #0e7490 !important; }
+  .text-blue-400   { color: #1e40af !important; -webkit-text-fill-color: #1e40af !important; }
+
+  /* ── SVG icons ── */
+  svg {
+    color: #0e7490 !important;
+    stroke: #0e7490 !important;
+    fill: none;
+  }
+
+  /* ── Page break helpers ── */
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}
