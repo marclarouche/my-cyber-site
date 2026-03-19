@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server, ClipboardList, Footprints } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Server, ShieldAlert, ClipboardList, Footprints } from 'lucide-react';
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -271,7 +271,16 @@ export default function ToolsHub() {
      link: "/tools/digital-footprint-scanner",
      aboutLink: "/tools/about-digital-footprint-scanner",
      isNew: true
-},
+    },
+    {
+    icon: <ShieldAlert className="w-8 h-8" />,
+    title: "Government Impersonation Scam Detector",
+    description: "Paste a suspicious message or describe a call from someone claiming to be the IRS, SSA, or FBI. Get an instant red flag analysis, clear verdict, and next steps — including real agency numbers and where to report..",
+    category: "Analysis",
+    link: "/tools/government-impersonation-scam-detector",
+    aboutLink: "/tools/about-government-impersonation-scam-detector",
+    isNew: true
+    },
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];
