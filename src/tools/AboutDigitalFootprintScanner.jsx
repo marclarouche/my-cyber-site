@@ -75,7 +75,8 @@ export default function AboutDigitalFootprintScanner() {
           {/* Lead */}
           <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/30 p-8 mb-8">
             <p className="text-slate-300 text-lg leading-relaxed">
-              Every account you create, every website you visit, every breach that includes your email — all of it contributes to a digital profile that data brokers, advertisers, and bad actors can access. The Digital Footprint Scanner helps you see that profile before someone else does, then gives you a scored, prioritised plan to shrink it.
+              Every account you create, every website you visit, every breach that includes your email, all of it contributes to a digital profile that data brokers, advertisers, and bad actors can access. The Digital Footprint Scanner helps you see that profile before someone else does, then gives you a scored, prioritised plan to shrink it.
+              Breach lookup and username scan results are illustrative estimates. Full live scanning coming soon.
             </p>
           </div>
 
@@ -85,7 +86,7 @@ export default function AboutDigitalFootprintScanner() {
               What Is a Digital Footprint?
             </h2>
             <p className="text-slate-400 leading-relaxed mb-6">
-              Your digital footprint is the collection of all data that exists about you online — some you created intentionally, and much of it gathered without your awareness. It falls into two categories:
+              Your digital footprint is the collection of all data that exists about you online, some you created intentionally, and much of it gathered without your awareness. It falls into two categories:
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
@@ -115,7 +116,7 @@ export default function AboutDigitalFootprintScanner() {
                 <div>
                   <p className="text-sm font-semibold text-blue-300 mb-2">Why it matters</p>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    The passive footprint is the dangerous one — it grows silently and is exploited by scammers, stalkers, and identity thieves. Most people are unaware of how large theirs has become until something goes wrong.
+                    The passive footprint is the dangerous one, it grows silently and is exploited by scammers, stalkers, and identity thieves. Most people are unaware of how large theirs has become until something goes wrong.
                   </p>
                 </div>
               </div>
@@ -157,7 +158,7 @@ export default function AboutDigitalFootprintScanner() {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-amber-900/40 border border-amber-500/30 text-amber-300 font-semibold">25% of score</span>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Estimates exposure across the major data broker categories — people-search sites, marketing brokers, background-check services, and public records aggregators. If you provide your full name, the scanner surfaces which categories almost certainly hold records on you and links directly to their opt-out pages so you can begin removals.
+                    Estimates exposure across the major data broker categories, people-search sites, marketing brokers, background-check services, and public records aggregators. If you provide your full name, the scanner surfaces which categories almost certainly hold records on you and links directly to their opt-out pages so you can begin removals.
                   </p>
                 </div>
               </div>
@@ -172,7 +173,7 @@ export default function AboutDigitalFootprintScanner() {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-purple-900/40 border border-purple-500/30 text-purple-300 font-semibold">15% of score</span>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Scans 24 major platforms to determine how many use the same username you provided. When the same handle appears across Reddit, GitHub, Instagram, LinkedIn, and a dozen other services, anyone can aggregate your posts, comments, and activity into a complete profile of your opinions, interests, and habits — without hacking anything.
+                    Scans 24 major platforms to determine how many use the same username you provided. When the same handle appears across Reddit, GitHub, Instagram, LinkedIn, and a dozen other services, anyone can aggregate your posts, comments, and activity into a complete profile of your opinions, interests, and habits, without hacking anything.
                   </p>
                 </div>
               </div>
@@ -187,7 +188,7 @@ export default function AboutDigitalFootprintScanner() {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-cyan-900/40 border border-cyan-500/30 text-cyan-300 font-semibold">25% of score</span>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Thirteen questions covering password reuse, two-factor authentication, social media sharing, app permissions, VPN habits, and more. This is the only module scored entirely locally in your browser — nothing is transmitted anywhere. Your behaviour patterns often matter as much as what's already leaked.
+                    Thirteen questions covering password reuse, two-factor authentication, social media sharing, app permissions, VPN habits, and more. This is the only module scored entirely locally in your browser, nothing is transmitted anywhere. Your behaviour patterns often matter as much as what's already leaked.
                   </p>
                 </div>
               </div>
@@ -241,7 +242,7 @@ export default function AboutDigitalFootprintScanner() {
               What Are Data Brokers and Why Should You Care?
             </h2>
             <p className="text-slate-400 leading-relaxed mb-6">
-              Data brokers are companies that collect, aggregate, and sell personal information — your name, address, employer, relatives, financial status, purchase history, and more. They operate largely in the background and most people have never heard of them despite being listed on dozens of these sites.
+              Data brokers are companies that collect, aggregate, and sell personal information, your name, address, employer, relatives, financial status, purchase history, and more. They operate largely in the background and most people have never heard of them despite being listed on dozens of these sites.
             </p>
 
             <h3 className="text-xl font-bold mb-4 text-cyan-400">The major categories</h3>
@@ -290,7 +291,7 @@ export default function AboutDigitalFootprintScanner() {
                 <div>
                   <p className="text-sm font-semibold text-amber-300 mb-2">The ARC / CBP situation</p>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    In June 2024 it was revealed that the Airlines Reporting Corporation (ARC) — a data broker partially owned by major U.S. airlines — had been supplying passenger travel records to U.S. Customs and Border Protection since 2024. The contract even prohibited DHS from disclosing ARC's involvement. This is an example of data broker exposure creating government surveillance risk without passengers ever consenting or being notified.
+                    In June 2024 it was revealed that the Airlines Reporting Corporation (ARC), a data broker partially owned by major U.S. airlines had been supplying passenger travel records to U.S. Customs and Border Protection since 2024. The contract even prohibited DHS from disclosing ARC's involvement. This is an example of data broker exposure creating government surveillance risk without passengers ever consenting or being notified.
                   </p>
                 </div>
               </div>
@@ -352,7 +353,7 @@ export default function AboutDigitalFootprintScanner() {
                 <div>
                   <p className="text-sm font-semibold text-blue-300 mb-2">How the breach check stays private</p>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    The scanner uses a k-anonymity model for email lookups. Only a short anonymised prefix of a hash derived from your email is ever transmitted — your actual email address is never sent anywhere. This is the same privacy model used by HaveIBeenPwned, the industry-standard breach database.
+                    The scanner uses a k-anonymity model for email lookups. Only a short anonymised prefix of a hash derived from your email is ever transmitted, your actual email address is never sent anywhere. This is the same privacy model used by HaveIBeenPwned, the industry-standard breach database.
                   </p>
                 </div>
               </div>
@@ -397,7 +398,7 @@ export default function AboutDigitalFootprintScanner() {
                 <span className="text-cyan-400 mr-4 font-bold text-xl flex-shrink-0">5.</span>
                 <div>
                   <strong className="text-slate-200">Submit opt-out requests to data brokers regularly.</strong>
-                  <span className="text-slate-400"> Opt-outs are not permanent — brokers re-acquire data. Plan to repeat the process every six to twelve months for the highest-risk sites.</span>
+                  <span className="text-slate-400"> Opt-outs are not permanent, brokers re-acquire data. Plan to repeat the process every six to twelve months for the highest risk sites.</span>
                 </div>
               </li>
               <li className="flex items-start">
@@ -422,7 +423,7 @@ export default function AboutDigitalFootprintScanner() {
                 <div>
                   <p className="text-sm font-semibold text-blue-300 mb-2">Tip</p>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    After running the scanner, use your action steps list as the starting point for your personalised Privacy Playbook. The Privacy Playbook Generator on this site turns your risk profile into a structured four-week action plan you can follow at your own pace.
+                    After running the scanner, use your action steps list as the starting point for your personalised Privacy Playbook. The Privacy Playbook Generator on this site turns your risk profile into a structured four week action plan you can follow at your own pace.
                   </p>
                 </div>
               </div>
@@ -447,7 +448,7 @@ export default function AboutDigitalFootprintScanner() {
               </li>
               <li className="flex items-start">
                 <span className="text-slate-500 mr-3 flex-shrink-0">•</span>
-                <span>It does not guarantee completeness — new breaches occur daily and some broker databases are not publicly accessible.</span>
+                <span>It does not guarantee completeness, new breaches occur daily and some broker databases are not publicly accessible.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-slate-500 mr-3 flex-shrink-0">•</span>
@@ -467,7 +468,7 @@ export default function AboutDigitalFootprintScanner() {
               </li>
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-3">•</span>
-                <span>Download the text report from within the tool if you need a portable record — it can be stored in an encrypted folder.</span>
+                <span>Download the text report from within the tool if you need a portable record it can be stored in an encrypted folder.</span>
               </li>
             </ul>
           </div>
@@ -493,7 +494,7 @@ export default function AboutDigitalFootprintScanner() {
           {/* Legal Disclaimer */}
           <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
             <p className="text-sm text-slate-400 leading-relaxed">
-              <strong className="text-cyan-400">Legal Disclaimer and Important Notice:</strong> This page and the associated tool are provided for educational and informational purposes only. CyberLifeCoach and its affiliates make no warranties regarding the completeness, accuracy, or timeliness of breach or broker data. Scan results are estimates — they are not a guarantee that your data is or is not exposed. You are responsible for taking appropriate action based on your own risk tolerance. Never rely solely on a single tool for security decisions. CyberLifeCoach assumes no liability for outcomes resulting from use of this page or tool.
+              <strong className="text-cyan-400">Legal Disclaimer and Important Notice:</strong> This page and the associated tool are provided for educational and informational purposes only. CyberLifeCoach and its affiliates make no warranties regarding the completeness, accuracy, or timeliness of breach or broker data. Scan results are estimates, they are not a guarantee that your data is or is not exposed. You are responsible for taking appropriate action based on your own risk tolerance. Never rely solely on a single tool for security decisions. CyberLifeCoach assumes no liability for outcomes resulting from use of this page or tool.
             </p>
           </div>
 
