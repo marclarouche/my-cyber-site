@@ -71,7 +71,7 @@ export default function AboutTrackerSimulator() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* What this simulator shows */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What this simulator shows
             </h2>
@@ -87,7 +87,7 @@ export default function AboutTrackerSimulator() {
           </div>
 
           {/* How the simulator works */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How the simulator works
             </h2>
@@ -131,7 +131,7 @@ export default function AboutTrackerSimulator() {
           </div>
 
           {/* Using the privacy controls */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Using the privacy controls
             </h2>
@@ -162,7 +162,7 @@ export default function AboutTrackerSimulator() {
           </div>
 
           {/* Ideas for workshops and training */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ideas for workshops and training
             </h2>
@@ -190,7 +190,7 @@ export default function AboutTrackerSimulator() {
           </div>
 
           {/* Privacy, safety, and limitations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Privacy, safety, and limitations
             </h2>

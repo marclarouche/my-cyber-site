@@ -86,7 +86,7 @@ export default function AboutFingerPrintAuditor() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* What this tool does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">What this tool does</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               The Browser Fingerprinting Auditor helps you understand how unique your browser appears to websites. It collects
@@ -98,7 +98,7 @@ export default function AboutFingerPrintAuditor() {
           </div>
 
           {/* How fingerprinting works */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">How browser fingerprinting works</h2>
             <p className="text-slate-300 leading-relaxed mb-6">
               Many sites can read certain browser and device characteristics in a normal web session. One detail alone is
@@ -137,7 +137,7 @@ export default function AboutFingerPrintAuditor() {
           </div>
 
           {/* How to use results */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">How to use the results</h2>
             <p className="text-slate-300 leading-relaxed mb-6">
               Start by running the tool in your everyday browser, then compare with a privacy hardened browser profile. If your
@@ -172,7 +172,7 @@ export default function AboutFingerPrintAuditor() {
           </div>
 
           {/* Expectations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">What to expect and what not to expect</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               Some fingerprint signals are difficult to reduce without breaking websites or reducing usability. Your goal should

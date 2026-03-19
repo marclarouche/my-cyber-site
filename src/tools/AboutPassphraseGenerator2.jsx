@@ -13,7 +13,7 @@ export default function AboutPassphraseGenerator() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 text-slate-100">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-slate-900/95 shadow-lg">
+      <nav className="fixed w-full z-50 bg-slate-900/95 backdrop-blur-sm shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <a href="/" className="flex items-center space-x-3 group cursor-pointer">
@@ -69,7 +69,7 @@ export default function AboutPassphraseGenerator() {
       {/* Lead Section */}
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-2xl border border-cyan-500/30 p-8 mb-8">
+          <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/30 p-8 mb-8">
             <p className="text-slate-300 text-lg leading-relaxed">
               Passphrases offer the best balance between security and memorability. Instead of short, complex passwords,
               they use a sequence of random words that are easy to recall yet extremely hard to guess.
@@ -77,7 +77,7 @@ export default function AboutPassphraseGenerator() {
           </div>
 
           {/* What is a Passphrase? */}
-          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What is a Passphrase?
             </h2>
@@ -99,7 +99,7 @@ export default function AboutPassphraseGenerator() {
           </div>
 
           {/* Why Choose a Passphrase? */}
-          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Why Choose a Passphrase?
             </h2>
@@ -126,7 +126,7 @@ export default function AboutPassphraseGenerator() {
                 </div>
               </li>
             </ul>
-            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl border border-blue-500/30 p-6">
+            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm rounded-xl border border-blue-500/30 p-6">
               <div className="flex items-start space-x-3">
                 <Shield className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
@@ -141,7 +141,7 @@ export default function AboutPassphraseGenerator() {
           </div>
 
           {/* When to Use Passphrases */}
-          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               When to Use Passphrases
             </h2>
@@ -211,7 +211,7 @@ export default function AboutPassphraseGenerator() {
           </div>
 
           {/* How Many Words Should You Use? */}
-          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How Many Words Should You Use?
             </h2>
@@ -254,7 +254,7 @@ export default function AboutPassphraseGenerator() {
           </div>
 
           {/* Best Practices */}
-          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Best Practices
             </h2>
@@ -302,7 +302,7 @@ export default function AboutPassphraseGenerator() {
                 </div>
               </li>
             </ol>
-            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl border border-blue-500/30 p-6">
+            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm rounded-xl border border-blue-500/30 p-6">
               <div className="flex items-start space-x-3">
                 <Lock className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
@@ -316,7 +316,7 @@ export default function AboutPassphraseGenerator() {
           </div>
 
           {/* Print-Friendly Notes */}
-          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Print-Friendly Notes
             </h2>

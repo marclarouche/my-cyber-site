@@ -84,7 +84,7 @@ export default function AboutEmailHeaderAnalyzer() {
           </div>
 
           {/* What an Email Header Is */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What an Email Header Is
             </h2>
@@ -101,7 +101,7 @@ export default function AboutEmailHeaderAnalyzer() {
               How to Copy the Full Header
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">Gmail on the web</h3>
                 <ol className="space-y-3 text-slate-400">
                   <li className="flex items-start">
@@ -123,7 +123,7 @@ export default function AboutEmailHeaderAnalyzer() {
                 </ol>
               </div>
 
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">Outlook on the web</h3>
                 <ol className="space-y-3 text-slate-400">
                   <li className="flex items-start">
@@ -145,7 +145,7 @@ export default function AboutEmailHeaderAnalyzer() {
                 </ol>
               </div>
 
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">Apple Mail (macOS)</h3>
                 <ol className="space-y-3 text-slate-400">
                   <li className="flex items-start">
@@ -163,7 +163,7 @@ export default function AboutEmailHeaderAnalyzer() {
                 </ol>
               </div>
 
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">Outlook desktop</h3>
                 <ol className="space-y-3 text-slate-400">
                   <li className="flex items-start">
@@ -184,7 +184,7 @@ export default function AboutEmailHeaderAnalyzer() {
           </div>
 
           {/* What to Look For */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What to Look For
             </h2>
@@ -330,7 +330,7 @@ Received: from relay-2.example by mx.yourdomain.net;
           </div>
 
           {/* Quick Manual Workflow */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Manual Workflow
             </h2>
@@ -374,7 +374,7 @@ Received: from relay-2.example by mx.yourdomain.net;
           </div>
 
           {/* Privacy Tips */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Privacy Tips When Sharing Headers
             </h2>
@@ -391,7 +391,7 @@ Received: from relay-2.example by mx.yourdomain.net;
           </div>
 
           {/* Practice Example */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Practice Example
             </h2>

@@ -70,7 +70,7 @@ export default function AboutThreatModel() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* 1) What is a threat model */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               1) What is a threat model
             </h2>
@@ -139,7 +139,7 @@ Turn on authenticator-app MFA, review forwarding rules monthly
           </div>
 
           {/* 2) Why do a threat model */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               2) Why do a threat model
             </h2>
@@ -176,7 +176,7 @@ Turn on authenticator-app MFA, review forwarding rules monthly
           </div>
 
           {/* 3) When to do it */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               3) When to do it
             </h2>
@@ -201,7 +201,7 @@ Turn on authenticator-app MFA, review forwarding rules monthly
           </div>
 
           {/* 4) A quick workflow that works */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               4) A quick workflow that works
             </h2>
@@ -264,7 +264,7 @@ Turn on authenticator-app MFA, review forwarding rules monthly
           </div>
 
           {/* 5) Common misconceptions */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               5) Common misconceptions
             </h2>
@@ -301,7 +301,7 @@ Turn on authenticator-app MFA, review forwarding rules monthly
           </div>
 
           {/* 6) What good output looks like */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               6) What good output looks like
             </h2>
@@ -343,7 +343,7 @@ Turn on authenticator-app MFA, review forwarding rules monthly
           </div>
 
           {/* Visual Guide Section */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Reference: The Threat Modeling Process
             </h2>

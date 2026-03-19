@@ -82,7 +82,7 @@ export default function AboutWiFiChecklist() {
           </div>
 
           {/* How to Read a URL */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How to Read a URL
             </h2>
@@ -136,7 +136,7 @@ https://<span className="text-red-400 font-bold">paypal-secure-login</span>.<spa
           </div>
 
           {/* High-Risk Signals */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               High-Risk Signals
             </h2>
@@ -201,7 +201,7 @@ https://<span className="text-red-400 font-bold">paypal-secure-login</span>.<spa
           </div>
 
           {/* Five-Second URL Check */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Five-Second URL Check
             </h2>
@@ -230,7 +230,7 @@ https://<span className="text-red-400 font-bold">paypal-secure-login</span>.<spa
           </div>
 
           {/* About URL Schemes */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               About URL Schemes
             </h2>
@@ -277,7 +277,7 @@ https://<span className="text-red-400 font-bold">paypal-secure-login</span>.<spa
           </div>
 
           {/* Tracking Parameters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Tracking Parameters to Know
             </h2>
@@ -304,7 +304,7 @@ utm_source, utm_campaign, gclid, fbclid, mc_eid, msclkid, ref, affiliate, sessio
           </div>
 
           {/* Common Parameters Explained */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               🧩 Common Parameters Explained
             </h2>

@@ -73,7 +73,7 @@ export default function AboutJSONXMLFormatter() {
             {/* Main Content Column */}
             <div className="lg:col-span-2">
               {/* What this tool actually does */}
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
                 <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   What this tool actually does
                 </h2>
@@ -179,7 +179,7 @@ export default function AboutJSONXMLFormatter() {
             {/* Sidebar Column */}
             <div className="lg:col-span-1">
               {/* Quick Snapshot */}
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6 mb-8">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6 mb-8">
                 <div className="flex items-center space-x-2 mb-2">
                   <Zap className="w-5 h-5 text-cyan-400" />
                   <span className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Quick snapshot</span>
@@ -212,7 +212,7 @@ export default function AboutJSONXMLFormatter() {
               </div>
 
               {/* Who this is for */}
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6 mb-8">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6 mb-8">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">Who this is for</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -237,7 +237,7 @@ export default function AboutJSONXMLFormatter() {
               </div>
 
               {/* What this page does not do */}
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-6 mb-8">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-6 mb-8">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">What this page does not do</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-4 italic">
                   The formatter is not a full validator for business rules, schemas, or security constraints. It does not check whether fields are present, values are safe, or payloads comply with a specific API specification. Those tasks still belong to your application tests, schema tools, and security reviews.

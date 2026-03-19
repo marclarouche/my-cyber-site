@@ -105,7 +105,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 1) Confirm what was exposed */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               1) Confirm what was exposed
             </h2>
@@ -153,7 +153,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 2) Fix the affected account first */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               2) Fix the affected account first
             </h2>
@@ -217,7 +217,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 3) Stop the ripple effect from password reuse */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               3) Stop the ripple effect from password reuse
             </h2>
@@ -259,7 +259,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 4) Prioritize your email account */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               4) Prioritize your email account
             </h2>
@@ -301,7 +301,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 5) Monitor for fraud and phishing */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               5) Monitor for fraud and phishing
             </h2>
@@ -354,7 +354,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 6) Add optional financial protections */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               6) Add optional financial protections
             </h2>
@@ -417,7 +417,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 7) Device and network hygiene */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               7) Device and network hygiene
             </h2>
@@ -459,7 +459,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 8) Special situations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               8) Special situations
             </h2>
@@ -501,7 +501,7 @@ export default function AboutBreachLookup() {
           </div>
 
           {/* 9) Prevention going forward */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               9) Prevention going forward
             </h2>

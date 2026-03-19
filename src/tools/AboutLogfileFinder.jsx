@@ -75,7 +75,7 @@ export default function AboutLogfileFinder() {
             {/* Left Column */}
             <div>
               {/* What this tool is designed to do */}
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
                 <div className="flex items-center space-x-2 mb-3">
                   <Terminal className="w-5 h-5 text-cyan-400" />
                   <span className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Overview</span>
@@ -149,7 +149,7 @@ export default function AboutLogfileFinder() {
             {/* Right Column */}
             <div>
               {/* How it works */}
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+              <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
                 <div className="flex items-center space-x-2 mb-3">
                   <Search className="w-5 h-5 text-cyan-400" />
                   <span className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">How it works</span>

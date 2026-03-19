@@ -86,7 +86,7 @@ export default function AboutCloudFormation() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* What this tool is designed to do */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">What this tool is designed to do</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               The AWS CloudFormation Template Generator is a gentle way to practice infrastructure as code without writing every
@@ -107,7 +107,7 @@ export default function AboutCloudFormation() {
           </div>
 
           {/* How the generator works */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">How the generator works</h2>
             <p className="text-slate-300 leading-relaxed mb-6">
               The page runs entirely in your browser. When you fill in the form and press Generate, a small script builds a
@@ -156,7 +156,7 @@ export default function AboutCloudFormation() {
           </div>
 
           {/* Who this tool is for */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">Who this tool is for</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               The generator is meant for people who want a safe runway into CloudFormation without starting from a blank file every
@@ -189,7 +189,7 @@ export default function AboutCloudFormation() {
           </div>
 
           {/* Quick start */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">Quick start: using the template safely</h2>
 
             <h3 className="text-xl font-bold mb-2 text-cyan-400">Step one, choose your building blocks</h3>
@@ -219,7 +219,7 @@ export default function AboutCloudFormation() {
           </div>
 
           {/* Privacy, security, and limitations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">Privacy, security, and limitations</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               The generator is intentionally minimal. It has no server side component and no analytics. Everything you type stays

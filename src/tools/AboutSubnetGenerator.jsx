@@ -73,7 +73,7 @@ export default function AboutSubnetGenerator() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* Why subnetting still matters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Why subnetting still matters
             </h2>
@@ -96,7 +96,7 @@ export default function AboutSubnetGenerator() {
           </div>
 
           {/* Subnetting in one sentence */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Subnetting in one sentence
             </h2>
@@ -109,7 +109,7 @@ export default function AboutSubnetGenerator() {
           </div>
 
           {/* IPv4 subnetting essentials */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               IPv4 subnetting essentials
             </h2>
@@ -145,7 +145,7 @@ export default function AboutSubnetGenerator() {
           </div>
 
           {/* IPv6 subnetting essentials */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               IPv6 subnetting essentials
             </h2>
@@ -178,7 +178,7 @@ export default function AboutSubnetGenerator() {
           </div>
 
           {/* How to use the Subnetting Generator */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How to use the Subnetting Generator
             </h2>
@@ -209,7 +209,7 @@ export default function AboutSubnetGenerator() {
           </div>
 
           {/* Next step */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Next step
             </h2>

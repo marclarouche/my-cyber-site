@@ -87,7 +87,7 @@ export default function AboutPasswordBreachChecker() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* Card 1 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">What this tool is designed to do</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               This helper lets you test a password against the public Have I Been Pwned breach corpus without revealing the
@@ -144,7 +144,7 @@ export default function AboutPasswordBreachChecker() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">Privacy first design</h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               The checker performs all hashing in your browser using SHA-1. The full hash and the plaintext password stay on your

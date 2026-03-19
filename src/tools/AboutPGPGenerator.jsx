@@ -71,7 +71,7 @@ export default function AboutPGPGenerator() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* What this tool does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What this tool does
             </h2>
@@ -146,7 +146,7 @@ export default function AboutPGPGenerator() {
           </div>
 
           {/* How it works under the hood */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How it works under the hood
             </h2>
@@ -175,7 +175,7 @@ export default function AboutPGPGenerator() {
           </div>
 
           {/* Quick start guide */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick start guide
             </h2>
@@ -210,7 +210,7 @@ export default function AboutPGPGenerator() {
           {/* Two column sections */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* What this tool is not */}
-            <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+            <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
               <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 What this tool is not
               </h2>
@@ -242,7 +242,7 @@ export default function AboutPGPGenerator() {
             </div>
 
             {/* Good use cases */}
-            <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+            <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
               <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Good use cases
               </h2>
@@ -270,7 +270,7 @@ export default function AboutPGPGenerator() {
           {/* Security and best practices */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Security and privacy notes */}
-            <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+            <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
               <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Security and privacy notes
               </h2>
@@ -299,7 +299,7 @@ export default function AboutPGPGenerator() {
             </div>
 
             {/* Best practice checklist */}
-            <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+            <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
               <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Best practice checklist
               </h2>

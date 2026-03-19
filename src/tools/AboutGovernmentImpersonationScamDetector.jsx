@@ -79,7 +79,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* What is a government impersonation scam? */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What Is a Government Impersonation Scam?
             </h2>
@@ -103,7 +103,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* The agencies most commonly impersonated */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Agencies Most Commonly Impersonated
             </h2>
@@ -185,7 +185,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* The four categories of red flags */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               The Four Categories of Red Flags
             </h2>
@@ -257,7 +257,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* What to do when you receive a suspicious contact */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What to Do When It Happens
             </h2>
@@ -319,7 +319,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* Who is most at risk */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Who Is Most at Risk — and Why
             </h2>
@@ -374,7 +374,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* Real agency contact numbers */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Official Contact Numbers — Reference Card
             </h2>
@@ -437,7 +437,7 @@ export default function AboutGovernmentImpersonationScamDetector() {
           </div>
 
           {/* Print-Friendly Notes */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Print-Friendly Notes
             </h2>

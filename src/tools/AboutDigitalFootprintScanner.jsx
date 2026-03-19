@@ -81,7 +81,7 @@ export default function AboutDigitalFootprintScanner() {
           </div>
 
           {/* What is a Digital Footprint? */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What Is a Digital Footprint?
             </h2>
@@ -124,7 +124,7 @@ export default function AboutDigitalFootprintScanner() {
           </div>
 
           {/* How the Scanner Works */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How the Scanner Works
             </h2>
@@ -237,7 +237,7 @@ export default function AboutDigitalFootprintScanner() {
           </div>
 
           {/* Data Brokers Explained */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What Are Data Brokers and Why Should You Care?
             </h2>
@@ -299,7 +299,7 @@ export default function AboutDigitalFootprintScanner() {
           </div>
 
           {/* Understanding Breach Exposure */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Understanding Breach Exposure
             </h2>
@@ -361,7 +361,7 @@ export default function AboutDigitalFootprintScanner() {
           </div>
 
           {/* Best Practices */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Best Practices for Reducing Your Footprint
             </h2>
@@ -431,7 +431,7 @@ export default function AboutDigitalFootprintScanner() {
           </div>
 
           {/* Privacy and Limitations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Privacy Commitments and Tool Limitations
             </h2>

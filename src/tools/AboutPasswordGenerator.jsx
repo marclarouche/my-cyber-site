@@ -71,7 +71,7 @@ export default function AboutPasswordGenerator() {
         <div className="max-w-7xl mx-auto">
           
           {/* 1. Use Long, Unique Passwords */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex items-start space-x-4 mb-4">
               <Lock className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
               <div>
@@ -86,7 +86,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 2. Prefer Passphrases Over Random Characters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex items-start space-x-4 mb-4">
               <Key className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
               <div>
@@ -101,7 +101,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 3. Store Passwords Securely */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex items-start space-x-4 mb-4">
               <Database className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
               <div>
@@ -127,7 +127,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 4. Enable Multi-Factor Authentication (MFA) */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex items-start space-x-4 mb-4">
               <Shield className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
               <div>
@@ -142,7 +142,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 5. Watch for Breach Notifications */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex items-start space-x-4 mb-4">
               <AlertTriangle className="w-8 h-8 text-yellow-400 flex-shrink-0 mt-1" />
               <div>
@@ -157,7 +157,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 6. Understand Password Entropy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex items-start space-x-4 mb-4">
               <Eye className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
               <div>
@@ -183,7 +183,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 7. Rotate Only When Necessary */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               7. Rotate Only When Necessary
             </h2>
@@ -193,7 +193,7 @@ export default function AboutPasswordGenerator() {
           </div>
 
           {/* 8. Educate Family and Teams */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               8. Educate Family and Teams
             </h2>

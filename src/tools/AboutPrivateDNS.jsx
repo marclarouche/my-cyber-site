@@ -79,7 +79,7 @@ export default function AboutPrivateDNS() {
           </div>
 
           {/* Introduction */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <p className="text-lg text-slate-300 leading-relaxed">
               Every time you open a website, your device asks a Domain Name System server for the site's address. Those
               DNS lookups reveal which sites you visit, even when the page itself is protected with HTTPS. <strong className="text-cyan-400">Encrypted DNS</strong> wraps those lookups inside an encrypted tunnel so your Internet provider, public Wi-Fi operator, or anyone on the same network
@@ -88,7 +88,7 @@ export default function AboutPrivateDNS() {
           </div>
 
           {/* What is Encrypted DNS? */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What is Encrypted DNS?
             </h2>
@@ -142,7 +142,7 @@ export default function AboutPrivateDNS() {
           </div>
 
           {/* How it Works */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How it Works
             </h2>
@@ -186,7 +186,7 @@ export default function AboutPrivateDNS() {
           </div>
 
           {/* Why It's Important */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Why It's Important
             </h2>
@@ -219,7 +219,7 @@ export default function AboutPrivateDNS() {
           </div>
 
           {/* What Encrypted DNS Doesn't Do */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What Encrypted DNS Doesn't Do
             </h2>
@@ -240,7 +240,7 @@ export default function AboutPrivateDNS() {
           </div>
 
           {/* How to Turn It On */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How to Turn It On (Quick Reference)
             </h2>

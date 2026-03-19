@@ -87,7 +87,7 @@ export default function AboutFirewallConfigurator() {
         <div className="max-w-7xl mx-auto">
           
           {/* Primary CTA Section */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <div className="flex flex-wrap gap-4 mb-6">
               <button
                 onClick={() => handleOpenTool(getCurrentHash())}
@@ -146,7 +146,7 @@ export default function AboutFirewallConfigurator() {
           </div>
 
           {/* What this tool does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What this tool does
             </h2>
@@ -246,7 +246,7 @@ export default function AboutFirewallConfigurator() {
           </div>
 
           {/* How it works (client-side) */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               How it works (client-side)
             </h2>
@@ -288,7 +288,7 @@ export default function AboutFirewallConfigurator() {
           </div>
 
           {/* Quick start */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick start
             </h2>
@@ -405,7 +405,7 @@ export default function AboutFirewallConfigurator() {
           </div>
 
           {/* Advanced notes */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Advanced notes
             </h2>

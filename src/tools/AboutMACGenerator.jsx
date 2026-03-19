@@ -74,7 +74,7 @@ export default function AboutMACGenerator() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto">
           {/* What this tool actually does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               What this tool actually does
             </h2>
@@ -141,7 +141,7 @@ export default function AboutMACGenerator() {
           </div>
 
           {/* How to use it in practice */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h3 className="text-2xl font-bold mb-3 text-cyan-400">How to use it in practice</h3>
             <p className="text-slate-500 mb-4 italic">
               The exact steps to "spoof" or temporarily change a MAC address depend on your operating system and network
@@ -172,7 +172,7 @@ export default function AboutMACGenerator() {
           </div>
 
           {/* When this tool is a good fit */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h3 className="text-2xl font-bold mb-3 text-cyan-400">When this tool is a good fit</h3>
             <p className="text-slate-400 leading-relaxed mb-4">
               This generator is tuned for situations where you want to reduce tracking or experiment with network behavior
@@ -199,7 +199,7 @@ export default function AboutMACGenerator() {
           </div>
 
           {/* Quick snapshot */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 mb-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8 mb-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick snapshot
             </h2>
