@@ -74,7 +74,7 @@ export default function AboutCCPACPRAPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* How to Use This Tool */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use this tool</h2>
             <ul className="space-y-3 text-slate-400">
@@ -112,7 +112,7 @@ export default function AboutCCPACPRAPolicy() {
           </div>
 
           {/* Where to Place the Generated Notice */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Implementation</div>
             <h2 className="text-2xl font-bold mb-4">Where to place the generated notice</h2>
             <ul className="space-y-3 text-slate-400">

@@ -86,7 +86,7 @@ export default function AboutRequestForProposal() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What the RFP Generator does */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What the RFP Generator does</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -102,7 +102,7 @@ export default function AboutRequestForProposal() {
           </div>
 
           {/* Who this tool is for */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Audience</div>
             <h2 className="text-2xl font-bold mb-4">Who this tool is for</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -130,7 +130,7 @@ export default function AboutRequestForProposal() {
           </div>
 
           {/* RFP Types Available */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Customization</div>
             <h2 className="text-2xl font-bold mb-4">RFP types available</h2>
             <div className="space-y-3 text-slate-400">
@@ -158,7 +158,7 @@ export default function AboutRequestForProposal() {
           </div>
 
           {/* How the generator works */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Workflow</div>
             <h2 className="text-2xl font-bold mb-4">How the generator works</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -207,7 +207,7 @@ export default function AboutRequestForProposal() {
           </div>
 
           {/* Choosing the RFP type and detail level */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Customization</div>
             <h2 className="text-2xl font-bold mb-4">Choosing the detail level</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -236,7 +236,7 @@ export default function AboutRequestForProposal() {
           </div>
 
           {/* Export options and next steps */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Export & Workflow</div>
             <h2 className="text-2xl font-bold mb-4">Export options and next steps</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -265,7 +265,7 @@ export default function AboutRequestForProposal() {
           </div>
 
           {/* Key benefits */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Benefits</div>
             <h2 className="text-2xl font-bold mb-4">Why use an RFP Generator</h2>
             <div className="grid md:grid-cols-3 gap-4 text-slate-400">

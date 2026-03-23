@@ -85,7 +85,7 @@ export default function AboutGDPRPrivacyPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What is a GDPR Privacy Policy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What is a GDPR Privacy Policy?</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -101,7 +101,7 @@ export default function AboutGDPRPrivacyPolicy() {
           </div>
 
           {/* Why it matters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Importance</div>
             <h2 className="text-2xl font-bold mb-4">Why it matters</h2>
             <ul className="space-y-3 text-slate-400 mb-4">
@@ -125,7 +125,7 @@ export default function AboutGDPRPrivacyPolicy() {
           </div>
 
           {/* How to use the generator */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use the generator</h2>
             <ol className="space-y-3 text-slate-400">
@@ -169,7 +169,7 @@ export default function AboutGDPRPrivacyPolicy() {
           </div>
 
           {/* What a strong policy includes */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Key Components</div>
             <h2 className="text-2xl font-bold mb-4">What a strong policy includes</h2>
             <ul className="space-y-3 text-slate-400">
@@ -209,7 +209,7 @@ export default function AboutGDPRPrivacyPolicy() {
           </div>
 
           {/* Practical tips */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practices</div>
             <h2 className="text-2xl font-bold mb-4">Practical tips</h2>
             <ul className="space-y-3 text-slate-400">
@@ -229,7 +229,7 @@ export default function AboutGDPRPrivacyPolicy() {
           </div>
 
           {/* FAQs */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">FAQs</div>
             <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
             <div className="space-y-4 text-slate-400">
@@ -249,7 +249,7 @@ export default function AboutGDPRPrivacyPolicy() {
           </div>
 
           {/* Helpful references - Full Width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Resources</div>
             <h2 className="text-2xl font-bold mb-4">Helpful references</h2>
             <ul className="grid md:grid-cols-2 gap-3 text-slate-400">

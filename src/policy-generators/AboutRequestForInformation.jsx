@@ -85,7 +85,7 @@ export default function AboutRequestForInformation() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* When to use an RFI */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">When to use an RFI instead of an RFP or RFQ</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -104,7 +104,7 @@ export default function AboutRequestForInformation() {
           </div>
 
           {/* What the RFI Generator produces */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Output</div>
             <h2 className="text-2xl font-bold mb-4">What the RFI Generator produces</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -128,7 +128,7 @@ export default function AboutRequestForInformation() {
           </div>
 
           {/* Core sections included */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Sections</div>
             <h2 className="text-2xl font-bold mb-4">Core sections included</h2>
             <ul className="space-y-3 text-slate-400">
@@ -172,7 +172,7 @@ export default function AboutRequestForInformation() {
           </div>
 
           {/* How to use the RFI Generator - Full width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-6">How to use the RFI Generator</h2>
             
@@ -266,7 +266,7 @@ export default function AboutRequestForInformation() {
           </div>
 
           {/* Who this tool is for */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Audience</div>
             <h2 className="text-2xl font-bold mb-4">Who this tool is for</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -280,7 +280,7 @@ export default function AboutRequestForInformation() {
           </div>
 
           {/* Data privacy and storage */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Privacy</div>
             <h2 className="text-2xl font-bold mb-4">Data privacy and storage</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -295,7 +295,7 @@ export default function AboutRequestForInformation() {
           </div>
 
           {/* Key benefits */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Benefits</div>
             <h2 className="text-2xl font-bold mb-4">Why use an RFI Generator</h2>
             <div className="grid md:grid-cols-3 gap-4 text-slate-400">

@@ -89,7 +89,7 @@ export default function AboutGrantProposalGenerator() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What this tool does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What this tool does</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -114,7 +114,7 @@ export default function AboutGrantProposalGenerator() {
           </div>
 
           {/* Who it is designed for */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Audience</div>
             <h2 className="text-2xl font-bold mb-4">Who it is designed for</h2>
             <p className="text-slate-400 leading-relaxed">
@@ -125,7 +125,7 @@ export default function AboutGrantProposalGenerator() {
           </div>
 
           {/* Key components covered */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Coverage</div>
             <h2 className="text-2xl font-bold mb-4">Key components covered</h2>
             <ul className="grid md:grid-cols-2 gap-3 text-slate-400">
@@ -165,7 +165,7 @@ export default function AboutGrantProposalGenerator() {
           </div>
 
           {/* How to use the generator - Step 1 & 2 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use the generator</h2>
             
@@ -213,7 +213,7 @@ export default function AboutGrantProposalGenerator() {
           </div>
 
           {/* How to use the generator - Step 3 & 4 */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Workflow</div>
             <h2 className="text-2xl font-bold mb-4">Complete and export</h2>
             
@@ -240,7 +240,7 @@ export default function AboutGrantProposalGenerator() {
           </div>
 
           {/* Tips for Success */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practices</div>
             <h2 className="text-2xl font-bold mb-4">Tips for Success</h2>
             <div className="grid md:grid-cols-2 gap-4 text-slate-400">

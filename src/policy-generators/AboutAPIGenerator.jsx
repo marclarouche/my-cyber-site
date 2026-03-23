@@ -91,7 +91,7 @@ export default function AboutAPIGenerator() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* Who this tool is for */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Audience</div>
             <h2 className="text-2xl font-bold mb-4">Who this tool is for</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -103,7 +103,7 @@ export default function AboutAPIGenerator() {
           </div>
 
           {/* What the generator creates */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Output</div>
             <h2 className="text-2xl font-bold mb-4">What the generator creates</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -123,7 +123,7 @@ export default function AboutAPIGenerator() {
           </div>
 
           {/* Core sections - Full width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Core Sections Included</div>
             <h2 className="text-2xl font-bold mb-4">What's covered in the documentation plan</h2>
             <ul className="grid md:grid-cols-2 gap-3 text-slate-400">
@@ -167,7 +167,7 @@ export default function AboutAPIGenerator() {
           </div>
 
           {/* How to use - Full width with steps */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-6">How to use the API Documentation Strategy Generator</h2>
             
@@ -245,7 +245,7 @@ export default function AboutAPIGenerator() {
           </div>
 
           {/* Why specification-driven */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practice</div>
             <h2 className="text-2xl font-bold mb-4">Why focus on specification-driven documentation</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -260,7 +260,7 @@ export default function AboutAPIGenerator() {
           </div>
 
           {/* Local processing */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Privacy & Security</div>
             <h2 className="text-2xl font-bold mb-4">Local processing and data handling</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">

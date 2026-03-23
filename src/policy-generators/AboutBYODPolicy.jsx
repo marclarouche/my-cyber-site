@@ -74,7 +74,7 @@ export default function AboutBYODPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What this tool creates */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What this tool creates</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -97,7 +97,7 @@ export default function AboutBYODPolicy() {
           </div>
 
           {/* Why BYOD matters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Importance</div>
             <h2 className="text-2xl font-bold mb-4">Why BYOD matters</h2>
             <p className="text-slate-400 leading-relaxed">
@@ -106,7 +106,7 @@ export default function AboutBYODPolicy() {
           </div>
 
           {/* How to use it */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use it</h2>
             <ul className="space-y-3 text-slate-400">
@@ -134,7 +134,7 @@ export default function AboutBYODPolicy() {
           </div>
 
           {/* Privacy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Privacy & Security</div>
             <h2 className="text-2xl font-bold mb-4">Privacy</h2>
             <p className="text-slate-400 leading-relaxed">

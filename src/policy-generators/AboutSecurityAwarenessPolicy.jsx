@@ -85,7 +85,7 @@ export default function AboutSecurityAwarenessPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What it does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What this tool does</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -110,7 +110,7 @@ export default function AboutSecurityAwarenessPolicy() {
           </div>
 
           {/* How to use it */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use it</h2>
             <ul className="space-y-3 text-slate-400">
@@ -150,7 +150,7 @@ export default function AboutSecurityAwarenessPolicy() {
           </div>
 
           {/* What it covers */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Coverage</div>
             <h2 className="text-2xl font-bold mb-4">What it covers</h2>
             <ul className="space-y-3 text-slate-400">
@@ -190,7 +190,7 @@ export default function AboutSecurityAwarenessPolicy() {
           </div>
 
           {/* Helpful references */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">References</div>
             <h2 className="text-2xl font-bold mb-4">Helpful references</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">

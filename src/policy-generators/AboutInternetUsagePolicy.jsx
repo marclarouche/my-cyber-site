@@ -86,7 +86,7 @@ export default function AboutInternetUsagePolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What this tool creates */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What this tool creates</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -111,7 +111,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* Why an internet usage policy matters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Importance</div>
             <h2 className="text-2xl font-bold mb-4">Why an internet usage policy matters</h2>
             <p className="text-slate-400 leading-relaxed">
@@ -122,7 +122,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* What to include in a strong policy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Key Elements</div>
             <h2 className="text-2xl font-bold mb-4">What to include in a strong policy</h2>
             <p className="text-slate-400 leading-relaxed">
@@ -133,7 +133,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* How to use it */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use it</h2>
             <ul className="space-y-3 text-slate-400">
@@ -169,7 +169,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* Privacy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Privacy</div>
             <h2 className="text-2xl font-bold mb-4">Your data stays private</h2>
             <p className="text-slate-400 leading-relaxed">
@@ -179,7 +179,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* Practical rollout tips */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practices</div>
             <h2 className="text-2xl font-bold mb-4">Practical rollout tips</h2>
             <ul className="space-y-3 text-slate-400">
@@ -207,7 +207,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* Policy Coverage - Full Width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Coverage</div>
             <h2 className="text-2xl font-bold mb-4">What the policy covers</h2>
             <ul className="grid md:grid-cols-2 gap-3 text-slate-400">
@@ -279,7 +279,7 @@ export default function AboutInternetUsagePolicy() {
           </div>
 
           {/* Helpful references - Full Width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Resources</div>
             <h2 className="text-2xl font-bold mb-4">Helpful references</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">

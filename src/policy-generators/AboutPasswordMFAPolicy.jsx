@@ -85,7 +85,7 @@ export default function AboutPasswordMFAPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What is a Password & MFA Policy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What is a Password & MFA Policy?</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -100,7 +100,7 @@ export default function AboutPasswordMFAPolicy() {
           </div>
 
           {/* When is it needed */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Applicability</div>
             <h2 className="text-2xl font-bold mb-4">When is it needed?</h2>
             <ul className="space-y-3 text-slate-400">
@@ -120,7 +120,7 @@ export default function AboutPasswordMFAPolicy() {
           </div>
 
           {/* How to use the generator */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use the Password & MFA Policy Generator</h2>
             <ol className="space-y-3 text-slate-400">
@@ -147,7 +147,7 @@ export default function AboutPasswordMFAPolicy() {
           </div>
 
           {/* Key elements of a strong policy */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Key Components</div>
             <h2 className="text-2xl font-bold mb-4">Key elements of a strong policy</h2>
             <ul className="space-y-3 text-slate-400">
@@ -175,7 +175,7 @@ export default function AboutPasswordMFAPolicy() {
           </div>
 
           {/* Tips for implementation */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practices</div>
             <h2 className="text-2xl font-bold mb-4">Tips for implementation</h2>
             <ul className="space-y-3 text-slate-400">
@@ -199,7 +199,7 @@ export default function AboutPasswordMFAPolicy() {
           </div>
 
           {/* Why this matters - Full Width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Importance</div>
             <h2 className="text-2xl font-bold mb-4">Why strong authentication policies matter</h2>
             <div className="grid md:grid-cols-3 gap-4 text-slate-400">
@@ -228,7 +228,7 @@ export default function AboutPasswordMFAPolicy() {
           </div>
 
           {/* Helpful references - Full Width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Resources</div>
             <h2 className="text-2xl font-bold mb-4">Helpful references</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">

@@ -85,7 +85,7 @@ export default function AboutRemoteWorkPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What this tool does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What this tool does</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -110,7 +110,7 @@ export default function AboutRemoteWorkPolicy() {
           </div>
 
           {/* How to use it */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use it</h2>
             <ol className="space-y-3 text-slate-400">
@@ -146,7 +146,7 @@ export default function AboutRemoteWorkPolicy() {
           </div>
 
           {/* What it covers */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Coverage</div>
             <h2 className="text-2xl font-bold mb-4">What it covers</h2>
             <ul className="grid md:grid-cols-2 gap-3 text-slate-400">
@@ -178,7 +178,7 @@ export default function AboutRemoteWorkPolicy() {
           </div>
 
           {/* Key security areas */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Security Focus</div>
             <h2 className="text-2xl font-bold mb-4">Key security areas</h2>
             <div className="space-y-4">
@@ -207,7 +207,7 @@ export default function AboutRemoteWorkPolicy() {
           </div>
 
           {/* Helpful references */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Resources</div>
             <h2 className="text-2xl font-bold mb-4">Helpful references</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -250,7 +250,7 @@ export default function AboutRemoteWorkPolicy() {
           </div>
 
           {/* Best practices */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practices</div>
             <h2 className="text-2xl font-bold mb-4">Remote work security tips</h2>
             <div className="grid md:grid-cols-3 gap-4 text-slate-400">

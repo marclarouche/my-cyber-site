@@ -86,7 +86,7 @@ export default function AboutCOPPAPrivacyPolicy() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* How This Tool Helps */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">How This Tool Helps</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -111,7 +111,7 @@ export default function AboutCOPPAPrivacyPolicy() {
           </div>
 
           {/* How to Use the Tool */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to Use the Tool</h2>
             <ul className="space-y-3 text-slate-400">
@@ -142,7 +142,7 @@ export default function AboutCOPPAPrivacyPolicy() {
           </div>
 
           {/* What COPPA Requires */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Compliance</div>
             <h2 className="text-2xl font-bold mb-4">What COPPA Requires</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -177,7 +177,7 @@ export default function AboutCOPPAPrivacyPolicy() {
           </div>
 
           {/* Important Considerations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Key Points</div>
             <h2 className="text-2xl font-bold mb-4">Important Considerations</h2>
             <ul className="space-y-3 text-slate-400">
@@ -205,7 +205,7 @@ export default function AboutCOPPAPrivacyPolicy() {
           </div>
 
           {/* Helpful References - Full Width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Resources</div>
             <h2 className="text-2xl font-bold mb-4">Helpful References</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">

@@ -85,7 +85,7 @@ export default function AboutRequestForQuote() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* When to use an RFQ */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">When to use an RFQ instead of an RFI or RFP</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -120,7 +120,7 @@ export default function AboutRequestForQuote() {
           </div>
 
           {/* What the RFQ Generator creates */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Output</div>
             <h2 className="text-2xl font-bold mb-4">What the RFQ Generator creates</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -148,7 +148,7 @@ export default function AboutRequestForQuote() {
           </div>
 
           {/* Core sections included */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Sections</div>
             <h2 className="text-2xl font-bold mb-4">Core sections included</h2>
             <ul className="space-y-3 text-slate-400">
@@ -184,7 +184,7 @@ export default function AboutRequestForQuote() {
           </div>
 
           {/* How to use the RFQ Generator - Full width */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-6">How to use the RFQ Generator</h2>
             
@@ -285,7 +285,7 @@ export default function AboutRequestForQuote() {
           </div>
 
           {/* Tips for clearer quotations */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Best Practices</div>
             <h2 className="text-2xl font-bold mb-4">Tips for clearer and more competitive quotations</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -333,7 +333,7 @@ export default function AboutRequestForQuote() {
           </div>
 
           {/* Data privacy and storage */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Privacy</div>
             <h2 className="text-2xl font-bold mb-4">Data privacy and storage</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -348,7 +348,7 @@ export default function AboutRequestForQuote() {
           </div>
 
           {/* Key benefits */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Benefits</div>
             <h2 className="text-2xl font-bold mb-4">Why use an RFQ Generator</h2>
             <div className="space-y-3">

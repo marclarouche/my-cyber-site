@@ -84,7 +84,7 @@ export default function AboutTermsOfService() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What is a Terms of Service */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What is a Terms of Service?</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -99,7 +99,7 @@ export default function AboutTermsOfService() {
           </div>
 
           {/* Why it matters */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Importance</div>
             <h2 className="text-2xl font-bold mb-4">Why it matters</h2>
             <ul className="space-y-3 text-slate-400 mb-4">
@@ -129,7 +129,7 @@ export default function AboutTermsOfService() {
           </div>
 
           {/* How to use the generator */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Getting Started</div>
             <h2 className="text-2xl font-bold mb-4">How to use the generator</h2>
             <ol className="space-y-3 text-slate-400">
@@ -171,7 +171,7 @@ export default function AboutTermsOfService() {
           </div>
 
           {/* Key clauses to include */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Key Elements</div>
             <h2 className="text-2xl font-bold mb-4">Key clauses to include</h2>
             <ul className="space-y-3 text-slate-400">
@@ -211,7 +211,7 @@ export default function AboutTermsOfService() {
           </div>
 
           {/* Helpful references */}
-          <div className="md:col-span-2 bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="md:col-span-2 bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">References</div>
             <h2 className="text-2xl font-bold mb-4">Helpful references</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">

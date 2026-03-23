@@ -100,7 +100,7 @@ export default function AboutSoftwareDesignDocument() {
       <section className="px-4 pb-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           {/* What this generator does */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Overview</div>
             <h2 className="text-2xl font-bold mb-4">What this generator does</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -129,7 +129,7 @@ export default function AboutSoftwareDesignDocument() {
           </div>
 
           {/* Who this generator is for */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Target Audience</div>
             <h2 className="text-2xl font-bold mb-4">Who this generator is for</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -157,7 +157,7 @@ export default function AboutSoftwareDesignDocument() {
           </div>
 
           {/* How the workflow is organized */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Workflow</div>
             <h2 className="text-2xl font-bold mb-4">How the workflow is organized</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -201,7 +201,7 @@ export default function AboutSoftwareDesignDocument() {
           </div>
 
           {/* What a complete design document includes */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Coverage</div>
             <h2 className="text-2xl font-bold mb-4">What a complete design document includes</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -245,7 +245,7 @@ export default function AboutSoftwareDesignDocument() {
           </div>
 
           {/* Local processing and data handling */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Privacy & Security</div>
             <h2 className="text-2xl font-bold mb-4">Local processing and data handling</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -278,7 +278,7 @@ export default function AboutSoftwareDesignDocument() {
           </div>
 
           {/* Review, governance, and legal considerations */}
-          <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-700 p-8">
             <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-4">Governance</div>
             <h2 className="text-2xl font-bold mb-4">Review, governance, and legal considerations</h2>
             <p className="text-slate-400 mb-4 leading-relaxed">
