@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Plane, Server, ShieldAlert, ClipboardList, Footprints } from 'lucide-react';
+import { Shield, Mail, Key, Lock, Wifi, FileText, Zap, Network, AlertTriangle, Image, Hash, QrCode, Globe, Search, Code, Database, Calculator, Eye, Cpu, Fingerprint, FileCode, Cloud, CheckCircle, FileSearch, ArrowLeft, ChevronRight, BookOpen, Wrench, Smartphone, BrainCircuit, Plane, Tv, Server, ShieldAlert, ClipboardList, Footprints } from 'lucide-react';
 export default function ToolsHub() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -289,7 +289,16 @@ export default function ToolsHub() {
      link: "/tools/travel-data-exposure-assessor",
      aboutLink: "/tools/about-travel-data-exposure-assessor",
      isNew: true
-    }
+    },
+    {
+    icon: <Tv className="w-8 h-8" />,
+    title: "Smart TV Privacy Configurator",
+    description: "Select your TV brand and follow step-by-step instructions to disable ACR tracking, silence microphones, limit ad profiling, and lock down network exposure. Covers Samsung, LG, Sony, Vizio, Roku, and more.",
+    category: "Privacy",
+    link: "/tools/smart-tv-privacy-configurator",
+    aboutLink: "/tools/about-smart-tv-privacy-configurator",
+    isNew: true
+   }
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];

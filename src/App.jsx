@@ -141,6 +141,8 @@ import GovernmentImpersonationScamDetector from './tools/GovernmentImpersonation
 import AboutGovernmentImpersonationScamDetector from './tools/AboutGovernmentImpersonationScamDetector';
 import TravelDataExposureAssessor from './tools/TravelDataExposureAssessor';
 import AboutTravelDataExposureAssessor from './tools/AboutTravelDataExposureAssessor';
+import SmartTVPrivacyConfigurator from './tools/SmartTVPrivacyConfigurator';
+import AboutSmartTVPrivacyConfigurator from './tools/AboutSmartTVPrivacyConfigurator';
 import ToolsHub from './tools/ToolsHub';
 
 
@@ -328,6 +330,8 @@ export default function App() {
         <Route path="/tools/about-government-impersonation-scam-detector" element={<AboutGovernmentImpersonationScamDetector />} />
         <Route path="/tools/travel-data-exposure-assessor" element={<TravelDataExposureAssessor />} />
         <Route path="/tools/about-travel-data-exposure-assessor" element={<AboutTravelDataExposureAssessor />} />
+        <Route path="/tools/smart-tv-privacy-configurator" element={<SmartTVPrivacyConfigurator />} />
+        <Route path="/tools/about-smart-tv-privacy-configurator" element={<AboutSmartTVPrivacyConfigurator />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}
