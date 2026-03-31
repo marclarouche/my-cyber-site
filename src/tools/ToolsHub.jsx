@@ -298,7 +298,16 @@ export default function ToolsHub() {
     link: "/tools/smart-tv-privacy-configurator",
     aboutLink: "/tools/about-smart-tv-privacy-configurator",
     isNew: true
-   }
+   },
+   {
+    icon: <FileCode className="w-8 h-8" />,
+    title: "Git Secrets Scanner",
+    description: "Paste any code snippet, config file, or script. Instantly detects exposed API keys, tokens, passwords, and connection strings across 13 secret patterns — 100% in your browser. No data transmitted.",
+    category: "Security",
+    link: "/tools/git-secrets-scanner",
+    aboutLink: "/tools/about-git-secrets-scanner",
+    isNew: true
+},
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];

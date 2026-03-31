@@ -143,6 +143,8 @@ import TravelDataExposureAssessor from './tools/TravelDataExposureAssessor';
 import AboutTravelDataExposureAssessor from './tools/AboutTravelDataExposureAssessor';
 import SmartTVPrivacyConfigurator from './tools/SmartTVPrivacyConfigurator';
 import AboutSmartTVPrivacyConfigurator from './tools/AboutSmartTVPrivacyConfigurator';
+import GitSecretsScanner from './tools/GitSecretsScanner';
+import AboutGitSecretsScanner from './tools/AboutGitSecretsScanner';
 import ToolsHub from './tools/ToolsHub';
 
 
@@ -166,6 +168,10 @@ import ChromeBaselinemacOS from './security-center/ChromeBaselinemacOS';
 import AboutChromeBaselinemacOS from './security-center/AboutChromeBaselinemacOS';
 import FirefoxBaselinemacOS from './security-center/FirefoxBaselinemacOS';
 import AboutFirefoxBaselinemacOS from './security-center/AboutFirefoxBaselinemacOS';
+import ChromeBaselineLinux from './security-center/ChromeBaselineLinux';
+import AboutChromeBaselineLinux from './security-center/AboutChromeBaselineLinux';
+import FirefoxBaselineLinux from './security-center/FirefoxBaselineLinux';
+import AboutFirefoxBaselineLinux from './security-center/AboutFirefoxBaselineLinux';
 import BrowserHardeningHub from './security-center/BrowserHardeningHub';
 import AboutBrowserHub from './security-center/AboutBrowserHub';
 
@@ -332,6 +338,8 @@ export default function App() {
         <Route path="/tools/about-travel-data-exposure-assessor" element={<AboutTravelDataExposureAssessor />} />
         <Route path="/tools/smart-tv-privacy-configurator" element={<SmartTVPrivacyConfigurator />} />
         <Route path="/tools/about-smart-tv-privacy-configurator" element={<AboutSmartTVPrivacyConfigurator />} />
+        <Route path="/tools/git-secrets-scanner" element={<GitSecretsScanner />} />
+        <Route path="/tools/about-git-secrets-scanner" element={<AboutGitSecretsScanner />} />
         <Route path="/tools" element={<ToolsHub />} />
         
         {/* Put nested routes BEFORE the parent route */}
@@ -353,6 +361,10 @@ export default function App() {
         <Route path="/security-center/browser-hardening-hub/about-chrome-baseline-macos" element={<AboutChromeBaselinemacOS />} />
         <Route path="/security-center/browser-hardening-hub/firefox-baseline-macos" element={<FirefoxBaselinemacOS />} />
         <Route path="/security-center/browser-hardening-hub/about-firefox-baseline-macos" element={<AboutFirefoxBaselinemacOS />} />
+        <Route path="/security-center/browser-hardening-hub/chrome-baseline-linux" element={<ChromeBaselineLinux />} />
+        <Route path="/security-center/browser-hardening-hub/about-chrome-baseline-linux" element={<AboutChromeBaselineLinux />} />
+        <Route path="/security-center/browser-hardening-hub/firefox-baseline-linux" element={<FirefoxBaselineLinux />} />
+        <Route path="/security-center/browser-hardening-hub/about-firefox-baseline-linux" element={<AboutFirefoxBaselineLinux />} />
         <Route path="/security-center/browser-hardening-hub" element={<BrowserHardeningHub />} />
         <Route path="/security-center/about-browser-hub" element={<AboutBrowserHub />} />
         

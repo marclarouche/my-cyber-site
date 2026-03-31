@@ -139,6 +139,16 @@ export default function BrowserHardeningHub() {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-3 mt-auto">
+          {tool.comingSoon ? (
+            <button
+              disabled
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold bg-slate-800 text-slate-500 border border-slate-700 cursor-not-allowed opacity-50"
+            >
+              <span>⏳</span>
+              <span>Coming Soon</span>
+            </button>
+          ) : (
+            <>
               <a
                 href={tool.toolUrl}
                 className="flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transition-all hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20"
@@ -153,6 +163,8 @@ export default function BrowserHardeningHub() {
                 <FileText className="w-4 h-4" />
                 <span>About Controls</span>
               </a>
+            </>
+          )}
         </div>
       </div>
     </div>
