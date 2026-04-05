@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   Mail, Shield, Globe, CheckCircle, ChevronRight,
-  Lock, Zap, Users, ExternalLink, Calendar, ArrowRight
+  Lock, Zap, Users, ExternalLink, Calendar, ArrowLeft, ArrowRight
 } from "lucide-react";
 
 const providers = [
@@ -118,15 +118,23 @@ export default function CustomEmailSetup() {
               CyberLifeCoach
             </span>
           </a>
-          <a
-            href="https://calendly.com/cyberlifecoach-proton/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-sm"
-          >
-            Book Consultation
-          </a>
-        </div>
+          
+          
+         <div className="flex items-center space-x-6">
+            <a href="/" className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Home</span>
+            </a>
+            <a
+              href="https://calendly.com/cyberlifecoach-proton/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-sm"
+            >
+              Book Consultation
+            </a>
+          </div>
+          </div>
       </nav>
 
       {/* Hero */}
