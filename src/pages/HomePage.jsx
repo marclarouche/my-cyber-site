@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Lock, Eye, UserCheck, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Newspaper } from 'lucide-react';
+import { Shield, Lock, Eye, UserCheck, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Mail, Newspaper } from 'lucide-react';
 
 
 export default function CyberSecurityLanding() {
@@ -35,8 +35,15 @@ export default function CyberSecurityLanding() {
       description: "Mini server with mirrored storage on ZimaOS, securely hardened and set up with training.",
       cta: "Get Started",
       href: "/privacy-storage-consultation"
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "Secure Email & Domain Setup",
+      description: "Own your digital identity with a custom domain and encrypted inbox via Proton Mail or Tuta — done with you, start to finish.",
+      cta: "Claim Your Domain",
+      href: "/custom-email-setup"
     }
-  ];
+    ];
 
   const products = [
     {
@@ -216,7 +223,7 @@ export default function CyberSecurityLanding() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group">
                 <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors wobble-icon">
