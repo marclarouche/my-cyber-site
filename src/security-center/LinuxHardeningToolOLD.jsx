@@ -12,8 +12,6 @@ export default function LinuxBaselineAssistant() {
     { key: 'telnetRemoval', title: 'Remove telnet package', description: 'Confirms telnet is not installed and documents the requirement to avoid legacy, unencrypted remote access on Ubuntu 24.04 LTS.', severity: 'critical', hint: 'Ensure the telnet package is not installed. Example: apt-get remove --purge telnet', relaxed: true, strict: true },
     { key: 'rshServerRemoval', title: 'Remove rsh-server package', description: 'Documents removal of insecure remote shell services such as rsh-server to prevent cleartext remote logins.', severity: 'critical', hint: 'Ensure rsh-server is not installed. Example: apt-get remove --purge rsh-server rsh-redone-server', relaxed: true, strict: true },
     { key: 'sshInstalled', title: 'Ensure SSH server is installed', description: 'Verifies that secure remote access is provided through openssh-server instead of legacy protocols like telnet or rsh.', severity: 'critical', hint: 'Ensure a supported OpenSSH server is installed and enabled. Example: apt-get install openssh-server', relaxed: true, strict: true },
-    { key: 'sshDisableRootLogin', title: 'Disable SSH root login', description: 'Sets PermitRootLogin to no in sshd_config to prevent direct root access over SSH, forcing admins to log in as a named user and escalate via sudo.', severity: 'critical', hint: 'Set PermitRootLogin no in /etc/ssh/sshd_config. Example: sed -i "s/^#*PermitRootLogin.*/PermitRootLogin no/" /etc/ssh/sshd_config && systemctl restart ssh', relaxed: true, strict: true },
-    { key: 'sshCertAuthOnly', title: 'Require SSH key-based authentication, disable passwords', description: 'Sets PasswordAuthentication no and PubkeyAuthentication yes in sshd_config, ensuring only certificate or key-based logins are accepted. Eliminates brute-force password attack surface. WARNING: Deploy SSH keys to all accounts before enabling this control or you will be locked out.', severity: 'critical', caution: true, hint: 'Set PasswordAuthentication no and PubkeyAuthentication yes in /etc/ssh/sshd_config. Ensure authorized_keys are deployed before applying. Example: systemctl restart ssh after changes.', relaxed: true, strict: true },
     { key: 'singleUserAuth', title: 'Require auth for single-user and maintenance modes', description: 'Ensures rescue and emergency modes require credentials so that single-user boot is not an unguarded back door.', severity: 'critical', manual: true, hint: 'Require authentication for rescue and emergency targets. Example: ensure sulogin is configured for rescue/emergency in systemd units', relaxed: true, strict: true },
     { key: 'remoteXRestricted', title: 'Restrict remote X connections', description: 'Notes that remote X11 access should be disabled or limited to documented mission requirements to reduce exposure of graphical sessions.', severity: 'critical', manual: true, hint: 'Disable or tightly restrict remote X11 connections unless explicitly required', relaxed: true, strict: true },
     { key: 'noBlankPasswords', title: 'Prohibit accounts with blank passwords', description: 'Confirms that local user accounts do not use empty or null passwords, which would allow trivial compromise.', severity: 'critical', hint: 'Ensure no local accounts have blank passwords. Example: passwd -S and /etc/shadow review', relaxed: true, strict: true },
@@ -122,10 +120,6 @@ export default function LinuxBaselineAssistant() {
       lines.push('# -----------------------------------------------');
       lines.push(`# Control ${index + 1}: ${control.title}`);
       lines.push(`# Severity : CAT ${control.severity === 'critical' ? 'I' : control.severity === 'medium' ? 'II' : 'III'}`);
-      if (control.caution) {
-        lines.push('# *** CAUTION: Ensure SSH keys are deployed to all accounts before enabling this control. ***');
-        lines.push('# *** Applying without deployed keys will lock out all SSH users immediately.           ***');
-      }
       if (control.hint) {
         lines.push(`# Hint     : ${control.hint}`);
       }
@@ -135,9 +129,6 @@ export default function LinuxBaselineAssistant() {
       lines.push('');
       lines.push(`echo "[INFO] Review control: ${control.title}";`);
       lines.push(`echo "       Severity: CAT ${control.severity === 'critical' ? 'I' : control.severity === 'medium' ? 'II' : 'III'}";`);
-      if (control.caution) {
-        lines.push(`echo "       *** CAUTION: Deploy SSH keys before applying this control. ***";`);
-      }
       if (control.hint) {
         lines.push(`echo "       Hint: ${control.hint}";`);
       }
@@ -210,11 +201,6 @@ export default function LinuxBaselineAssistant() {
               MANUAL
             </span>
           )}
-          {control.caution && (
-            <span className="text-xs px-2 py-0.5 rounded-full bg-orange-900/80 text-orange-200 border border-orange-500/70">
-              ⚠ DEPLOY KEYS FIRST
-            </span>
-          )}
         </div>
         <p className="text-xs text-slate-400 leading-relaxed">{control.description}</p>
       </div>
@@ -239,12 +225,12 @@ export default function LinuxBaselineAssistant() {
             </a>
 
             <button
-              onClick={() => window.location.href = '/security-center'}
-              className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition-all duration-300 border border-slate-700 hover:border-cyan-500"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Security Center</span>
-            </button>
+  onClick={() => window.location.href = '/security-center'}
+  className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition-all duration-300 border border-slate-700 hover:border-cyan-500"
+>
+  <ArrowLeft className="w-4 h-4" />
+  <span>Back to Security Center</span>
+</button>
           </div>
         </div>
       </nav>
@@ -433,7 +419,6 @@ export default function LinuxBaselineAssistant() {
                 <li>• Generate the script and review every section, especially Strict profile items.</li>
                 <li>• This is a checklist template—you must implement actual hardening commands.</li>
                 <li>• Test on a non-critical machine first with sudo privileges.</li>
-                <li>• <strong className="text-orange-400">If using "Require SSH key-based authentication":</strong> ensure all SSH public keys are deployed to authorized_keys before disabling password auth or you will be locked out.</li>
               </ul>
             </div>
             <div>
@@ -467,26 +452,26 @@ export default function LinuxBaselineAssistant() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <img 
-              src="/logo.png" 
-              alt="CyberLifeCoach" 
-              className="h-8 w-auto transition-all duration-300 hover:scale-125 hover:brightness-125" 
-            />
-            <span className="font-bold text-lg transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
+{/* Footer */}
+<footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
+  <div className="max-w-7xl mx-auto text-center">
+    <div className="flex items-center justify-center space-x-2 mb-4">
+      <img 
+        src="/logo.png" 
+        alt="CyberLifeCoach" 
+        className="h-8 w-auto transition-all duration-300 hover:scale-125 hover:brightness-125" 
+      />
+       <span className="font-bold text-lg transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
               CyberLifeCoach
             </span>
-          </div>
-          <div className="text-slate-500 text-sm">
-            <p>&copy; 2026 CyberLifeCoach</p>
-            <p className="text-slate-600">A Veteran-Owned Business Committed to Your Digital Security</p>
-            <p>All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+    </div>
+    <div className="text-slate-500 text-sm">
+      <p>&copy; 2026 CyberLifeCoach</p>
+      <p className="text-slate-600">A Veteran-Owned Business Committed to Your Digital Security</p>
+      <p>All rights reserved.</p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
