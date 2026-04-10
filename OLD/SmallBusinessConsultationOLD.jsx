@@ -274,11 +274,8 @@ export default function SmallBusinessConsultation() {
             Book Session Now
             </a>
 
-              <button
-                onClick={() => window.location.href = '/business-assessment-preview'}
-                className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 flex items-center space-x-2">
-                <FileText className="w-5 h-5" />
-                <span>Try Free Preview First</span>
+              <button className="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900">
+                Try Free Preview First
               </button>
             </div>
           </div>
@@ -314,17 +311,11 @@ export default function SmallBusinessConsultation() {
             Get your practical 30-day security plan and take control of your cyber risk today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://calendly.com/cyberlifecoach-proton/new-meeting"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3">
+            <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3">
               <Calendar className="w-6 h-6" />
               <span>Book Your Session</span>
-            </a>
-            <button
-              onClick={() => window.location.href = '/business-assessment-preview'}
-              className="px-10 py-5 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 inline-flex items-center space-x-3">
+            </button>
+            <button className="px-10 py-5 rounded-lg font-semibold text-lg border-2 border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-900 inline-flex items-center space-x-3">
               <FileText className="w-6 h-6" />
               <span>Free Preview Assessment</span>
             </button>

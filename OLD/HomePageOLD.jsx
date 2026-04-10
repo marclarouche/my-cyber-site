@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Lock, Eye, UserCheck, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Mail, Newspaper, Wifi } from 'lucide-react';
+import { Shield, Lock, Eye, UserCheck, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Mail, Newspaper } from 'lucide-react';
 
 
 export default function CyberSecurityLanding() {
@@ -42,13 +42,6 @@ export default function CyberSecurityLanding() {
       description: "Own your digital identity with a custom domain and encrypted inbox via Proton Mail or Tuta — done with you, start to finish.",
       cta: "Claim Your Domain",
       href: "/custom-email-setup"
-    },
-    {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "Home Network Privacy Installation",
-      description: "Block ads and trackers on every device in your home — one installation, no per-device setup. Optional VPN available",
-      cta: "Learn More",
-      href: "/home-network-privacy"
     }
     ];
 
@@ -230,7 +223,7 @@ export default function CyberSecurityLanding() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group">
                 <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors wobble-icon">
@@ -413,7 +406,6 @@ export default function CyberSecurityLanding() {
                 <li><a href="/individual-consultation" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
                 <li><a href="/small-business-consultation" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
                 <li><a href="/tools/threat-model" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
-                <li><a href="/home-network-privacy" className="hover:text-cyan-400 transition-colors">Home Network Privacy</a></li>
               </ul>
             </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Settings, Radio, ArrowLeft, ChevronRight, Lock, CheckCircle, Clock, Zap, Wifi } from 'lucide-react';
+import { Shield, Settings, Radio, ArrowLeft, ChevronRight, Lock, CheckCircle, Clock, Zap } from 'lucide-react';
 
 export default function MissionControl() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,17 +49,6 @@ export default function MissionControl() {
       tag: 'Complete ✅',
       tagColor: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30',
       time: 'Already done',
-    },
-    {
-      number: '04',
-      icon: <Wifi className="w-8 h-8" />,
-      title: 'Pi-hole Live Demo Tool',
-      description: 'Step-by-step guide to running Pi-hole in Docker on your MacBook, sharing your hotspot, and showing a prospect their own network traffic in real time. Your sales playbook — keep it here.',
-      cta: 'Open Demo Guide',
-      href: '/clc-ops/live-demo-tool',
-      tag: 'Sales Tool',
-      tagColor: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/30',
-      time: 'Use before prospect visits',
     },
   ];
 
@@ -154,11 +143,11 @@ export default function MissionControl() {
               Operations
             </h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Four tools. One mission — publish great content, stay secure, and close more installs.
+              Three tools. One mission — publish great content and stay secure doing it.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {ops.map((op, i) => (
               <div key={i} className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group flex flex-col">
                 {/* Number + tag */}
@@ -173,8 +162,8 @@ export default function MissionControl() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold mb-3">{op.title}</h3>
-                <p className="text-slate-400 mb-3 leading-relaxed flex-1 text-sm">{op.description}</p>
+                <h3 className="text-2xl font-bold mb-3">{op.title}</h3>
+                <p className="text-slate-400 mb-3 leading-relaxed flex-1">{op.description}</p>
                 <p className="text-slate-600 text-xs mb-6 flex items-center gap-1.5">
                   <Clock className="w-3 h-3" /> {op.time}
                 </p>
@@ -244,6 +233,7 @@ export default function MissionControl() {
           </div>
         </div>
       </footer>
+
     </div>
   );
 }

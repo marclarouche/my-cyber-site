@@ -11,6 +11,8 @@ const MissionControl = lazy(() => import('./pages/MissionControl'));
 const AdminSetup = lazy(() => import('./pages/AdminSetup'));
 const CloudflareSetup = lazy(() => import('./pages/CloudflareSetup'));
 const SocialAutomation = lazy(() => import('./pages/SocialAutomation'));
+const LiveDemoTool = lazy(() => import('./pages/LiveDemoTool'))
+
 
 // Consultations
 const IndividualConsultation = lazy(() => import('./consultations/IndividualConsultation'));
@@ -21,6 +23,12 @@ const StorageSetupIntake = lazy(() => import('./consultations/StorageSetupIntake
 const PrivacyStorageConsultation = lazy(() => import('./consultations/PrivacyStorageConsultation'));
 const PrivacyScoreCalculator = lazy(() => import('./PrivacyScoreCalculator'));
 const CustomEmailSetup = lazy(() => import('./consultations/CustomEmailSetup'));
+const NetworkIntakeForm = lazy(() => import('./consultations/NetworkIntakeForm'));
+const PiholeFaq = lazy(() => import('./consultations/PiholeFaq'));
+const PiholeWireguardFaq = lazy(() => import('./consultations/PiholeWireguardFaq'));
+const PricingPage = lazy(() => import('./consultations/PricingPage'));
+const HomeNetworkPrivacy = lazy(() => import('./consultations/HomeNetworkPrivacy'))
+
 
 // Policy Generators
 const AcceptableUsePolicy = lazy(() => import('./policy-generators/AcceptableUsePolicy'));
@@ -206,6 +214,7 @@ export default function App() {
             <Route path="/clc-ops/social-setup" element={<AdminSetup />} />
             <Route path="/clc-ops/social-automation" element={<SocialAutomation />} />
             <Route path="/clc-ops/cloudflare-setup" element={<CloudflareSetup />} />
+            <Route path="clc-ops/live-demo-tool" element={<LiveDemoTool />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/writing" element={<Writing />} />
@@ -217,6 +226,11 @@ export default function App() {
             <Route path="/privacy-storage-consultation" element={<PrivacyStorageConsultation />} />
             <Route path="/privacy-score" element={<PrivacyScoreCalculator />} />
             <Route path="/custom-email-setup" element={<CustomEmailSetup />} />
+            <Route path="/home-network-privacy" element={<HomeNetworkPrivacy />} />
+            <Route path="/home-network-privacy/network-intake-form" element={<NetworkIntakeForm />} />
+            <Route path="/home-network-privacy/pi-hole-faq" element={<PiholeFaq />} />
+            <Route path="/home-network-privacy/pi-hole-wireguard-faq" element={<PiholeWireguardFaq />} />
+            <Route path="/home-network-privacy/pricing-page" element={<PricingPage />} />
 
             {/* Policy Generators */}
             <Route path="/policy-generators/acceptable-use-policy" element={<AcceptableUsePolicy />} />
