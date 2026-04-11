@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowLeft, AlertTriangle, Info, CheckCircle, Send, Loader2 } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, Info, CheckCircle, Send } from 'lucide-react';
 
 const initialForm = {
   firstName: '', lastName: '', email: '', phone: '', address: '',
@@ -71,8 +71,6 @@ function Alert({ type, children }) {
 export default function NetworkIntakeForm() {
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
 
   const set = (field) => (e) => setForm(f => ({ ...f, [field]: e.target.value }));
   const toggleIot = (item) => setForm(f => ({
@@ -82,32 +80,9 @@ export default function NetworkIntakeForm() {
       : [...f.iotDevices, item],
   }));
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     if (!form.firstName || !form.email || !form.serviceInterest) return;
-
-    setLoading(true);
-    setError('');
-
-    try {
-      const response = await fetch("https://formspree.io/f/xjgpnvae", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          iotDevices: form.iotDevices.join(', '),
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        setError('Something went wrong. Please try again or contact us directly.');
-      }
-    } catch (err) {
-      setError('Network error. Please check your connection and try again.');
-    } finally {
-      setLoading(false);
-    }
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -178,38 +153,32 @@ export default function NetworkIntakeForm() {
                 <div><FieldLabel>Email address</FieldLabel><Input value={form.email} onChange={set('email')} type="email" placeholder="jane@example.com" /></div>
                 <div><FieldLabel>Phone number</FieldLabel><Input value={form.phone} onChange={set('phone')} placeholder="(555) 555-5555" /></div>
               </div>
-              <div>
-                <FieldLabel hint="Street address, city, state, zip">Service address</FieldLabel>
-                <Input value={form.address} onChange={set('address')} placeholder="123 Main St, Anytown, CA 90210" />
-              </div>
+              <div><FieldLabel>Service address</FieldLabel><Input value={form.address} onChange={set('address')} placeholder="123 Main St, City, State" /></div>
             </div>
           </div>
 
-          {/* Internet & Router */}
+          {/* Internet Service */}
           <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700 p-8">
-            <h2 className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-6">Internet & Router Setup</h2>
+            <h2 className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-6">Internet Service</h2>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <FieldLabel>Internet Service Provider (ISP)</FieldLabel>
-                  <Input value={form.isp} onChange={set('isp')} placeholder="e.g. Xfinity, AT&T, Spectrum" />
-                </div>
+                <div><FieldLabel>Internet service provider (ISP)</FieldLabel><Input value={form.isp} onChange={set('isp')} placeholder="e.g. Spectrum, AT&T, Comcast" /></div>
                 <div>
                   <FieldLabel>Connection type</FieldLabel>
                   <Select value={form.connectionType} onChange={set('connectionType')} options={[
-                    {value:'fiber',label:'Fiber'},{value:'cable',label:'Cable'},
-                    {value:'dsl',label:'DSL'},{value:'satellite',label:'Satellite'},
-                    {value:'fixed-wireless',label:'Fixed Wireless'},{value:'unsure',label:'Not sure'},
+                    {value:'fiber',label:'Fiber optic'},{value:'cable',label:'Cable'},
+                    {value:'5g',label:'5G home internet'},{value:'dsl',label:'DSL'},
+                    {value:'satellite',label:'Satellite'},{value:'unsure',label:'Not sure'},
                   ]} />
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <FieldLabel hint="Check fast.com or your ISP bill">Approximate download speed</FieldLabel>
+                  <FieldLabel>Approximate download speed</FieldLabel>
                   <Select value={form.downloadSpeed} onChange={set('downloadSpeed')} options={[
-                    {value:'under-100',label:'Under 100 Mbps'},{value:'100-300',label:'100–300 Mbps'},
-                    {value:'300-500',label:'300–500 Mbps'},{value:'500-1000',label:'500 Mbps–1 Gbps'},
-                    {value:'1gig+',label:'1 Gbps or faster'},{value:'unsure',label:'Not sure'},
+                    {value:'under100',label:'Under 100 Mbps'},{value:'100to500',label:'100–500 Mbps'},
+                    {value:'500to1g',label:'500 Mbps–1 Gbps'},{value:'over1g',label:'Over 1 Gbps'},
+                    {value:'unsure',label:'Not sure'},
                   ]} />
                 </div>
                 <div>
@@ -334,24 +303,14 @@ export default function NetworkIntakeForm() {
             </div>
           </div>
 
-          {/* Error message */}
-          {error && (
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-red-500/30 bg-red-500/10 text-red-300 text-sm">
-              <AlertTriangle className="w-4 h-4 flex-shrink-0" />
-              {error}
-            </div>
-          )}
-
           {/* Submit */}
           <button
             onClick={handleSubmit}
-            disabled={!form.firstName || !form.email || !form.serviceInterest || loading}
+            disabled={!form.firstName || !form.email || !form.serviceInterest}
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-[1.01] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-3"
           >
-            {loading
-              ? <><Loader2 className="w-5 h-5 animate-spin" /> Submitting...</>
-              : <><Send className="w-5 h-5" /> Submit Network Assessment</>
-            }
+            <Send className="w-5 h-5" />
+            Submit Network Assessment
           </button>
           <p className="text-xs text-slate-500 text-center">We'll review your submission and follow up within one business day.</p>
         </div>
