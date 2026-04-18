@@ -2,9 +2,8 @@
  * TOSGate.jsx
  * 
  * Drop this wrapper around your entire app in App.jsx (or your router root).
- * Any user who hasn't accepted the current TOS version — or confirmed they are
- * 18+ — will be shown the TermsOfAgreement page first, no matter which route
- * they navigate to.
+ * Any user who hasn't accepted the current TOS version will be shown the
+ * TermsOfAgreement page first — no matter which route they navigate to.
  *
  * Usage in App.jsx:
  * 
@@ -31,18 +30,20 @@ const TOS_KEY = 'clc_tos_acceptance';
 function hasAcceptedCurrentTOS() {
   try {
     const stored = JSON.parse(localStorage.getItem(TOS_KEY) || 'null');
-    // Must match the required version AND have confirmed age (18+).
-    return stored?.version === REQUIRED_TOS_VERSION && stored?.ageVerified === true;
+    return stored?.version === REQUIRED_TOS_VERSION;
   } catch {
     return false;
   }
 }
 
 export default function TOSGate({ children }) {
-  // Lazy initialization reads localStorage once on mount — no flash of content,
-  // no extra render cycle needed.
+  // Use lazy initialization to read from localStorage once during mount.
+  // This avoids the need for useEffect + setState which triggers cascading renders.
   const [accepted, setAccepted] = useState(() => hasAcceptedCurrentTOS());
 
+  // If user hasn't accepted the current TOS version, show the TermsOfService page.
+  // Lazy initialization runs synchronously during mount, so accepted is always true or false.
+  // No loading spinner needed - this prevents any flash of content.
   if (!accepted) {
     return <TermsOfAgreement onAccept={() => setAccepted(true)} />;
   }

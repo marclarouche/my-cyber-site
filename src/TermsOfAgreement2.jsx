@@ -1,109 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, FileText, Lock, AlertTriangle, UserCheck, RefreshCw, ChevronRight, CheckCircle, Ban } from 'lucide-react';
+import { Shield, FileText, Lock, AlertTriangle, UserCheck, RefreshCw, ChevronRight, CheckCircle } from 'lucide-react';
 
 const TOS_VERSION = "1.0.1";
 const TOS_KEY = "clc_tos_acceptance";
 
-// ── Age-Blocked screen ────────────────────────────────────────────────────────
-function AgeBlocked({ declined = false }) {
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
-      <style>{`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in-up { animation: fadeInUp 0.6s ease both; }
-        .grid-bg {
-          background-image:
-            linear-gradient(rgba(239,68,68,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(239,68,68,0.03) 1px, transparent 1px);
-          background-size: 40px 40px;
-        }
-      `}</style>
-
-      {/* Nav */}
-      <nav className="relative z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
-        <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
-          <a href="/" className="flex items-center space-x-3 group">
-            <img src="/logo.png" alt="CyberLifeCoach" className="h-10 w-auto group-hover:brightness-125 group-hover:scale-110 transition-all duration-300" />
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              CyberLifeCoach
-            </span>
-          </a>
-        </div>
-      </nav>
-
-      {/* Blocked content */}
-      <main className="grid-bg flex-1 flex items-center justify-center px-4">
-        <div className="max-w-md w-full text-center fade-in-up">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500/20 to-rose-600/20 border border-red-500/30 mb-8">
-            <Ban className="w-10 h-10 text-red-400" />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-transparent">
-            {declined ? 'Terms Declined' : 'Unable to Continue'}
-          </h1>
-          <p className="text-slate-400 text-base leading-relaxed mb-6">
-            {declined
-              ? 'You must accept the Terms of Agreement to use CyberLife Coach tools. Without acceptance, we cannot confirm you understand and take responsibility for how these tools are applied.'
-              : <>CyberLife Coach tools involve real-world security configurations and carry genuine risk if misapplied. To proceed, you must be{' '}<span className="text-slate-200 font-semibold">18 years of age or older</span> and legally capable of accepting these terms on your own behalf.</>
-            }
-          </p>
-          <div className="bg-slate-900/70 border border-red-500/20 rounded-2xl p-5 mb-8">
-            <div className="flex items-start space-x-3">
-              <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-slate-400 text-left leading-relaxed">
-                {declined
-                  ? 'If you changed your mind or declined by mistake, you can return to the Terms page to review and accept.'
-                  : 'Access requires legal capacity to enter a binding agreement and to take responsibility for how these tools are applied. If you are under 18, please have a qualified adult review this material on your behalf.'
-                }
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            {declined && (
-              <button
-                onClick={() => window.location.reload()}
-                className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105"
-              >
-                <ChevronRight className="w-5 h-5" />
-                <span>Return to Terms</span>
-              </button>
-            )}
-            <a
-              href="https://www.google.com"
-              className="inline-flex items-center justify-center space-x-2 px-8 py-3 rounded-xl font-semibold border border-slate-700 text-slate-400 hover:border-slate-500 hover:text-slate-300 transition-all duration-300"
-            >
-              <span>Leave Site</span>
-              <ChevronRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="relative z-10 bg-slate-950 border-t border-slate-800 py-6 px-4">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>&copy; 2026 CyberLifeCoach | A Veteran-Owned Business Committed to Your Digital Security</p>
-          <div className="flex space-x-6">
-            <a href="/privacy-policy" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
-            <a href="/terms-of-service" className="hover:text-cyan-400 transition-colors">Terms of Service</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
-// ─────────────────────────────────────────────────────────────────────────────
-
 export default function TermsOfAgreement({ onAccept }) {
-  const [tosChecked, setTosChecked]   = useState(false);
-  const [ageChecked, setAgeChecked]   = useState(false);
-  const [accepted, setAccepted]       = useState(false);
-  const [ageDenied, setAgeDenied]     = useState(false);
-  const [declined, setDeclined]       = useState(false);
+  const [checked, setChecked] = useState(false);
+  const [accepted, setAccepted] = useState(false);
   const [previousAcceptance, setPreviousAcceptance] = useState(null);
-  const [pulse, setPulse]             = useState(false);  // which row to shake: 'tos' | 'age' | null
+  const [pulse, setPulse] = useState(false);
 
   useEffect(() => {
     try {
@@ -116,20 +21,13 @@ export default function TermsOfAgreement({ onAccept }) {
     }
   }, []);
 
-  // If user unchecks the age box after having checked it, show denied screen immediately.
-  const handleAgeChange = (e) => {
-    const val = e.target.checked;
-    setAgeChecked(val);
-    if (!val) setAgeDenied(true);
-  };
-
   const handleAccept = () => {
-    if (!tosChecked || !ageChecked) {
-      setPulse(!tosChecked ? 'tos' : 'age');
-      setTimeout(() => setPulse(null), 600);
+    if (!checked) {
+      setPulse(true);
+      setTimeout(() => setPulse(false), 600);
       return;
     }
-    const record = { version: TOS_VERSION, ts: new Date().toISOString(), ageVerified: true };
+    const record = { version: TOS_VERSION, ts: new Date().toISOString() };
     try {
       localStorage.setItem(TOS_KEY, JSON.stringify(record));
     } catch (e) {
@@ -138,24 +36,19 @@ export default function TermsOfAgreement({ onAccept }) {
       return;
     }
     setAccepted(true);
+    if (onAccept) onAccept();
   };
 
   const handleReset = () => {
     try {
       localStorage.removeItem(TOS_KEY);
       setPreviousAcceptance(null);
-      setTosChecked(false);
-      setAgeChecked(false);
+      setChecked(false);
       setAccepted(false);
-      setAgeDenied(false);
-      setDeclined(false);
     } catch (e) {
       console.error('localStorage remove error:', e);
     }
   };
-
-  // Show blocked screen if user indicated they are under 18 or explicitly declined.
-  if (ageDenied || declined) return <AgeBlocked declined={declined} />;
 
   const sections = [
     {
@@ -278,20 +171,29 @@ export default function TermsOfAgreement({ onAccept }) {
           background: linear-gradient(135deg, #06b6d4, #3b82f6);
           border-color: #06b6d4;
         }
-        .custom-checkbox::after {
-          content: '';
+        .custom-checkbox:checked::after {
+          content: '✓';
           position: absolute;
-          display: none;
-          left: 5px; top: 2px;
-          width: 6px; height: 10px;
-          border: 2px solid white;
-          border-top: none; border-left: none;
-          transform: rotate(45deg);
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 12px;
+          font-weight: bold;
         }
-        .custom-checkbox:checked::after { display: block; }
+        .custom-checkbox:hover:not(:checked) {
+          border-color: #22d3ee;
+          box-shadow: 0 0 8px rgba(34,211,238,0.3);
+        }
       `}</style>
 
-      <div className="scanline" />
+      {/* Decorative scanline */}
+      <div className="scanline" aria-hidden="true" />
+
+      {/* Ambient blobs */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+      </div>
 
       {/* Nav */}
       <nav className="relative z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
@@ -322,7 +224,7 @@ export default function TermsOfAgreement({ onAccept }) {
               Terms of Service
             </h1>
             <p className="text-slate-400 text-lg max-w-xl mx-auto">
-              These tools interact with real systems and carry genuine risk if misapplied. Please read and acknowledge the following terms before continuing.
+              Please read and acknowledge the following terms before continuing to use CyberLife Coach tools.
             </p>
           </div>
 
@@ -354,9 +256,9 @@ export default function TermsOfAgreement({ onAccept }) {
             <div className="flex items-start space-x-3">
               <AlertTriangle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-cyan-300 mb-1">Important — Real-World Risk</p>
+                <p className="text-sm font-semibold text-cyan-300 mb-1">Educational Notice</p>
                 <p className="text-sm text-slate-400">
-                  CyberLife Coach workbooks and guides are educational resources, not professional security advice. Misapplying configurations to live systems can cause outages, data loss, or security gaps. Always test in a safe environment first and verify that any guidance applies to your specific situation before acting on it.
+                  All CyberLife Coach workbooks and guides are provided for educational and informational purposes only. Always verify recommendations and test thoroughly before applying them to your own systems or organization.
                 </p>
               </div>
             </div>
@@ -370,61 +272,41 @@ export default function TermsOfAgreement({ onAccept }) {
               </div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-2">Terms Accepted</h3>
               <p className="text-slate-400 mb-8">You're all set. Welcome to CyberLife Coach.</p>
-              <button
-                onClick={() => { if (onAccept) onAccept(); }}
+              <a
+                href="/"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105"
               >
                 <span>Continue to Site</span>
                 <ChevronRight className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           ) : (
-            <div className="fade-in-up space-y-4" style={{ animationDelay: '0.45s' }}>
-
-              {/* ── Age verification checkbox ── */}
+            <div className="fade-in-up" style={{ animationDelay: '0.45s' }}>
+              {/* Checkbox acknowledgement */}
               <div
-                className={`bg-slate-900/70 border rounded-2xl p-6 transition-all duration-300 ${
-                  pulse === 'age' ? 'border-red-500/60 shake' : ageChecked ? 'border-cyan-500/50' : 'border-slate-700'
+                className={`bg-slate-900/70 border rounded-2xl p-6 mb-6 transition-all duration-300 ${
+                  pulse ? 'border-red-500/60 shake' : checked ? 'border-cyan-500/50' : 'border-slate-700'
                 }`}
               >
                 <label className="flex items-start space-x-4 cursor-pointer group">
                   <input
                     type="checkbox"
                     className="custom-checkbox mt-0.5"
-                    checked={ageChecked}
-                    onChange={handleAgeChange}
+                    checked={checked}
+                    onChange={(e) => setChecked(e.target.checked)}
                   />
                   <span className="text-sm text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors">
-                  I confirm that I am <span className="text-cyan-400 font-semibold">18 years of age or older</span> and that I have the legal capacity to enter this agreement and accept responsibility for how I apply these tools.
-                  </span>
-                </label>
-              </div>
-
-              {/* ── TOS checkbox ── */}
-              <div
-                className={`bg-slate-900/70 border rounded-2xl p-6 transition-all duration-300 ${
-                  pulse === 'tos' ? 'border-red-500/60 shake' : tosChecked ? 'border-cyan-500/50' : 'border-slate-700'
-                }`}
-              >
-                <label className="flex items-start space-x-4 cursor-pointer group">
-                  <input
-                    type="checkbox"
-                    className="custom-checkbox mt-0.5"
-                    checked={tosChecked}
-                    onChange={(e) => setTosChecked(e.target.checked)}
-                  />
-                  <span className="text-sm text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors">
-                    I have read and agree to the Terms of Agreement. I understand that these tools are provided for educational purposes, that they process data locally in my browser, and that I am solely responsible for evaluating and applying any guidance to my own systems.
+                    I have read and agree to the Terms of Agreement, and I understand that the tools process data locally in my browser and do not collect personal information unless I explicitly choose to email results.
                   </span>
                 </label>
               </div>
 
               {/* Action buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={handleAccept}
                   className={`flex-1 flex items-center justify-center space-x-2 px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
-                    tosChecked && ageChecked
+                    checked
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:shadow-lg hover:shadow-cyan-500/40 hover:scale-105 glow-accept'
                       : 'bg-slate-800 text-slate-500 cursor-not-allowed'
                   }`}
@@ -432,12 +314,12 @@ export default function TermsOfAgreement({ onAccept }) {
                   <CheckCircle className="w-5 h-5" />
                   <span>Accept and Continue</span>
                 </button>
-                <button
-                  onClick={() => setDeclined(true)}
+                <a
+                  href="/about"
                   className="flex-1 sm:flex-none flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-base border border-slate-700 text-slate-400 hover:border-slate-500 hover:text-slate-300 transition-all duration-300"
                 >
                   Decline
-                </button>
+                </a>
               </div>
             </div>
           )}
