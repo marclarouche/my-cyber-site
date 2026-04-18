@@ -316,7 +316,16 @@ export default function ToolsHub() {
     link: "/tools/image-compressor",
     aboutLink: "/tools/about-image-compressor",
     isNew: true
-   }
+   },
+    {
+     icon: <FileText className="w-8 h-8" />,
+      title: "PDF Compressor",
+      description: "Reduce PDF file sizes directly in your browser. No uploads, no servers — your documents never leave your device.",
+      category: "Privacy",
+      link: "/tools/pdf-compressor",
+      aboutLink: "/tools/about-pdf-compressor",
+      isNew: true
+    }
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];

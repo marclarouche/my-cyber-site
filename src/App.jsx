@@ -158,6 +158,8 @@ const GitSecretsScanner = lazy(() => import('./tools/GitSecretsScanner'));
 const AboutGitSecretsScanner = lazy(() => import('./tools/AboutGitSecretsScanner'));
 const ImageCompressor = lazy(() => import('./tools/ImageCompressor'));
 const AboutImageCompressor = lazy(() => import('./tools/AboutImageCompressor'));
+const PDFCompressor = lazy(() => import('./tools/PDFCompressor'));
+const AboutPDFCompressor = lazy(() => import('./tools/AboutPDFCompressor'));
 const ToolsHub = lazy(() => import('./tools/ToolsHub'));
 
 // Security Center
@@ -362,6 +364,8 @@ export default function App() {
             <Route path="/tools/about-git-secrets-scanner" element={<AboutGitSecretsScanner />} />
             <Route path="/tools/image-compressor" element={<ImageCompressor />} />
             <Route path="/tools/about-image-compressor" element={<AboutImageCompressor />} />
+            <Route path="/tools/about-pdf-compressor" element={<AboutPDFCompressor />} />
+            <Route path="/tools/pdf-compressor" element={<PDFCompressor />} />
             <Route path="/tools" element={<ToolsHub />} />
 
             {/* Security Center */}
