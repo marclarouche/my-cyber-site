@@ -156,6 +156,8 @@ const SmartTVPrivacyConfigurator = lazy(() => import('./tools/SmartTVPrivacyConf
 const AboutSmartTVPrivacyConfigurator = lazy(() => import('./tools/AboutSmartTVPrivacyConfigurator'));
 const GitSecretsScanner = lazy(() => import('./tools/GitSecretsScanner'));
 const AboutGitSecretsScanner = lazy(() => import('./tools/AboutGitSecretsScanner'));
+const ImageCompressor = lazy(() => import('./tools/ImageCompressor'));
+const AboutImageCompressor = lazy(() => import('./tools/AboutImageCompressor'));
 const ToolsHub = lazy(() => import('./tools/ToolsHub'));
 
 // Security Center
@@ -358,6 +360,8 @@ export default function App() {
             <Route path="/tools/about-smart-tv-privacy-configurator" element={<AboutSmartTVPrivacyConfigurator />} />
             <Route path="/tools/git-secrets-scanner" element={<GitSecretsScanner />} />
             <Route path="/tools/about-git-secrets-scanner" element={<AboutGitSecretsScanner />} />
+            <Route path="/tools/image-compressor" element={<ImageCompressor />} />
+            <Route path="/tools/about-image-compressor" element={<AboutImageCompressor />} />
             <Route path="/tools" element={<ToolsHub />} />
 
             {/* Security Center */}

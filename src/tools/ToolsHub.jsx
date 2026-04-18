@@ -308,6 +308,15 @@ export default function ToolsHub() {
     aboutLink: "/tools/about-git-secrets-scanner",
     isNew: true
 },
+   {
+    icon: <Image className="w-8 h-8" />,
+    title: "Image Compressor",
+    description: "Compress JPEG, PNG, and WebP images directly in your browser. Reduces file sizes without uploading — your images never leave your device.",
+    category: "Privacy",
+    link: "/tools/image-compressor",
+    aboutLink: "/tools/about-image-compressor",
+    isNew: true
+   }
   ];
 
   const categories = ["All", "AI Security", "Security", "Privacy", "Network", "Analysis", "Encryption", "Development", "Utility"];
