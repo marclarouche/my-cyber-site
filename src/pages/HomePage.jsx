@@ -113,6 +113,7 @@ export default function CyberSecurityLanding() {
               <a href="#products" className="text-slate-300 hover:text-cyan-400 transition-colors">Products</a>
               <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
               <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
+              <a href="/courses" className="text-slate-300 hover:text-cyan-400 transition-colors">Courses</a>
               <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
               <a href="/writing" className="text-slate-300 hover:text-cyan-400 transition-colors">Writing</a>
              
@@ -143,6 +144,7 @@ export default function CyberSecurityLanding() {
               <a href="/policy-generators" className="block text-slate-300 hover:text-cyan-400 transition-colors">Policy Generators</a>
               <a href="#products" className="block text-slate-300 hover:text-cyan-400 transition-colors">Products</a>
               <a href="/security-center" className="block text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
+              <a href="/courses" className="block text-slate-300 hover:text-cyan-400 transition-colors">Courses</a>
               <a href="/tools" className="block text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
               <a href="/about" className="block text-slate-300 hover:text-cyan-400 transition-colors">About</a>
               <a
@@ -421,7 +423,7 @@ export default function CyberSecurityLanding() {
               <h4 className="font-semibold mb-4 text-cyan-400">Resources</h4>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
-                <li><a href="https://cyberlifecoach.pro/courses.html" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Courses</a></li>
+                <li><a href="/courses" className="hover:text-cyan-400 transition-colors">Courses</a></li>
                 <li><a href="https://cyberlifecoach.substack.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
               </ul>
             </div>
