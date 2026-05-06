@@ -6,6 +6,7 @@ import TOSGate from './TOSGate';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
+const CoursesPage = lazy(() => import('./pages/CoursesPage'));
 const Writing = lazy(() => import('./pages/Writing'));
 const MissionControl = lazy(() => import('./pages/MissionControl'));
 const AdminSetup = lazy(() => import('./pages/AdminSetup'));
@@ -221,6 +222,7 @@ export default function App() {
             <Route path="clc-ops/live-demo-tool" element={<LiveDemoTool />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/courses" element={<CoursesPage />} />
             <Route path="/writing" element={<Writing />} />
             <Route path="/personal-assessment" element={<PersonalAssessmentPreview />} />
             <Route path="/individual-consultation" element={<IndividualConsultation />} />
