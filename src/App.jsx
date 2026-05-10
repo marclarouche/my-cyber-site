@@ -368,7 +368,7 @@ export default function App() {
             <Route path="/tools/about-image-compressor" element={<AboutImageCompressor />} />
             <Route path="/tools/about-pdf-compressor" element={<AboutPDFCompressor />} />
             <Route path="/tools/pdf-compressor" element={<PDFCompressor />} />
-            <Route path="/tools" element={<ToolsHub />} />
+            {/* <Route path="/tools" element={<ToolsHub />} /> */}
 
             {/* Security Center */}
             <Route path="/security-center/windows-11-hardening" element={<Windows11HardeningTool />} />
@@ -412,7 +412,7 @@ export default function App() {
             <Route path="/security-center/about-smb-assessment" element={<AboutSMBAssessment />} />
             <Route path="/security-center/office365-lockdown-tool" element={<Office365LockdownTool />} />
             <Route path="/security-center/about-office365-lockdown" element={<AboutOffice365Tool />} />
-            <Route path="/security-center" element={<SecurityCenterHub />} />
+            {/* <Route path="/security-center" element={<SecurityCenterHub />} /> */}
           </Routes>
         </Suspense>
       </Router>

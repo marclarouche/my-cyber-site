@@ -8,7 +8,7 @@ import {
 const courses = [
   {
     id: 'foundations',
-    status: 'live',
+    status: 'Coming soon',
     icon: <Search className="w-8 h-8" />,
     title: 'Foundations of OSINT',
     tagline: 'The complete starting point for open-source intelligence.',
@@ -36,7 +36,7 @@ const courses = [
   },
   {
     id: 'python',
-    status: 'live',
+    status: 'Coming soon',
     icon: <Code className="w-8 h-8" />,
     title: 'Using Python OSINT Tools',
     tagline: 'Automate your investigations with Python.',
@@ -63,7 +63,7 @@ const courses = [
   },
   {
     id: 'ai',
-    status: 'live',
+    status: 'Coming soon',
     icon: <Brain className="w-8 h-8" />,
     title: 'Introduction to AI and OSINT',
     tagline: 'Use AI tools to work faster and see further.',

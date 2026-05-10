@@ -98,7 +98,7 @@ export default function CyberSecurityLanding() {
             <div className="flex items-center space-x-3 group cursor-pointer">
               <img
                 src="/logo.png"
-                alt="Your Company"
+                alt="CyberLife Coach"
                 className="h-10 w-auto group-hover:brightness-125 group-hover:scale-110 transition-all duration-300"
               />
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-300">
@@ -111,8 +111,10 @@ export default function CyberSecurityLanding() {
               <a href="#services" className="text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
               <a href="/policy-generators" className="text-slate-300 hover:text-cyan-400 transition-colors">Policy Generators</a>
               <a href="#products" className="text-slate-300 hover:text-cyan-400 transition-colors">Products</a>
-              <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
-              <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
+              
+            {/* <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a> */}
+            {/* <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a> */}
+
               <a href="/courses" className="text-slate-300 hover:text-cyan-400 transition-colors">Courses</a>
               <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
               <a href="/writing" className="text-slate-300 hover:text-cyan-400 transition-colors">Writing</a>
@@ -422,7 +424,7 @@ export default function CyberSecurityLanding() {
             <div>
               <h4 className="font-semibold mb-4 text-cyan-400">Resources</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>
+              {/* <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li> */}
                 <li><a href="/courses" className="hover:text-cyan-400 transition-colors">Courses</a></li>
                 <li><a href="https://cyberlifecoach.substack.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
               </ul>
