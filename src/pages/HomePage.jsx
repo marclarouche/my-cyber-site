@@ -1,3 +1,4 @@
+import { FLAGS } from '../flags';
 import React, { useState, useEffect } from 'react';
 import { Shield, Lock, Eye, UserCheck, Calendar, BookOpen, Wrench, ChevronRight, Menu, X, ExternalLink, Plane, Heart, Home, Mail, Newspaper, Wifi } from 'lucide-react';
 
@@ -112,8 +113,8 @@ export default function CyberSecurityLanding() {
               <a href="/policy-generators" className="text-slate-300 hover:text-cyan-400 transition-colors">Policy Generators</a>
               <a href="#products" className="text-slate-300 hover:text-cyan-400 transition-colors">Products</a>
               
-            {/* <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a> */}
-            {/* <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a> */}
+           {FLAGS.showSecurityCenter && <a href="/security-center" className="text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>}
+           {FLAGS.showTools && <a href="/tools" className="text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>}
 
               <a href="/courses" className="text-slate-300 hover:text-cyan-400 transition-colors">Courses</a>
               <a href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
@@ -145,8 +146,8 @@ export default function CyberSecurityLanding() {
               <a href="#services" className="block text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
               <a href="/policy-generators" className="block text-slate-300 hover:text-cyan-400 transition-colors">Policy Generators</a>
               <a href="#products" className="block text-slate-300 hover:text-cyan-400 transition-colors">Products</a>
-              <a href="/security-center" className="block text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>
-              <a href="/tools" className="block text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>
+              {FLAGS.showSecurityCenter && <a href="/security-center" className="block text-slate-300 hover:text-cyan-400 transition-colors">Security Center</a>}
+              {FLAGS.showTools && <a href="/tools" className="block text-slate-300 hover:text-cyan-400 transition-colors">Tools</a>}
               <a href="/courses" className="block text-slate-300 hover:text-cyan-400 transition-colors">Courses</a>
               <a href="/about" className="block text-slate-300 hover:text-cyan-400 transition-colors">About</a>
               <a
@@ -416,7 +417,7 @@ export default function CyberSecurityLanding() {
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="/individual-consultation" className="hover:text-cyan-400 transition-colors">Privacy Audits</a></li>
                 <li><a href="/small-business-consultation" className="hover:text-cyan-400 transition-colors">Security Consulting</a></li>
-                <li><a href="/tools/threat-model" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>
+               {FLAGS.showTools && <li><a href="/tools/threat-model" className="hover:text-cyan-400 transition-colors">Threat Assessment</a></li>}
                 <li><a href="/home-network-privacy" className="hover:text-cyan-400 transition-colors">Home Network Privacy</a></li>
               </ul>
             </div>
@@ -424,7 +425,7 @@ export default function CyberSecurityLanding() {
             <div>
               <h4 className="font-semibold mb-4 text-cyan-400">Resources</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-              {/* <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li> */}
+              {FLAGS.showTools && <li><a href="/tools" className="hover:text-cyan-400 transition-colors">Free Tools</a></li>}
                 <li><a href="/courses" className="hover:text-cyan-400 transition-colors">Courses</a></li>
                 <li><a href="https://cyberlifecoach.substack.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Newsletter</a></li>
               </ul>

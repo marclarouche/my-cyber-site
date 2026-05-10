@@ -1,3 +1,4 @@
+import { FLAGS } from './flags';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TOSGate from './TOSGate';
@@ -368,6 +369,7 @@ export default function App() {
             <Route path="/tools/about-image-compressor" element={<AboutImageCompressor />} />
             <Route path="/tools/about-pdf-compressor" element={<AboutPDFCompressor />} />
             <Route path="/tools/pdf-compressor" element={<PDFCompressor />} />
+            {FLAGS.showTools && <Route path="/tools" element={<ToolsHub />} />}
             {/* <Route path="/tools" element={<ToolsHub />} /> */}
 
             {/* Security Center */}
@@ -412,6 +414,7 @@ export default function App() {
             <Route path="/security-center/about-smb-assessment" element={<AboutSMBAssessment />} />
             <Route path="/security-center/office365-lockdown-tool" element={<Office365LockdownTool />} />
             <Route path="/security-center/about-office365-lockdown" element={<AboutOffice365Tool />} />
+            {FLAGS.showSecurityCenter && <Route path="/security-center" element={<SecurityCenter />} />}
             {/* <Route path="/security-center" element={<SecurityCenterHub />} /> */}
           </Routes>
         </Suspense>
