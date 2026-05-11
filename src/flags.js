@@ -1,4 +1,4 @@
 export const FLAGS = {
-  showTools: false,
+  showTools: true,
   showSecurityCenter: false,
 };
